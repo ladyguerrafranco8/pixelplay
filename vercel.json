@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/app.jsx", "destination": "/app.jsx" },
+    { "source": "/tweaks-panel.jsx", "destination": "/tweaks-panel.jsx" },
+    { "source": "/styles.css", "destination": "/styles.css" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
