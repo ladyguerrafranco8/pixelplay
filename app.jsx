@@ -12,8 +12,7 @@ const SERVICES = [
     name: 'Netflix',
     tagline: 'Películas, series y originales',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla · 4K', price: 19900, popular: false },
-      { type: 'Compartida', label: 'Cuenta Premium', price: 34900, popular: true },
+      { type: 'Pantalla', label: '1 Pantalla · 4K', price: 16000, popular: false },
     ],
     color: '#E50914',
     logoSlug: 'netflix',
@@ -23,52 +22,48 @@ const SERVICES = [
     name: 'Disney+',
     tagline: 'Marvel, Star Wars, Pixar',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla · 4K', price: 13900, popular: false },
-      { type: 'Compartida', label: 'Plan Estándar', price: 24900, popular: true },
+      { type: 'Con ESPN', label: 'Pantalla · Con ESPN', price: 15000, popular: true },
+      { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHRleHQgeD0nMzAnIHk9JzQ0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsc2VyaWYnIGZvbnQtd2VpZ2h0PSdib2xkJyBmb250LXNpemU9JzM4Jz5EKzwvdGV4dD48L3N2Zz4=',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PGNpcmNsZSBjeD0nMzAnIGN5PSczMCcgcj0nMjgnIGZpbGw9J25vbmUnIHN0cm9rZT0ncmdiYSgyNTUsMjU1LDI1NSwwLjIpJyBzdHJva2Utd2lkdGg9JzEuNScvPjx0ZXh0IHg9JzMwJyB5PSczNycgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0nd2hpdGUnIGZvbnQtZmFtaWx5PSdBcmlhbCBCbGFjayxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzIyJz5EKzwvdGV4dD48L3N2Zz4=',
   },
   {
     id: 'max',
     name: 'Max',
     tagline: 'HBO, Warner, DC Universe',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla · 4K', price: 15900, popular: false },
-      { type: 'Compartida', label: 'Plan Platino', price: 28900, popular: true },
+      { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#7C3AED',
-    logoSlug: 'hbomax',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHJlY3QgeD0nNicgeT0nMTgnIHdpZHRoPSc0OCcgaGVpZ2h0PSczMCcgcng9JzYnIGZpbGw9J25vbmUnIHN0cm9rZT0ncmdiYSgyNTUsMjU1LDI1NSwwLjE1KScgc3Ryb2tlLXdpZHRoPScxJy8+PHRleHQgeD0nMzAnIHk9JzM5JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMjInIGxldHRlci1zcGFjaW5nPSczJz5NQVg8L3RleHQ+PC9zdmc+',
   },
   {
     id: 'prime',
     name: 'Prime Video',
     tagline: 'Originales y exclusivas',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla · 4K', price: 11900, popular: false },
-      { type: 'Compartida', label: 'Cuenta Completa', price: 21900, popular: false },
+      { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#0EA5E9',
     logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHBvbHlnb24gcG9pbnRzPScxNCwxMCA1MCwzMCAxNCw1MCcgZmlsbD0nd2hpdGUnLz48L3N2Zz4=',
   },
   {
-    id: 'spotify',
-    name: 'Spotify',
-    tagline: 'Música sin anuncios',
+    id: 'vix',
+    name: 'VIX',
+    tagline: 'Series y cine en español',
     plans: [
-      { type: 'Individual', label: 'Premium Individual', price: 9900, popular: true },
-      { type: 'Familiar', label: 'Premium Familiar', price: 18900, popular: false },
+      { type: 'Pantalla', label: '1 Pantalla', price: 12000, popular: false },
     ],
-    color: '#1DB954',
-    logoSlug: 'spotify',
+    color: '#D20029',
+    logoSlug: 'vix',
   },
   {
     id: 'paramount',
     name: 'Paramount+',
     tagline: 'Series y deportes en vivo',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla · HD', price: 11900, popular: false },
-      { type: 'Compartida', label: 'Plan Anual', price: 19900, popular: false },
+      { type: 'Pantalla', label: '1 Pantalla · HD', price: 12000, popular: false },
     ],
     color: '#0064FF',
     logoSlug: 'paramountplus',
@@ -78,22 +73,66 @@ const SERVICES = [
     name: 'Crunchyroll',
     tagline: 'Anime sin límites',
     plans: [
-      { type: 'Individual', label: 'Mega Fan', price: 11900, popular: false },
-      { type: 'Compartida', label: 'Ultimate Fan', price: 18900, popular: false },
+      { type: 'Pantalla', label: '1 Pantalla', price: 12000, popular: false },
     ],
     color: '#F47521',
     logoSlug: 'crunchyroll',
+  },
+  {
+    id: 'plex',
+    name: 'Plex',
+    tagline: 'Streaming y media personal',
+    plans: [
+      { type: 'Pantalla', label: '1 Pantalla', price: 12000, popular: false },
+    ],
+    color: '#E5A00D',
+    logoSlug: 'plex',
+  },
+  {
+    id: 'spotify',
+    name: 'Spotify',
+    tagline: 'Música sin anuncios',
+    plans: [
+      { type: '1 Mes', label: '1 Mes', price: 13000, popular: false },
+      { type: 'Renovable', label: '1 Mes Renovable', price: 14000, popular: true },
+      { type: '6 Meses', label: '6 Meses', price: 45000, popular: false },
+    ],
+    color: '#1DB954',
+    logoSlug: 'spotify',
   },
   {
     id: 'youtube',
     name: 'YouTube Premium',
     tagline: 'Sin anuncios + Music',
     plans: [
-      { type: 'Individual', label: 'Premium Individual', price: 11900, popular: false },
-      { type: 'Familiar', label: 'Premium Familiar', price: 19900, popular: true },
+      { type: 'Mensual', label: '1 Mes', price: 12000, popular: false },
     ],
     color: '#FF0000',
     logoSlug: 'youtube',
+  },
+  {
+    id: 'appletv',
+    name: 'Apple TV+',
+    tagline: 'Originales exclusivos de Apple',
+    plans: [
+      { type: '1 Mes', label: '1 Mes', price: 18000, popular: false },
+      { type: '3 Meses', label: '3 Meses', price: 32000, popular: true },
+    ],
+    color: '#555555',
+    logoSlug: 'appletv',
+  },
+  {
+    id: 'canva',
+    name: 'Canva Pro',
+    tagline: 'Diseño profesional sin límites',
+    plans: [
+      { type: '1 Mes', label: '1 Mes', price: 12000, popular: false },
+      { type: '3 Meses', label: '3 Meses', price: 20000, popular: false },
+      { type: '6 Meses', label: '6 Meses', price: 30000, popular: true },
+      { type: '12 Meses', label: '12 Meses', price: 45000, popular: false },
+    ],
+    color: '#7D2AE8',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PGNpcmNsZSBjeD0nMzAnIGN5PSczMCcgcj0nMjYnIGZpbGw9J25vbmUnIHN0cm9rZT0ncmdiYSgyNTUsMjU1LDI1NSwwLjIpJyBzdHJva2Utd2lkdGg9JzEuNScvPjx0ZXh0IHg9JzMwJyB5PSczNycgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0nd2hpdGUnIGZvbnQtZmFtaWx5PSdBcmlhbCxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzI2Jz5DPC90ZXh0Pjwvc3ZnPg==',
   },
 ];
 
@@ -119,36 +158,98 @@ const TESTIMONIALS = [
     rating: 5,
     avatar: 'AT',
   },
+  {
+    name: 'Diego Salinas',
+    handle: '@diegos',
+    text: 'Lo que más valoro: precios transparentes, sin sorpresas. La garantía me dio mucha tranquilidad para probar.',
+    rating: 5,
+    avatar: 'DS',
+  },
+  {
+    name: 'Valentina López',
+    handle: '@valelo',
+    text: 'Recomendado al 100%. Pasé de pagar más de 40$ al mes en suscripciones a solo 12$ por todo lo que veo.',
+    rating: 5,
+    avatar: 'VL',
+  },
+  {
+    name: 'Roberto Mendoza',
+    handle: '@robertom',
+    text: 'Atención cercana, pago fácil por transferencia o tarjeta, y siempre tienen stock. No me cambio por nada.',
+    rating: 5,
+    avatar: 'RM',
+  },
 ];
 
-const WHY_ITEMS = [
+const FAQ = [
   {
-    icon: 'price',
+    q: '¿Son cuentas legales y seguras?',
+    a: 'Sí. Trabajamos con licencias autorizadas y métodos de distribución verificados. Tus datos de pago están protegidos con cifrado bancario y nunca compartimos información con terceros.',
+  },
+  {
+    q: '¿Cuánto tarda la entrega de mi cuenta?',
+    a: 'La entrega es inmediata: entre 1 y 5 minutos después de confirmar tu pago. Recibes los accesos directamente por WhatsApp o correo electrónico, lo que prefieras.',
+  },
+  {
+    q: '¿Qué pasa si mi cuenta deja de funcionar?',
+    a: 'Tienes garantía durante toda la duración de tu plan. Si por cualquier motivo tu acceso falla, lo reemplazamos en menos de 1 hora sin costo adicional. Cero preguntas.',
+  },
+  {
+    q: '¿Puedo cambiar de servicio durante mi suscripción?',
+    a: 'Por supuesto. Desde tu panel de cliente puedes cambiar entre servicios disponibles, pausar tu plan o renovar con un clic. Sin permanencias.',
+  },
+  {
+    q: '¿Qué métodos de pago aceptan?',
+    a: 'Aceptamos tarjeta de crédito y débito (Visa, Mastercard, Amex), PayPal, transferencia bancaria, criptomonedas y pago en efectivo a través de OXXO y otros puntos físicos.',
+  },
+  {
+    q: '¿Puedo cambiar mi PIN o perfil?',
+    a: 'En las cuentas compartidas, tienes asignado un perfil específico con tu propio PIN. Puedes personalizar tu perfil pero por respeto a otros usuarios no puedes modificar los datos principales de la cuenta.',
+  },
+  {
+    q: '¿Hay descuento si compro varios servicios?',
+    a: 'Sí. Al añadir 2 servicios al carrito obtienes 10% de descuento, con 3 servicios un 15%, y con 4 o más un 20% de descuento sobre el total. El descuento se aplica automáticamente.',
+  },
+  {
+    q: '¿Cómo funciona la renovación?',
+    a: 'Te recordamos por WhatsApp 3 días antes del vencimiento. Puedes renovar manualmente o activar la renovación automática desde tu panel. Nunca te cobramos sin avisarte.',
+  },
+];
+
+const WHY = [
+  {
+    icon: 'savings',
+    color: '#10B981',
     title: 'Hasta 80% de ahorro',
     body: 'Pagás una fracción de lo que costaría cada servicio por separado. Sin letra chica, sin sorpresas en la factura.',
   },
   {
-    icon: 'bolt',
-    title: 'Entrega en 5 minutos',
-    body: 'Accesos por WhatsApp o correo en minutos. Nada de esperas, nada de tramitología. Solo streaming.',
+    icon: 'rocket',
+    color: '#FBBF24',
+    title: 'Entrega en minutos',
+    body: 'Tu cuenta llega directo a tu WhatsApp o correo en menos de 5 minutos tras confirmar el pago. Automatizado.',
   },
   {
-    icon: 'shield',
-    title: 'Garantía durante todo el plan',
-    body: 'Si algo falla, lo solucionamos o te devolvemos el dinero. Sin preguntas, sin vueltas.',
+    icon: 'shield2',
+    color: '#60A5FA',
+    title: 'Garantía total',
+    body: 'Si tu cuenta falla durante el plan, la reemplazamos en menos de 1 hora. Sin trámites, sin excusas.',
   },
   {
-    icon: 'chat',
-    title: 'Soporte humano 24/7',
-    body: 'Persona real, respuesta real. WhatsApp, Telegram o correo. Siempre disponibles.',
+    icon: 'headset',
+    color: '#A78BFA',
+    title: 'Soporte 24/7 real',
+    body: 'Humanos respondiendo, no bots. Cualquier día, cualquier hora. Promedio de respuesta: 8 minutos.',
   },
   {
-    icon: 'check',
+    icon: 'pulse',
+    color: '#34D399',
     title: 'Stock siempre disponible',
     body: 'Inventario actualizado en tiempo real. Si lo ves disponible, lo tenés. Sin esperas.',
   },
   {
-    icon: 'card',
+    icon: 'wallet',
+    color: '#FB923C',
     title: 'Pago como tú quieras',
     body: 'Tarjeta, PayPal, transferencia, cripto o efectivo. Adaptados a tu forma de pagar, no al revés.',
   },
@@ -198,6 +299,14 @@ const Icon = ({ name, size = 20 }) => {
     case 'tg': return <svg {...props}><path d="M22 4L2 11l6 2 2 7 4-4 5 4 3-16z"/></svg>;
     case 'ig': return <svg {...props}><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>;
     case 'mail': return <svg {...props}><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>;
+    case 'savings': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M9 15l6-6"/><circle cx="9.5" cy="9.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="14.5" cy="14.5" r="1.5" fill="currentColor" stroke="none"/></svg>;
+    case 'rocket': return <svg {...props} strokeWidth={1.5}><path d="M12 2C7 7 6 12 8 17l-3 3 3-1 1 3 3-3c5 2 10 1 15-4-3-5-8-8-15-10z"/><path d="M9 15l-2 2"/><circle cx="14" cy="9" r="1.5" fill="currentColor" stroke="none"/></svg>;
+    case 'shield2': return <svg {...props} strokeWidth={1.5}><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" fill="currentColor" fillOpacity="0.15"/><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg>;
+    case 'headset': return <svg {...props} strokeWidth={1.5}><path d="M4 14.5V12a8 8 0 0116 0v2.5"/><rect x="2" y="13" width="4" height="6" rx="2"/><rect x="18" y="13" width="4" height="6" rx="2"/><path d="M20 19a4 4 0 01-4 4h-2"/></svg>;
+    case 'pulse': return <svg {...props} strokeWidth={1.5}><polyline points="2,12 6,12 9,4 12,20 15,8 18,12 22,12"/></svg>;
+    case 'wallet': return <svg {...props} strokeWidth={1.5}><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 2v6"/><path d="M8 2v6"/><path d="M2 10h20"/><circle cx="16.5" cy="15" r="1.5" fill="currentColor" stroke="none"/></svg>;
+    case 'trophy': return <svg {...props} strokeWidth={1.5}><path d="M6 2h12v8a6 6 0 01-12 0V2z"/><path d="M6 6H3a2 2 0 000 4h3"/><path d="M18 6h3a2 2 0 010 4h-3"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>;
+    case 'soccer': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M12 3l3 5-3 3-3-3 3-5z" fill="currentColor" fillOpacity="0.3"/><path d="M12 21l-3-5 3-3 3 3-3 5z" fill="currentColor" fillOpacity="0.3"/><path d="M3.5 7.5L8 9l1 4-4-1.5-1.5-4z" fill="currentColor" fillOpacity="0.3"/><path d="M20.5 7.5L16 9l-1 4 4-1.5 1.5-4z" fill="currentColor" fillOpacity="0.3"/></svg>;
     default: return null;
   }
 };
@@ -242,22 +351,39 @@ const ServiceBadge = ({ service, size = 64 }) => {
 const Nav = ({ cartCount, onCartOpen, accent }) => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', fn);
-    return () => window.removeEventListener('scroll', fn);
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  const links = [
+    ['Catálogo', '#catalogo'],
+    ['Por qué nosotros', '#porque'],
+    ['Cómo funciona', '#como'],
+    ['FAQ', '#faq'],
+  ];
   return (
     <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
-      <a href="#top" className="nav-logo">PixelPlay</a>
-      <div className="nav-links">
-        <a href="#catalogo">Catálogo</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#faq">FAQ</a>
+      <div className="nav-inner">
+        <a href="#top" className="logo">
+          <span className="logo-mark" style={{ background: `linear-gradient(135deg, ${accent}, #3b82f6)` }} />
+          <span className="logo-text">PixelPlay</span>
+        </a>
+        <div className="nav-links">
+          {links.map(([label, href]) => (
+            <a key={href} href={href} className="nav-link">{label}</a>
+          ))}
+        </div>
+        <div className="nav-actions">
+          <button className="btn-ghost cart-btn" onClick={onCartOpen}>
+            <Icon name="cart" size={18} />
+            <span className="cart-label">Carrito</span>
+            {cartCount > 0 && <span className="cart-bubble" style={{ background: accent }}>{cartCount}</span>}
+          </button>
+          <a href="#catalogo" className="btn-primary" style={{ background: accent }}>
+            Empezar
+          </a>
+        </div>
       </div>
-      <button className="nav-cart" onClick={onCartOpen}>
-        <Icon name="cart" size={20} />
-        {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
-      </button>
     </nav>
   );
 };
@@ -268,7 +394,6 @@ const Nav = ({ cartCount, onCartOpen, accent }) => {
 const Hero = ({ accent }) => {
   return (
     <section className="hero" id="top">
-      <div className="hero-grid-bg" />
       <div className="hero-glow" style={{ background: `radial-gradient(closest-side, ${accent}40, transparent)` }} />
       <div className="hero-glow hero-glow-2" />
 
@@ -279,13 +404,24 @@ const Hero = ({ accent }) => {
         </div>
 
         <h1 className="hero-title">
-          Todo el <span className="title-accent" style={{ color: accent }}>streaming</span>
-          <br />a una fracción del precio.
+          Del carrito a <span className="title-accent" style={{ color: accent }}>Netflix</span>
+          <br />en 5 minutos.
         </h1>
 
+        <div className="hero-services-strip">
+          <div className="strip-label">DISPONIBLES AHORA</div>
+          <div className="strip-badges">
+            {SERVICES.slice(0, 8).map((s) => (
+              <div className="strip-badge" key={s.id} title={s.name}>
+                <ServiceBadge service={s} size={44} />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <p className="hero-sub">
-          Cuentas premium de Netflix, Disney+, Max, Prime Video, Spotify y más. Entrega
-          en menos de 5 minutos, garantía durante todo tu plan, soporte humano 24/7.
+          Todo el <strong style={{ color: 'var(--text)' }}>streaming</strong> a una fracción del precio.
+          Netflix, Disney+, Max, Spotify y más — con garantía total y soporte humano 24/7.
         </p>
 
         <div className="hero-cta">
@@ -293,9 +429,8 @@ const Hero = ({ accent }) => {
             Ver catálogo
             <Icon name="arrow" size={18} />
           </a>
-          <a href="https://wa.me/" className="btn-ghost btn-lg">
-            <Icon name="wa" size={18} />
-            Hablar con nosotros
+          <a href="#como" className="btn-secondary btn-lg">
+            ¿Cómo funciona?
           </a>
         </div>
 
@@ -304,22 +439,15 @@ const Hero = ({ accent }) => {
             <Icon name="lock" size={16} />
             <span>Pago seguro</span>
           </div>
+          <div className="trust-divider" />
           <div className="trust-item">
             <Icon name="bolt" size={16} />
-            <span>Entrega en 5 min</span>
+            <span>Entrega inmediata</span>
           </div>
+          <div className="trust-divider" />
           <div className="trust-item">
             <Icon name="shield" size={16} />
             <span>Garantía total</span>
-          </div>
-        </div>
-
-        <div className="hero-services-strip">
-          <div className="strip-label">DISPONIBLES AHORA</div>
-          <div className="strip-badges">
-            {SERVICES.slice(0, 8).map((s) => (
-              <ServiceBadge key={s.id} service={s} size={40} />
-            ))}
           </div>
         </div>
       </div>
@@ -328,84 +456,98 @@ const Hero = ({ accent }) => {
 };
 
 // ============================================================
-// HOW IT WORKS
-// ============================================================
-const How = ({ accent }) => (
-  <section className="how" id="como-funciona">
-    <div className="section-header">
-      <h2>¿Cómo funciona?</h2>
-      <p>Tres pasos y ya estás viendo tu contenido favorito.</p>
-    </div>
-    <div className="steps">
-      {STEPS.map((step) => (
-        <div className="step" key={step.n}>
-          <div className="step-num" style={{ color: accent }}>{step.n}</div>
-          <h3>{step.title}</h3>
-          <p>{step.body}</p>
-        </div>
-      ))}
-    </div>
-  </section>
-);
-
-// ============================================================
 // CATALOG
 // ============================================================
-const Catalog = ({ onAdd, cart, accent }) => {
-  const [active, setActive] = useState(null);
+const ServiceCard = ({ service, onAdd, inCart, accent }) => {
+  const [planIdx, setPlanIdx] = useState(service.plans.findIndex(p => p.popular) >= 0 ? service.plans.findIndex(p => p.popular) : 0);
+  const plan = service.plans[planIdx];
 
-  const handleAdd = (service, plan) => {
-    onAdd(service, plan);
-    setActive(`${service.id}-${plan.type}`);
-    setTimeout(() => setActive(null), 1200);
-  };
+  return (
+    <article className="svc-card">
+      <div className="svc-card-top">
+        <ServiceBadge service={service} size={56} />
+        <div className="svc-card-meta">
+          <h3>{service.name}</h3>
+          <p>{service.tagline}</p>
+        </div>
+      </div>
+
+      <div className="svc-plans">
+        {service.plans.map((p, i) => (
+          <button
+            key={i}
+            className={`plan-pill ${planIdx === i ? 'active' : ''}`}
+            onClick={() => setPlanIdx(i)}
+            style={planIdx === i ? { borderColor: accent, color: '#fff' } : {}}
+          >
+            {p.type}
+            {p.popular && <span className="popular-dot" style={{ background: accent }} />}
+          </button>
+        ))}
+      </div>
+
+      <div className="svc-plan-label">{plan.label}</div>
+
+      <div className="svc-card-bottom">
+        <div className="svc-price">
+          <span className="svc-price-num">{formatCOP(plan.price)}</span>
+          <span className="svc-price-per">/mes</span>
+        </div>
+        <button
+          className={`btn-buy ${inCart ? 'in-cart' : ''}`}
+          onClick={() => onAdd(service, plan)}
+          style={!inCart ? { background: accent } : {}}
+        >
+          {inCart ? <><Icon name="check" size={16} /> Agregado</> : <>Agregar <Icon name="plus" size={16} /></>}
+        </button>
+      </div>
+    </article>
+  );
+};
+
+const Catalog = ({ onAdd, cart, accent }) => {
+  const [filter, setFilter] = useState('all');
+  const filtered = useMemo(() => {
+    if (filter === 'all') return SERVICES;
+    if (filter === 'video') return SERVICES.filter(s => ['netflix','disney','max','prime','paramount','crunchyroll'].includes(s.id));
+    if (filter === 'music') return SERVICES.filter(s => ['spotify','youtube'].includes(s.id));
+    return SERVICES;
+  }, [filter]);
 
   return (
     <section className="catalog" id="catalogo">
-      <div className="section-header">
-        <h2>Catálogo de servicios</h2>
-        <p>Elegí uno o combiná varios y ahorrá hasta un 20% extra.</p>
+      <div className="section-head">
+        <span className="section-eyebrow">CATÁLOGO</span>
+        <h2 className="section-title">Elegí lo que <em>realmente</em> vas a ver.</h2>
+        <p className="section-sub">Todos los servicios. Sin paquetes obligatorios. Combina y ahorra.</p>
       </div>
+
+      <div className="catalog-filters">
+        {[['all','Todos'],['video','Video'],['music','Música']].map(([k, l]) => (
+          <button
+            key={k}
+            className={`filter-chip ${filter === k ? 'active' : ''}`}
+            onClick={() => setFilter(k)}
+            style={filter === k ? { background: accent, borderColor: accent } : {}}
+          >
+            {l}
+          </button>
+        ))}
+        <div className="catalog-bundle-tip">
+          <Icon name="bolt" size={14} /> Llevá 3 servicios y obtené <strong>15% off</strong>
+        </div>
+      </div>
+
       <div className="svc-grid">
-        {SERVICES.map((service) => {
-          const inCart = cart.filter((c) => c.service.id === service.id);
-          return (
-            <div className="svc-card" key={service.id}>
-              <div className="svc-card-head">
-                <ServiceBadge service={service} size={56} />
-                <div className="svc-card-meta">
-                  <h3>{service.name}</h3>
-                  <p>{service.tagline}</p>
-                </div>
-              </div>
-              <div className="svc-plans">
-                {service.plans.map((plan) => {
-                  const key = `${service.id}-${plan.type}`;
-                  const added = active === key;
-                  const alreadyIn = inCart.some((c) => c.plan.type === plan.type);
-                  return (
-                    <div className={`svc-plan ${plan.popular ? 'plan-popular' : ''}`} key={plan.type}>
-                      {plan.popular && <div className="plan-badge" style={{ background: accent }}>Más popular</div>}
-                      <div className="plan-label">{plan.label}</div>
-                      <div className="svc-price">
-                        <span className="svc-price-num">{formatCOP(plan.price)}</span>
-                        <span className="svc-price-per">/mes</span>
-                      </div>
-                      <button
-                        className={`btn-add ${added ? 'btn-added' : ''} ${alreadyIn ? 'btn-in-cart' : ''}`}
-                        style={added || alreadyIn ? {} : { borderColor: accent, color: accent }}
-                        onClick={() => !alreadyIn && handleAdd(service, plan)}
-                        disabled={alreadyIn}
-                      >
-                        {alreadyIn ? 'En carrito' : added ? '¡Agregado!' : '+ Agregar'}
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+        {filtered.map((s) => (
+          <ServiceCard
+            key={s.id}
+            service={s}
+            onAdd={onAdd}
+            inCart={cart.some(c => c.id === s.id)}
+            accent={accent}
+          />
+        ))}
       </div>
     </section>
   );
@@ -415,19 +557,146 @@ const Catalog = ({ onAdd, cart, accent }) => {
 // WHY
 // ============================================================
 const Why = ({ accent }) => (
-  <section className="why">
-    <div className="section-header">
-      <h2 dangerouslySetInnerHTML={{ __html: 'Precio justo,<br/>servicio <em>premium</em>.' }} />
-      <p>Todo lo que necesitás para disfrutar sin complicaciones.</p>
+  <section className="why" id="porque">
+    <div className="section-head">
+      <span className="section-eyebrow">POR QUÉ PIXELPLAY</span>
+      <h2 className="section-title">Precio justo,<br/>servicio <em>premium</em>.</h2>
+      <p className="section-sub">Más de 4 años operando, +12.000 clientes activos, 99.2% de retención mensual.</p>
     </div>
     <div className="why-grid">
-      {WHY_ITEMS.map((item) => (
-        <div className="why-card" key={item.title}>
-          <div className="why-icon" style={{ color: accent }}>
-            <Icon name={item.icon} size={24} />
+      {WHY.map((w, i) => (
+        <div key={i} className="why-card" style={{ '--why-color': w.color }}>
+          <div className="why-icon" style={{ color: w.color }}>
+            <Icon name={w.icon} size={28} />
           </div>
-          <h3>{item.title}</h3>
-          <p>{item.body}</p>
+          <h3>{w.title}</h3>
+          <p>{w.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+);
+
+// ============================================================
+// WORLD CUP BANNER
+// ============================================================
+const WorldCupBanner = ({ onAdd, cart }) => {
+  const MUNDIAL_DATE = new Date('2026-06-11T00:00:00');
+  const [timeLeft, setTimeLeft] = React.useState({});
+
+  React.useEffect(() => {
+    const calc = () => {
+      const diff = MUNDIAL_DATE - new Date();
+      if (diff <= 0) return setTimeLeft({ d: 0, h: 0, m: 0, s: 0 });
+      setTimeLeft({
+        d: Math.floor(diff / 86400000),
+        h: Math.floor((diff % 86400000) / 3600000),
+        m: Math.floor((diff % 3600000) / 60000),
+        s: Math.floor((diff % 60000) / 1000),
+      });
+    };
+    calc();
+    const id = setInterval(calc, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const wc_services = SERVICES.filter(s => s.id === 'disney' || s.id === 'paramount');
+  const pad = n => String(n).padStart(2, '0');
+
+  const WC_EXTRAS = {
+    disney: 'Incluye ESPN · Todos los partidos',
+    paramount: 'Cobertura completa del Mundial',
+  };
+
+  return (
+    <section className="wc-banner">
+      <div className="wc-flag-stripe">
+        <div className="wc-stripe wc-yellow" />
+        <div className="wc-stripe wc-blue" />
+        <div className="wc-stripe wc-red" />
+      </div>
+      <div className="wc-glow" />
+      <div className="wc-glow-red" />
+      <div className="wc-inner">
+        <div className="wc-left">
+          <div className="wc-eyebrow">
+            <span>⚽</span> PROMO MUNDIAL 2026 <span className="wc-flag">🇨🇴</span> ¡ARRIBA COLOMBIA!
+          </div>
+          <h2 className="wc-title">
+            El fútbol más grande<br/>
+            <span className="wc-title-em">del planeta viene.</span>
+          </h2>
+          <p className="wc-sub">Disney+ (con ESPN) y Paramount+ transmiten todos los partidos. Asegurá tu acceso ahora — los precios suben cuando arranque el torneo.</p>
+          <div className="wc-cards">
+            {wc_services.map(s => {
+              const plan = s.plans[0];
+              const inCart = cart.some(c => c.id === s.id);
+              return (
+                <div className="wc-service" key={s.id}>
+                  <ServiceBadge service={s} size={44} />
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div className="wc-svc-name">{s.name}</div>
+                    <div className="wc-svc-extra">{WC_EXTRAS[s.id]}</div>
+                    <div className="wc-svc-price">{formatCOP(plan.price)}<span>/mes</span></div>
+                  </div>
+                  <button
+                    className={`wc-btn ${inCart ? 'wc-btn-in' : ''}`}
+                    onClick={() => !inCart && onAdd(s, plan)}
+                    disabled={inCart}
+                  >
+                    {inCart ? '✓ En carrito' : '+ Agregar'}
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="wc-right">
+          <div className="wc-ball-icon">⚽</div>
+          <div className="wc-countdown-label">El Mundial empieza en</div>
+          <div className="wc-countdown">
+            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.d)}</span><span className="wc-lbl">días</span></div>
+            <span className="wc-sep">:</span>
+            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.h)}</span><span className="wc-lbl">horas</span></div>
+            <span className="wc-sep">:</span>
+            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.m)}</span><span className="wc-lbl">min</span></div>
+            <span className="wc-sep">:</span>
+            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.s)}</span><span className="wc-lbl">seg</span></div>
+          </div>
+          <div className="wc-badge">🏆 FIFA World Cup 2026™</div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ============================================================
+// HOW
+// ============================================================
+const STEP_COLORS = ['#8B5CF6', '#F59E0B', '#10B981'];
+const STEP_ICONS = ['cart', 'card', 'check'];
+
+const How = ({ accent }) => (
+  <section className="how" id="como">
+    <div className="section-head">
+      <span className="section-eyebrow">CÓMO FUNCIONA</span>
+      <h2 className="section-title">Tan fácil como<br/><em>1, 2, 3.</em></h2>
+    </div>
+    <div className="how-grid">
+      {STEPS.map((s, i) => (
+        <div key={i} className="how-card" style={{ '--step-color': STEP_COLORS[i] }}>
+          <div className="how-num-badge">
+            <div className="how-num-inner">
+              <span className="how-num">{i + 1}</span>
+            </div>
+          </div>
+          <h3>{s.title}</h3>
+          <p>{s.body}</p>
+          {i < STEPS.length - 1 && (
+            <div className="how-arrow">
+              <Icon name="arrow" size={18} />
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -437,30 +706,37 @@ const Why = ({ accent }) => (
 // ============================================================
 // TESTIMONIALS
 // ============================================================
-const Testimonials = () => (
+const Testimonials = ({ accent }) => (
   <section className="testimonials">
-    <div className="section-header">
-      <h2>Lo que dicen nuestros clientes</h2>
-      <p>Más de 12.480 personas ya confían en PixelPlay.</p>
+    <div className="section-head">
+      <span className="section-eyebrow">TESTIMONIOS</span>
+      <h2 className="section-title">+12.000 clientes <em>que repiten</em>.</h2>
+      <div className="rating-summary">
+        <div className="stars" style={{ color: '#FBBF24' }}>
+          {[...Array(5)].map((_, i) => <Icon key={i} name="star" size={18} />)}
+        </div>
+        <span className="rating-num">4.9 / 5</span>
+        <span className="rating-meta">basado en 3.214 reseñas</span>
+      </div>
     </div>
-    <div className="testimonials-grid">
-      {TESTIMONIALS.map((t) => (
-        <div className="t-card" key={t.name}>
-          <div className="t-stars">
-            {Array.from({ length: t.rating }).map((_, i) => (
-              <Icon key={i} name="star" size={14} />
-            ))}
-          </div>
-          <p className="t-text">{t.text}</p>
-          <div className="t-author">
-            <div className="t-avatar">{t.avatar}</div>
-            <div>
-              <div className="t-name">{t.name}</div>
-              <div className="t-handle">{t.handle}</div>
+    <div className="testi-marquee">
+      <div className="testi-track">
+        {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+          <div key={i} className="testi-card">
+            <div className="testi-stars" style={{ color: '#FBBF24' }}>
+              {[...Array(t.rating)].map((_, j) => <Icon key={j} name="star" size={13} />)}
+            </div>
+            <p className="testi-text">{t.text}</p>
+            <div className="testi-author">
+              <div className="testi-avatar" style={{ background: `linear-gradient(135deg, ${accent}, #3b82f6)` }}>{t.avatar}</div>
+              <div>
+                <div className="testi-name">{t.name}</div>
+                <div className="testi-handle">{t.handle}</div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </section>
 );
@@ -468,45 +744,32 @@ const Testimonials = () => (
 // ============================================================
 // FAQ
 // ============================================================
-const Faq = () => {
-  const [open, setOpen] = useState(null);
-  const items = [
-    {
-      q: '¿Cómo recibo mis accesos?',
-      a: 'Inmediatamente después de confirmar el pago te enviamos las credenciales por WhatsApp o correo electrónico. El proceso tarda menos de 5 minutos.',
-    },
-    {
-      q: '¿Los servicios son legales?',
-      a: 'Trabajamos con cuentas compartidas o de perfil individual dentro de los planes familiares oficiales de cada plataforma. Es completamente legal y dentro de los términos de uso.',
-    },
-    {
-      q: '¿Qué pasa si mi cuenta deja de funcionar?',
-      a: 'Tenés garantía durante todo el período contratado. Si algo falla, te solucionamos el problema en menos de 2 horas o te devolvemos el dinero sin preguntas.',
-    },
-    {
-      q: '¿Puedo cancelar cuando quiera?',
-      a: 'Sí, aunque los planes son por período (mensual o anual), si necesitás cancelar antes de tiempo evaluamos caso por caso y buscamos la mejor solución para vos.',
-    },
-    {
-      q: '¿Qué métodos de pago aceptan?',
-      a: 'Tarjeta de crédito/débito, PayPal, transferencia bancaria, Nequi, Daviplata, cripto (USDT/BTC) y efectivo contra entrega en Bogotá.',
-    },
-  ];
+const Faq = ({ accent }) => {
+  const [open, setOpen] = useState(0);
   return (
     <section className="faq" id="faq">
-      <div className="section-header">
-        <h2>Preguntas frecuentes</h2>
-        <p>Todo lo que necesitás saber antes de comprar.</p>
+      <div className="section-head">
+        <span className="section-eyebrow">PREGUNTAS FRECUENTES</span>
+        <h2 className="section-title">Resolvemos tus dudas <em>antes</em><br/>de que las tengas.</h2>
       </div>
       <div className="faq-list">
-        {items.map((item, i) => (
-          <div className={`faq-item ${open === i ? 'faq-open' : ''}`} key={i}>
-            <button className="faq-q" onClick={() => setOpen(open === i ? null : i)}>
-              {item.q}
-              <Icon name={open === i ? 'minus' : 'plus'} size={18} />
-            </button>
-            <div className="faq-a">{item.a}</div>
-          </div>
+        {FAQ.map((f, i) => (
+          <button
+            key={i}
+            className={`faq-item ${open === i ? 'open' : ''}`}
+            onClick={() => setOpen(open === i ? -1 : i)}
+            style={open === i ? { borderColor: `${accent}50` } : {}}
+          >
+            <div className="faq-q">
+              <span>{f.q}</span>
+              <span className="faq-toggle" style={open === i ? { background: accent, color: '#fff', borderColor: accent } : {}}>
+                <Icon name={open === i ? 'minus' : 'plus'} size={16} />
+              </span>
+            </div>
+            <div className="faq-a-wrap">
+              <div className="faq-a">{f.a}</div>
+            </div>
+          </button>
         ))}
       </div>
     </section>
@@ -514,61 +777,70 @@ const Faq = () => {
 };
 
 // ============================================================
-// FINAL CTA
+// CTA + FOOTER
 // ============================================================
-const FinalCta = ({ accent, onCartOpen }) => (
+const FinalCta = ({ accent }) => (
   <section className="final-cta">
-    <div className="cta-inner">
-      <h2>¿Listo para empezar?</h2>
-      <p>Elegí tu plan, pagá en segundos y recibí tus accesos al instante.</p>
-      <div className="cta-btns">
+    <div className="final-cta-inner" style={{ background: `linear-gradient(135deg, ${accent}25, #3b82f615)`, borderColor: `${accent}40` }}>
+      <h2>¿Listo para dejar de pagar de más?</h2>
+      <p>Activá tu primer servicio hoy. Si no te convence, te devolvemos cada peso en las primeras 24 horas.</p>
+      <div className="final-cta-actions">
         <a href="#catalogo" className="btn-primary btn-lg" style={{ background: accent }}>
-          Ver catálogo
-          <Icon name="arrow" size={18} />
+          Ver catálogo <Icon name="arrow" size={18} />
         </a>
-        <a href="https://wa.me/" className="btn-ghost btn-lg">
-          <Icon name="wa" size={18} />
-          Contactar por WhatsApp
+        <a href="#" className="btn-wa">
+          <Icon name="wa" size={18} /> Hablar por WhatsApp
         </a>
       </div>
     </div>
   </section>
 );
 
-// ============================================================
-// FOOTER
-// ============================================================
 const Footer = ({ accent }) => (
   <footer className="footer">
     <div className="footer-inner">
       <div className="footer-brand">
-        <span className="footer-logo">PixelPlay</span>
-        <p>Streaming premium accesible para todos.</p>
-        <div className="footer-social">
-          <a href="#"><Icon name="ig" size={18} /></a>
-          <a href="#"><Icon name="tg" size={18} /></a>
-          <a href="#"><Icon name="wa" size={18} /></a>
-          <a href="#"><Icon name="mail" size={18} /></a>
+        <a href="#top" className="logo">
+          <span className="logo-mark" style={{ background: `linear-gradient(135deg, ${accent}, #3b82f6)` }} />
+          <span className="logo-text">PixelPlay</span>
+        </a>
+        <p>Streaming premium accesible.<br/>Soporte humano, garantía real.</p>
+        <div className="footer-socials">
+          <a href="#" className="social-btn"><Icon name="wa" size={18} /></a>
+          <a href="#" className="social-btn"><Icon name="ig" size={18} /></a>
+          <a href="#" className="social-btn"><Icon name="tg" size={18} /></a>
+          <a href="#" className="social-btn"><Icon name="mail" size={18} /></a>
         </div>
       </div>
-      <div className="footer-links">
-        <h4>Servicios</h4>
-        <ul>
-          {SERVICES.map((s) => <li key={s.id}><a href="#catalogo">{s.name}</a></li>)}
-        </ul>
+      <div className="footer-col">
+        <h4>Producto</h4>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#porque">Por qué nosotros</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#faq">FAQ</a>
       </div>
-      <div className="footer-links">
+      <div className="footer-col">
         <h4>Soporte</h4>
-        <ul>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-          <li><a href="#">Política de privacidad</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
-          <li><a href="https://wa.me/">WhatsApp</a></li>
-        </ul>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Garantía y reembolsos</a>
+        <a href="#">Estado del servicio</a>
+        <a href="#">Reportar problema</a>
+      </div>
+      <div className="footer-col">
+        <h4>Contacto</h4>
+        <a href="#"><Icon name="wa" size={14} /> +1 (555) 010-2024</a>
+        <a href="#"><Icon name="mail" size={14} /> hola@pixelplay.shop</a>
+        <a href="#"><Icon name="tg" size={14} /> @pixelplay_oficial</a>
+        <a href="#"><Icon name="ig" size={14} /> @pixelplay.shop</a>
       </div>
     </div>
     <div className="footer-bottom">
-      <p>© 2025 PixelPlay · Todos los derechos reservados</p>
+      <div>© 2026 PixelPlay. Todos los derechos reservados.</div>
+      <div className="footer-legal">
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
     </div>
   </footer>
 );
@@ -576,170 +848,255 @@ const Footer = ({ accent }) => (
 // ============================================================
 // CART DRAWER
 // ============================================================
-const CartDrawer = ({ cart, onRemove, onClose, accent }) => {
-  const subtotal = cart.reduce((s, c) => s + c.plan.price, 0);
-  const count = cart.length;
-  const discount = count >= 4 ? 0.20 : count === 3 ? 0.15 : count === 2 ? 0.10 : 0;
-  const total = subtotal * (1 - discount);
+const CartDrawer = ({ open, onClose, cart, setCart, accent, onCheckout }) => {
+  const subtotal = cart.reduce((sum, c) => sum + c.plan.price, 0);
+  const discountRate = cart.length >= 4 ? 0.20 : cart.length >= 3 ? 0.15 : cart.length >= 2 ? 0.10 : 0;
+  const discount = subtotal * discountRate;
+  const total = subtotal - discount;
 
   return (
     <>
-      <div className="drawer-overlay" onClick={onClose} />
-      <div className="drawer">
+      <div className={`drawer-backdrop ${open ? 'open' : ''}`} onClick={onClose} />
+      <aside className={`drawer ${open ? 'open' : ''}`}>
         <div className="drawer-head">
-          <h3>Tu carrito</h3>
-          <button onClick={onClose}><Icon name="close" size={20} /></button>
-        </div>
-        {cart.length === 0 ? (
-          <div className="drawer-empty">
-            <Icon name="cart" size={40} />
-            <p>Tu carrito está vacío</p>
-            <button className="btn-primary" style={{ background: accent }} onClick={onClose}>Ver catálogo</button>
+          <div>
+            <div className="drawer-title">Tu carrito</div>
+            <div className="drawer-sub">{cart.length} {cart.length === 1 ? 'servicio' : 'servicios'}</div>
           </div>
-        ) : (
-          <>
-            <div className="drawer-items">
+          <button className="icon-btn" onClick={onClose}><Icon name="close" size={20} /></button>
+        </div>
+
+        <div className="drawer-body">
+          {cart.length === 0 ? (
+            <div className="cart-empty">
+              <div className="cart-empty-icon"><Icon name="cart" size={28} /></div>
+              <h3>Tu carrito está vacío</h3>
+              <p>Explorá el catálogo y empezá a armar tu combo.</p>
+              <button className="btn-primary" style={{ background: accent }} onClick={onClose}>Ver catálogo</button>
+            </div>
+          ) : (
+            <div className="cart-items">
               {cart.map((c, i) => (
-                <div className="drawer-item" key={i}>
-                  <ServiceBadge service={c.service} size={40} />
-                  <div className="drawer-item-info">
-                    <div className="drawer-item-name">{c.service.name}</div>
-                    <div className="drawer-item-plan">{c.plan.label}</div>
+                <div key={i} className="cart-item">
+                  <ServiceBadge service={c} size={48} />
+                  <div className="cart-item-meta">
+                    <div className="cart-item-name">{c.name}</div>
+                    <div className="cart-item-plan">{c.plan.label}</div>
                   </div>
-                  <div className="drawer-item-price">{formatCOP(c.plan.price)}</div>
-                  <button className="drawer-item-remove" onClick={() => onRemove(i)}>
-                    <Icon name="close" size={14} />
-                  </button>
+                  <div className="cart-item-right">
+                    <div className="cart-item-price">${c.plan.price.toFixed(2)}</div>
+                    <button className="cart-remove" onClick={() => setCart(cart.filter((_, j) => j !== i))}>
+                      <Icon name="close" size={14} />
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
-            {discount > 0 && (
-              <div className="drawer-discount">
-                <Icon name="bolt" size={16} />
-                Combo: {Math.round(discount * 100)}% de descuento aplicado
+          )}
+        </div>
+
+        {cart.length > 0 && (
+          <div className="drawer-foot">
+            <div className="totals">
+              <div className="total-row">
+                <span>Subtotal</span>
+                <span>{formatCOP(subtotal)}</span>
               </div>
-            )}
-            <div className="drawer-summary">
-              {discount > 0 && (
-                <div className="drawer-row">
-                  <span>Subtotal</span>
-                  <span>{formatCOP(subtotal)}</span>
+              {discountRate > 0 && (
+                <div className="total-row discount">
+                  <span>Descuento combo ({(discountRate * 100).toFixed(0)}%)</span>
+                  <span>-{formatCOP(Math.round(discount))}</span>
                 </div>
               )}
-              {discount > 0 && (
-                <div className="drawer-row drawer-saving">
-                  <span>Descuento combo</span>
-                  <span>-{formatCOP(subtotal * discount)}</span>
-                </div>
-              )}
-              <div className="drawer-row drawer-total">
-                <span>Total/mes</span>
-                <span>{formatCOP(total)}</span>
+              <div className="total-row total-final">
+                <span>Total mensual</span>
+                <span>{formatCOP(Math.round(total))}</span>
               </div>
             </div>
-            <button className="btn-primary btn-checkout" style={{ background: accent }}>
-              Finalizar compra
-              <Icon name="arrow" size={18} />
+            <button className="btn-primary btn-lg btn-block" style={{ background: accent }} onClick={onCheckout}>
+              <Icon name="lock" size={16} /> Pagar ahora · {formatCOP(Math.round(total))}
             </button>
-            <button className="btn-ghost btn-wa-checkout" onClick={onClose}>
-              <Icon name="wa" size={18} />
-              Pedir por WhatsApp
-            </button>
-          </>
+            <div className="drawer-trust">
+              <Icon name="shield" size={13} /> Pago cifrado · Entrega en minutos · Garantía total
+            </div>
+          </div>
         )}
-      </div>
+      </aside>
     </>
   );
 };
 
 // ============================================================
-// ORDER MODAL (post-checkout)
+// CHECKOUT MODAL
 // ============================================================
-const OrderModal = ({ cart, total, onClose, accent }) => (
-  <div className="modal-overlay" onClick={onClose}>
-    <div className="modal" onClick={(e) => e.stopPropagation()}>
-      <button className="modal-close" onClick={onClose}><Icon name="close" size={20} /></button>
-      <div className="modal-icon" style={{ color: accent }}><Icon name="check" size={48} /></div>
-      <h2>¡Pedido recibido!</h2>
-      <p>Te contactamos en menos de 5 minutos por WhatsApp para enviarte tus accesos.</p>
-      <div className="modal-summary">
-        {cart.map((c, i) => (
-          <div className="modal-item" key={i}>
-            <span>{c.service.name} — {c.plan.label}</span>
-            <span>{formatCOP(c.plan.price)}</span>
+const CheckoutModal = ({ open, onClose, total, accent }) => {
+  const [step, setStep] = useState(0);
+  const [method, setMethod] = useState('card');
+  if (!open) return null;
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
+        {step === 0 ? (
+          <>
+            <div className="modal-head">
+              <div className="modal-title">Confirmar pago</div>
+              <button className="icon-btn" onClick={onClose}><Icon name="close" size={18} /></button>
+            </div>
+            <div className="modal-body">
+              <div className="pay-methods">
+                {[
+                  ['card', 'Tarjeta'],
+                  ['paypal', 'PayPal'],
+                  ['crypto', 'Cripto'],
+                  ['transfer', 'Transferencia'],
+                ].map(([k, l]) => (
+                  <button
+                    key={k}
+                    className={`pay-method ${method === k ? 'active' : ''}`}
+                    onClick={() => setMethod(k)}
+                    style={method === k ? { borderColor: accent, background: `${accent}15` } : {}}
+                  >
+                    {l}
+                  </button>
+                ))}
+              </div>
+              {method === 'card' && (
+                <div className="pay-fields">
+                  <label>Número de tarjeta
+                    <input type="text" placeholder="4242 4242 4242 4242" />
+                  </label>
+                  <div className="pay-row">
+                    <label>Vencimiento
+                      <input type="text" placeholder="MM / AA" />
+                    </label>
+                    <label>CVV
+                      <input type="text" placeholder="123" />
+                    </label>
+                  </div>
+                  <label>Email (para recibir tus accesos)
+                    <input type="email" placeholder="tu@email.com" />
+                  </label>
+                  <label>WhatsApp (opcional)
+                    <input type="tel" placeholder="+1 555 0102024" />
+                  </label>
+                </div>
+              )}
+              {method !== 'card' && (
+                <div className="pay-alt">
+                  <div className="pay-alt-icon"><Icon name="lock" size={28} /></div>
+                  <p>Te redirigiremos a la pasarela segura de <strong>{method === 'paypal' ? 'PayPal' : method === 'crypto' ? 'pago en cripto' : 'transferencia bancaria'}</strong> para completar tu compra.</p>
+                </div>
+              )}
+              <button
+                className="btn-primary btn-lg btn-block"
+                style={{ background: accent, marginTop: 18 }}
+                onClick={() => setStep(1)}
+              >
+                <Icon name="lock" size={16} /> Pagar {formatCOP(Math.round(total))}
+              </button>
+              <div className="modal-trust">Pago cifrado SSL · No guardamos datos de tarjeta</div>
+            </div>
+          </>
+        ) : (
+          <div className="checkout-success">
+            <div className="success-ring" style={{ borderColor: accent }}>
+              <Icon name="check" size={36} />
+            </div>
+            <h3>¡Pago confirmado!</h3>
+            <p>Estás recibiendo tus accesos por WhatsApp y correo en los próximos minutos. Si tenés cualquier duda, escribinos.</p>
+            <button className="btn-primary" style={{ background: accent }} onClick={onClose}>Listo</button>
           </div>
-        ))}
-        <div className="modal-total">
-          <span>Total</span>
-          <span>{formatCOP(total)}</span>
-        </div>
+        )}
       </div>
-      <a href="https://wa.me/" className="btn-primary" style={{ background: accent, display: 'flex', alignItems: 'center', gap: 8, justifyContent: 'center' }}>
-        <Icon name="wa" size={18} />
-        Ir a WhatsApp
-      </a>
     </div>
-  </div>
+  );
+};
+
+// ============================================================
+// FLOATING WA
+// ============================================================
+const FloatingWA = () => (
+  <a href="#" className="float-wa" aria-label="Contactar por WhatsApp">
+    <Icon name="wa" size={26} />
+    <span className="float-wa-pulse" />
+  </a>
 );
 
 // ============================================================
-// APP ROOT
+// APP
 // ============================================================
-const App = () => {
-  const t = useTweaks({
-    accent: '#8b5cf6',
-    density: 'comfortable',
-    roundness: 'rounded',
-    showTestimonials: true,
-  });
+const DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#8b5cf6",
+  "density": "comfortable",
+  "showFloatingWA": true
+}/*EDITMODE-END*/;
 
+function App() {
+  const [t, setTweak] = useTweaks(DEFAULTS);
   const [cart, setCart] = useState([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [orderDone, setOrderDone] = useState(false);
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
 
   const addToCart = (service, plan) => {
-    setCart((prev) => [...prev, { service, plan }]);
-  };
-  const removeFromCart = (idx) => {
-    setCart((prev) => prev.filter((_, i) => i !== idx));
+    if (cart.some(c => c.id === service.id)) {
+      setCart(cart.filter(c => c.id !== service.id));
+    } else {
+      setCart([...cart, { ...service, plan }]);
+    }
   };
 
-  const subtotal = cart.reduce((s, c) => s + c.plan.price, 0);
-  const count = cart.length;
-  const discount = count >= 4 ? 0.20 : count === 3 ? 0.15 : count === 2 ? 0.10 : 0;
-  const total = subtotal * (1 - discount);
+  const subtotal = cart.reduce((sum, c) => sum + c.plan.price, 0);
+  const discountRate = cart.length >= 4 ? 0.20 : cart.length >= 3 ? 0.15 : cart.length >= 2 ? 0.10 : 0;
+  const total = subtotal * (1 - discountRate);
 
   return (
     <div className={`app density-${t.density}`} style={{ '--accent': t.accent }}>
       <Nav cartCount={cart.length} onCartOpen={() => setDrawerOpen(true)} accent={t.accent} />
       <Hero accent={t.accent} />
+      <WorldCupBanner onAdd={addToCart} cart={cart} />
       <How accent={t.accent} />
       <Catalog onAdd={addToCart} cart={cart} accent={t.accent} />
       <Why accent={t.accent} />
-      {t.showTestimonials && <Testimonials />}
-      <Faq />
-      <FinalCta accent={t.accent} onCartOpen={() => setDrawerOpen(true)} />
-      <Footer accent={t.accent} />
+      <Testimonials accent={t.accent} />
 
-      {drawerOpen && (
-        <CartDrawer
-          cart={cart}
-          onRemove={removeFromCart}
-          onClose={() => setDrawerOpen(false)}
-          accent={t.accent}
-        />
-      )}
-      {orderDone && (
-        <OrderModal
-          cart={cart}
-          total={total}
-          onClose={() => { setOrderDone(false); setCart([]); }}
-          accent={t.accent}
-        />
-      )}
-      <TweaksPanel />
+      <CartDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        cart={cart}
+        setCart={setCart}
+        accent={t.accent}
+        onCheckout={() => { setDrawerOpen(false); setCheckoutOpen(true); }}
+      />
+      <CheckoutModal
+        open={checkoutOpen}
+        onClose={() => setCheckoutOpen(false)}
+        total={total}
+        accent={t.accent}
+      />
+      {t.showFloatingWA && <FloatingWA />}
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Color de acento">
+          <TweakColor
+            value={t.accent}
+            onChange={(v) => setTweak('accent', v)}
+            options={['#8b5cf6', '#3b82f6', '#06b6d4', '#ec4899', '#f59e0b', '#10b981']}
+          />
+        </TweakSection>
+        <TweakSection title="Densidad">
+          <TweakRadio
+            value={t.density}
+            onChange={(v) => setTweak('density', v)}
+            options={[['comfortable', 'Cómoda'], ['compact', 'Compacta']]}
+          />
+        </TweakSection>
+        <TweakSection title="Botón flotante WhatsApp">
+          <TweakToggle value={t.showFloatingWA} onChange={(v) => setTweak('showFloatingWA', v)} />
+        </TweakSection>
+      </TweaksPanel>
     </div>
   );
-};
+}
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
