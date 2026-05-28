@@ -26,8 +26,7 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA1Nic+CiAgPHRleHQgeD0nMzInIHk9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsVGltZXMgTmV3IFJvbWFuLHNlcmlmJyBmb250LXN0eWxlPSdpdGFsaWMnIGZvbnQtd2VpZ2h0PSc3MDAnIGZvbnQtc2l6ZT0nMTgnIGxldHRlci1zcGFjaW5nPScwLjMnPkRpc25leTwvdGV4dD4KICA8dGV4dCB4PSczMicgeT0nNTAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZpbGw9JyM1QkE0RkYnIGZvbnQtZmFtaWx5PSdBcmlhbCBCbGFjayxBcmlhbCxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzIyJz4rPC90ZXh0Pgo8L3N2Zz4K',
-    logoScale: 0.9,
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMTknIHk9JzQ0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nNDAnPkQ8L3RleHQ+CiAgPHRleHQgeD0nNDcnIHk9JzQyJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjNUJBNEZGJyBmb250LWZhbWlseT0nQXJpYWwgQmxhY2ssQXJpYWwsc2Fucy1zZXJpZicgZm9udC13ZWlnaHQ9JzkwMCcgZm9udC1zaXplPScyNic+KzwvdGV4dD4KPC9zdmc+Cg==',
   },
   {
     id: 'max',
@@ -48,8 +47,7 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#0EA5E9',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzI0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMTMnIGxldHRlci1zcGFjaW5nPScwLjUnPnByaW1lPC90ZXh0PgogIDx0ZXh0IHg9JzMwJyB5PSczOCcgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0ncmdiYSgyNTUsMjU1LDI1NSwwLjg1KScgZm9udC1mYW1pbHk9J0FyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc0MDAnIGZvbnQtc2l6ZT0nMTAnIGxldHRlci1zcGFjaW5nPScyJz52aWRlbzwvdGV4dD4KICA8cGF0aCBkPSdNMTUgNDggUTMwIDQzIDQ1IDQ4JyBmaWxsPSdub25lJyBzdHJva2U9JyMwMEE4RTEnIHN0cm9rZS13aWR0aD0nMy41JyBzdHJva2UtbGluZWNhcD0ncm91bmQnLz4KPC9zdmc+Cg==',
-    logoScale: 0.85,
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzMzJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMTknIGxldHRlci1zcGFjaW5nPScwLjUnPlByaW1lPC90ZXh0PgogIDxwYXRoIGQ9J00xMSA0NCBRMzAgMzggNDkgNDQnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzAwQThFMScgc3Ryb2tlLXdpZHRoPSczLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPgo8L3N2Zz4K',
   },
   {
     id: 'vix',
