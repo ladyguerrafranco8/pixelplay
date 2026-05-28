@@ -134,7 +134,8 @@ const SERVICES = [
       { type: '12 Meses', label: '12 Meses', price: 45000, popular: false },
     ],
     color: '#7D2AE8',
-    logoSlug: 'canva',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9J2cnIHgxPScwJyB5MT0nMCcgeDI9JzEnIHkyPScxJz4KICAgICAgPHN0b3Agb2Zmc2V0PScwJScgc3RvcC1jb2xvcj0nIzAwQzRDQycvPgogICAgICA8c3RvcCBvZmZzZXQ9JzEwMCUnIHN0b3AtY29sb3I9JyM3RDJBRTgnLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxjaXJjbGUgY3g9JzMwJyBjeT0nMzAnIHI9JzMwJyBmaWxsPSd1cmwoI2cpJy8+CiAgPHRleHQgeD0nMzInIHk9JzQ0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsVGltZXMgTmV3IFJvbWFuLHNlcmlmJyBmb250LXNpemU9JzQyJyBmb250LXN0eWxlPSdpdGFsaWMnIGZvbnQtd2VpZ2h0PSc0MDAnPkM8L3RleHQ+Cjwvc3ZnPgo=',
+    logoScale: 0.92,
   },
 ];
 
