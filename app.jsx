@@ -26,8 +26,7 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4MCA3MCc+PHBhdGggZD0nTTEwIDM4IFE0MCA1IDcwIDM4JyBmaWxsPSdub25lJyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzMuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJy8+PHRleHQgeD0nNDAnIHk9JzYwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9Ikdlb3JnaWEsVGltZXMgTmV3IFJvbWFuLHNlcmlmIiBmb250LXN0eWxlPSdpdGFsaWMnIGZvbnQtd2VpZ2h0PSc3MDAnIGZvbnQtc2l6ZT0nMjAnIGxldHRlci1zcGFjaW5nPScwLjUnPkRpc25leSs8L3RleHQ+PC9zdmc+',
-    logoScale: 0.82,
+    logoSlug: 'disneyplus',
   },
   {
     id: 'max',
@@ -37,7 +36,7 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#7C3AED',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHJlY3QgeD0nNicgeT0nMTgnIHdpZHRoPSc0OCcgaGVpZ2h0PSczMCcgcng9JzYnIGZpbGw9J25vbmUnIHN0cm9rZT0ncmdiYSgyNTUsMjU1LDI1NSwwLjE1KScgc3Ryb2tlLXdpZHRoPScxJy8+PHRleHQgeD0nMzAnIHk9JzM5JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMjInIGxldHRlci1zcGFjaW5nPSczJz5NQVg8L3RleHQ+PC9zdmc+',
+    logoSlug: 'max',
   },
   {
     id: 'prime',
@@ -47,8 +46,7 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#0EA5E9',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHRleHQgeD0nMzAnIHk9JzI3JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMTMnIGxldHRlci1zcGFjaW5nPScxJz5wcmltZTwvdGV4dD48dGV4dCB4PSczMCcgeT0nNDAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZpbGw9J3doaXRlJyBmb250LWZhbWlseT0nQXJpYWwsc2Fucy1zZXJpZicgZm9udC13ZWlnaHQ9JzQwMCcgZm9udC1zaXplPScxMCcgbGV0dGVyLXNwYWNpbmc9JzEnPnZpZGVvPC90ZXh0PjxwYXRoIGQ9J00xOCA0OCBRMzAgNDQgNDIgNDgnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzAwQThFMScgc3Ryb2tlLXdpZHRoPScyLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPjwvc3ZnPg==',
-    logoScale: 0.85,
+    logoSlug: 'primevideo',
   },
   {
     id: 'vix',
@@ -134,8 +132,7 @@ const SERVICES = [
       { type: '12 Meses', label: '12 Meses', price: 45000, popular: false },
     ],
     color: '#7D2AE8',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHBhdGggZD0nTTQ0IDIyIEExOCAxOCAwIDEgMCA0NCAzOCcgZmlsbD0nbm9uZScgc3Ryb2tlPSd3aGl0ZScgc3Ryb2tlLXdpZHRoPSc2JyBzdHJva2UtbGluZWNhcD0ncm91bmQnLz48L3N2Zz4=',
-    logoScale: 0.72,
+    logoSlug: 'canva',
   },
 ];
 
@@ -227,7 +224,7 @@ const WHY = [
     body: 'Pagás una fracción de lo que costaría cada servicio por separado. Sin letra chica, sin sorpresas en la factura.',
   },
   {
-    icon: 'rocket',
+    icon: 'clock',
     color: '#FBBF24',
     title: 'Entrega en minutos',
     body: 'Tu cuenta llega directo a tu WhatsApp o correo en menos de 5 minutos tras confirmar el pago. Automatizado.',
@@ -310,6 +307,7 @@ const Icon = ({ name, size = 20 }) => {
     case 'wallet': return <svg {...props} strokeWidth={1.5}><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 2v6"/><path d="M8 2v6"/><path d="M2 10h20"/><circle cx="16.5" cy="15" r="1.5" fill="currentColor" stroke="none"/></svg>;
     case 'trophy': return <svg {...props} strokeWidth={1.5}><path d="M6 2h12v8a6 6 0 01-12 0V2z"/><path d="M6 6H3a2 2 0 000 4h3"/><path d="M18 6h3a2 2 0 010 4h-3"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>;
     case 'soccer': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M12 3l3 5-3 3-3-3 3-5z" fill="currentColor" fillOpacity="0.3"/><path d="M12 21l-3-5 3-3 3 3-3 5z" fill="currentColor" fillOpacity="0.3"/><path d="M3.5 7.5L8 9l1 4-4-1.5-1.5-4z" fill="currentColor" fillOpacity="0.3"/><path d="M20.5 7.5L16 9l-1 4 4-1.5 1.5-4z" fill="currentColor" fillOpacity="0.3"/></svg>;
+    case 'clock': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/><path d="M12 2v2"/></svg>;
     default: return null;
   }
 };
@@ -368,7 +366,7 @@ const Nav = ({ cartCount, onCartOpen, accent }) => {
     <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#top" className="logo">
-          <span className="logo-mark" style={{ background: '#ef4444' }} />
+          <span className="logo-mark" style={{ background: 'rgba(255,255,255,0.92)', boxShadow: '0 2px 10px rgba(255,255,255,0.15)' }} />
           <span className="logo-text">PixelPlay</span>
         </a>
         <div className="nav-links">
@@ -587,6 +585,30 @@ const Why = ({ accent }) => (
 );
 
 // ============================================================
+// FLIP UNIT — countdown digit with calendar-flip animation
+// ============================================================
+const FlipUnit = ({ value, label }) => {
+  const prevRef = useRef(value);
+  const [animKey, setAnimKey] = useState(0);
+  useEffect(() => {
+    if (value !== prevRef.current) {
+      prevRef.current = value;
+      setAnimKey(k => k + 1);
+    }
+  }, [value]);
+  return (
+    <div className="wc-flip-unit">
+      <div className="wc-flip-card">
+        <div className="wc-flip-inner" key={animKey}>
+          <span className="wc-flip-num">{value}</span>
+        </div>
+      </div>
+      <span className="wc-lbl">{label}</span>
+    </div>
+  );
+};
+
+// ============================================================
 // WORLD CUP BANNER
 // ============================================================
 const WorldCupBanner = ({ onAdd, cart }) => {
@@ -656,16 +678,15 @@ const WorldCupBanner = ({ onAdd, cart }) => {
           </div>
         </div>
         <div className="wc-right">
-          <div className="wc-ball-icon">⚽</div>
           <div className="wc-countdown-label">El Mundial empieza en</div>
           <div className="wc-countdown">
-            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.d)}</span><span className="wc-lbl">días</span></div>
+            <FlipUnit value={pad(timeLeft.d)} label="días" />
             <span className="wc-sep">:</span>
-            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.h)}</span><span className="wc-lbl">horas</span></div>
+            <FlipUnit value={pad(timeLeft.h)} label="horas" />
             <span className="wc-sep">:</span>
-            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.m)}</span><span className="wc-lbl">min</span></div>
+            <FlipUnit value={pad(timeLeft.m)} label="min" />
             <span className="wc-sep">:</span>
-            <div className="wc-unit"><span className="wc-num">{pad(timeLeft.s)}</span><span className="wc-lbl">seg</span></div>
+            <FlipUnit value={pad(timeLeft.s)} label="seg" />
           </div>
           <div className="wc-badge">🏆 FIFA World Cup 2026™</div>
         </div>
@@ -804,7 +825,7 @@ const Footer = ({ accent }) => (
     <div className="footer-inner">
       <div className="footer-brand">
         <a href="#top" className="logo">
-          <span className="logo-mark" style={{ background: '#ef4444' }} />
+          <span className="logo-mark" style={{ background: 'rgba(255,255,255,0.92)', boxShadow: '0 2px 10px rgba(255,255,255,0.15)' }} />
           <span className="logo-text">PixelPlay</span>
         </a>
         <p>Streaming premium accesible.<br/>Soporte 24/7, garantía real.</p>
