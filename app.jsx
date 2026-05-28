@@ -47,7 +47,8 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#0EA5E9',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHBvbHlnb24gcG9pbnRzPScxNCwxMCA1MCwzMCAxNCw1MCcgZmlsbD0nd2hpdGUnLz48L3N2Zz4=',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHRleHQgeD0nMzAnIHk9JzI3JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMTMnIGxldHRlci1zcGFjaW5nPScxJz5wcmltZTwvdGV4dD48dGV4dCB4PSczMCcgeT0nNDAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZpbGw9J3doaXRlJyBmb250LWZhbWlseT0nQXJpYWwsc2Fucy1zZXJpZicgZm9udC13ZWlnaHQ9JzQwMCcgZm9udC1zaXplPScxMCcgbGV0dGVyLXNwYWNpbmc9JzEnPnZpZGVvPC90ZXh0PjxwYXRoIGQ9J00xOCA0OCBRMzAgNDQgNDIgNDgnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzAwQThFMScgc3Ryb2tlLXdpZHRoPScyLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPjwvc3ZnPg==',
+    logoScale: 0.85,
   },
   {
     id: 'vix',
@@ -133,7 +134,8 @@ const SERVICES = [
       { type: '12 Meses', label: '12 Meses', price: 45000, popular: false },
     ],
     color: '#7D2AE8',
-    logoSlug: 'canva',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHBhdGggZD0nTTQ0IDIyIEExOCAxOCAwIDEgMCA0NCAzOCcgZmlsbD0nbm9uZScgc3Ryb2tlPSd3aGl0ZScgc3Ryb2tlLXdpZHRoPSc2JyBzdHJva2UtbGluZWNhcD0ncm91bmQnLz48L3N2Zz4=',
+    logoScale: 0.72,
   },
 ];
 
@@ -366,7 +368,7 @@ const Nav = ({ cartCount, onCartOpen, accent }) => {
     <nav className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#top" className="logo">
-          <span className="logo-mark" style={{ background: `linear-gradient(135deg, ${accent}, #3b82f6)` }} />
+          <span className="logo-mark" style={{ background: '#ef4444' }} />
           <span className="logo-text">PixelPlay</span>
         </a>
         <div className="nav-links">
@@ -569,7 +571,6 @@ const Why = ({ accent }) => (
   <section className="why" id="porque">
     <div className="section-head">
       <h2 className="section-title">Precio justo,<br/>servicio <em>premium</em>.</h2>
-      <p className="section-sub">Más de 4 años operando, +12.000 clientes activos, 99.2% de retención mensual.</p>
     </div>
     <div className="why-grid">
       {WHY.map((w, i) => (
@@ -803,7 +804,7 @@ const Footer = ({ accent }) => (
     <div className="footer-inner">
       <div className="footer-brand">
         <a href="#top" className="logo">
-          <span className="logo-mark" style={{ background: `linear-gradient(135deg, ${accent}, #3b82f6)` }} />
+          <span className="logo-mark" style={{ background: '#ef4444' }} />
           <span className="logo-text">PixelPlay</span>
         </a>
         <p>Streaming premium accesible.<br/>Soporte 24/7, garantía real.</p>
