@@ -169,11 +169,11 @@ const TESTIMONIALS = [
     avatar: 'JM',
   },
   {
-    name: 'Valentina López',
-    handle: 'valelo',
+    name: 'Tatiana Lopera',
+    handle: 'tatianal',
     text: 'Recomendado al 100%. Pasé de pagar más de 40$ al mes en suscripciones a solo 12$ por todo lo que veo.',
     rating: 5,
-    avatar: 'VL',
+    avatar: 'TL',
   },
   {
     name: 'Roberto Mendoza',
@@ -405,7 +405,7 @@ const Hero = ({ accent }) => {
       <div className="hero-inner">
         <div className="hero-eyebrow">
           <span className="dot" style={{ background: '#10B981' }} />
-          <span>+12.480 clientes activos · stock disponible ahora</span>
+          <span>+7.480 clientes activos · stock disponible ahora</span>
         </div>
 
         <h1 className="hero-title">
@@ -742,7 +742,7 @@ const Testimonials = ({ accent }) => (
   <section className="testimonials">
     <div className="section-head">
       <span className="section-eyebrow">TESTIMONIOS</span>
-      <h2 className="section-title">+12.000 clientes <em>que repiten</em>.</h2>
+      <h2 className="section-title">+7.000 clientes <em>que repiten</em>.</h2>
       <div className="rating-summary">
         <div className="stars" style={{ color: '#FBBF24' }}>
           {[...Array(5)].map((_, i) => <Icon key={i} name="star" size={18} />)}
