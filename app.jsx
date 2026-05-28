@@ -26,7 +26,8 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoSlug: 'disneyplus',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA1Nic+CiAgPHRleHQgeD0nMzInIHk9JzI2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsVGltZXMgTmV3IFJvbWFuLHNlcmlmJyBmb250LXN0eWxlPSdpdGFsaWMnIGZvbnQtd2VpZ2h0PSc3MDAnIGZvbnQtc2l6ZT0nMTgnIGxldHRlci1zcGFjaW5nPScwLjMnPkRpc25leTwvdGV4dD4KICA8dGV4dCB4PSczMicgeT0nNTAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZpbGw9JyM1QkE0RkYnIGZvbnQtZmFtaWx5PSdBcmlhbCBCbGFjayxBcmlhbCxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzIyJz4rPC90ZXh0Pgo8L3N2Zz4K',
+    logoScale: 0.9,
   },
   {
     id: 'max',
@@ -36,7 +37,8 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#7C3AED',
-    logoSlug: 'max',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzQwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEltcGFjdCxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzI4JyBsZXR0ZXItc3BhY2luZz0nLTEnPm1heDwvdGV4dD4KPC9zdmc+Cg==',
+    logoScale: 0.8,
   },
   {
     id: 'prime',
@@ -46,7 +48,8 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#0EA5E9',
-    logoSlug: 'primevideo',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzI0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMTMnIGxldHRlci1zcGFjaW5nPScwLjUnPnByaW1lPC90ZXh0PgogIDx0ZXh0IHg9JzMwJyB5PSczOCcgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0ncmdiYSgyNTUsMjU1LDI1NSwwLjg1KScgZm9udC1mYW1pbHk9J0FyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc0MDAnIGZvbnQtc2l6ZT0nMTAnIGxldHRlci1zcGFjaW5nPScyJz52aWRlbzwvdGV4dD4KICA8cGF0aCBkPSdNMTUgNDggUTMwIDQzIDQ1IDQ4JyBmaWxsPSdub25lJyBzdHJva2U9JyMwMEE4RTEnIHN0cm9rZS13aWR0aD0nMy41JyBzdHJva2UtbGluZWNhcD0ncm91bmQnLz4KPC9zdmc+Cg==',
+    logoScale: 0.85,
   },
   {
     id: 'vix',
@@ -56,7 +59,8 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla', price: 12000, popular: false },
     ],
     color: '#D20029',
-    logoSlug: 'vix',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzQyJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEltcGFjdCxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzMwJyBsZXR0ZXItc3BhY2luZz0nLTInPlZJWDwvdGV4dD4KPC9zdmc+Cg==',
+    logoScale: 0.8,
   },
   {
     id: 'paramount',
@@ -467,7 +471,7 @@ const ServiceCard = ({ service, onAdd, inCart, accent }) => {
   return (
     <article className={`svc-card ${open ? 'svc-card--open' : ''}`}>
       <div className="svc-card-top" onClick={() => setOpen(o => !o)} style={{ cursor: 'pointer' }}>
-        <ServiceBadge service={service} size={56} />
+        <ServiceBadge service={service} size={64} />
         <div className="svc-card-meta">
           <h3>{service.name}</h3>
           <p>{service.tagline}</p>
@@ -586,19 +590,25 @@ const Why = ({ accent }) => (
 // FLIP UNIT — countdown digit with calendar-flip animation
 // ============================================================
 const FlipUnit = ({ value, label }) => {
-  const prevRef = useRef(value);
-  const [animKey, setAnimKey] = useState(0);
+  const [shown, setShown] = useState(value);
+  const [phase, setPhase] = useState('');
+  const busyRef = useRef(false);
+
   useEffect(() => {
-    if (value !== prevRef.current) {
-      prevRef.current = value;
-      setAnimKey(k => k + 1);
-    }
+    if (value === shown && !busyRef.current) return;
+    if (busyRef.current) return;
+    busyRef.current = true;
+    setPhase('exit');
+    const t1 = setTimeout(() => { setShown(value); setPhase('enter'); }, 420);
+    const t2 = setTimeout(() => { setPhase(''); busyRef.current = false; }, 980);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
   }, [value]);
+
   return (
     <div className="wc-flip-unit">
       <div className="wc-flip-card">
-        <div className="wc-flip-inner" key={animKey}>
-          <span className="wc-flip-num">{value}</span>
+        <div className={`wc-flip-inner${phase ? ' wc-flip-' + phase : ''}`}>
+          <span className="wc-flip-num">{shown}</span>
         </div>
       </div>
       <span className="wc-lbl">{label}</span>

@@ -759,9 +759,9 @@ section {
 }
 .how-grid::-webkit-scrollbar { display: none; }
 .how-card {
-  flex: 0 0 260px;
+  flex: 0 0 285px;
   scroll-snap-align: start;
-  padding: 20px 16px;
+  padding: 28px 22px;
   background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
@@ -825,7 +825,7 @@ section {
   display: none;
 }
 @media (max-width: 640px) {
-  .how-card { flex: 0 0 220px; }
+  .how-card { flex: 0 0 252px; padding: 22px 18px; }
 }
 @media (max-width: 640px) {
   .why-card { flex: 0 0 220px; padding: 20px 16px; }
@@ -1675,13 +1675,24 @@ section {
   align-items: center;
   justify-content: center;
   padding: 14px 8px;
-  animation: flipInPage 0.42s cubic-bezier(0.22, 0.61, 0.36, 1);
-  transform-origin: center top;
+  transform-origin: bottom center;
+  will-change: transform, opacity;
 }
-@keyframes flipInPage {
-  0%   { transform: perspective(280px) rotateX(-90deg); opacity: 0; }
-  60%  { opacity: 1; }
-  100% { transform: perspective(280px) rotateX(0deg); opacity: 1; }
+.wc-flip-exit {
+  animation: calendarExit 0.44s ease-in forwards;
+}
+.wc-flip-enter {
+  animation: calendarEnter 0.56s ease-out forwards;
+}
+@keyframes calendarExit {
+  0%   { transform: perspective(260px) rotateX(0deg); opacity: 1; }
+  70%  { opacity: 0.6; }
+  100% { transform: perspective(260px) rotateX(-88deg); opacity: 0; }
+}
+@keyframes calendarEnter {
+  0%   { transform: perspective(260px) rotateX(88deg); opacity: 0; }
+  25%  { opacity: 1; }
+  100% { transform: perspective(260px) rotateX(0deg); opacity: 1; }
 }
 .wc-flip-num {
   font-family: var(--font-mono);
