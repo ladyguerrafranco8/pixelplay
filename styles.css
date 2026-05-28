@@ -1645,36 +1645,75 @@ section {
   display: inline-block;
 }
 
-/* flip clock */
+/* flip clock — calendar style */
 .wc-flip-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
+
+/* wrapper holds the rings above the card */
+.wc-cal-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.5));
+}
+
+/* metal ring row */
+.wc-cal-rings {
+  display: flex;
+  gap: 14px;
+  margin-bottom: -6px;
+  position: relative;
+  z-index: 4;
+  padding: 0 8px;
+}
+.wc-cal-ring {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #e0e0e0 30%, #888 100%);
+  border: 2px solid #555;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* card body */
 .wc-flip-card {
   position: relative;
-  width: 72px;
-  background: rgba(252,209,22,0.07);
-  border: 1px solid rgba(252,209,22,0.28);
-  border-radius: 12px;
+  width: 80px;
+  background: #f8f5ee;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(252,209,22,0.12);
+  box-shadow: 0 2px 0 #ccc, inset 0 0 0 1px rgba(0,0,0,0.08);
 }
-.wc-flip-card::after {
-  content: '';
+
+/* colored header strip */
+.wc-cal-head {
+  height: 22px;
+  background: linear-gradient(135deg, #D4251A 0%, #B01D14 100%);
+  flex-shrink: 0;
+}
+
+/* fold line in the middle */
+.wc-cal-fold {
   position: absolute;
-  left: 0; right: 0; top: 50%;
+  left: 0; right: 0;
+  top: calc(22px + 40px);
   height: 1px;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.12);
   z-index: 3;
   pointer-events: none;
 }
+
 .wc-flip-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 8px;
+  padding: 10px 8px 14px;
   transform-origin: bottom center;
   will-change: transform, opacity;
 }
@@ -1697,9 +1736,10 @@ section {
 .wc-flip-num {
   font-family: var(--font-mono);
   font-size: 38px;
-  font-weight: 700;
-  color: #FCD116;
+  font-weight: 800;
+  color: #1a1220;
   line-height: 1;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
 
 /* ============================================================

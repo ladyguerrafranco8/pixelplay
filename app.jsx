@@ -244,7 +244,7 @@ const WHY = [
     body: 'Humanos respondiendo, no bots. Cualquier día, cualquier hora. Promedio de respuesta: 8 minutos.',
   },
   {
-    icon: 'pulse',
+    icon: 'box',
     color: '#34D399',
     title: 'Stock siempre disponible',
     body: 'Inventario actualizado en tiempo real. Si lo ves disponible, lo tenés. Sin esperas.',
@@ -306,6 +306,7 @@ const Icon = ({ name, size = 20 }) => {
     case 'shield2': return <svg {...props} strokeWidth={1.5}><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" fill="currentColor" fillOpacity="0.15"/><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg>;
     case 'headset': return <svg {...props} strokeWidth={1.5}><path d="M4 14.5V12a8 8 0 0116 0v2.5"/><rect x="2" y="13" width="4" height="6" rx="2"/><rect x="18" y="13" width="4" height="6" rx="2"/><path d="M20 19a4 4 0 01-4 4h-2"/></svg>;
     case 'pulse': return <svg {...props} strokeWidth={1.5}><polyline points="2,12 6,12 9,4 12,20 15,8 18,12 22,12"/></svg>;
+    case 'box': return <svg {...props} strokeWidth={1.5}><path d="M2 7l10-5 10 5v10l-10 5L2 17V7z"/><path d="M12 2v20"/><path d="M2 7l10 5 10-5"/></svg>;
     case 'wallet': return <svg {...props} strokeWidth={1.5}><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 2v6"/><path d="M8 2v6"/><path d="M2 10h20"/><circle cx="16.5" cy="15" r="1.5" fill="currentColor" stroke="none"/></svg>;
     case 'trophy': return <svg {...props} strokeWidth={1.5}><path d="M6 2h12v8a6 6 0 01-12 0V2z"/><path d="M6 6H3a2 2 0 000 4h3"/><path d="M18 6h3a2 2 0 010 4h-3"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>;
     case 'soccer': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M12 3l3 5-3 3-3-3 3-5z" fill="currentColor" fillOpacity="0.3"/><path d="M12 21l-3-5 3-3 3 3-3 5z" fill="currentColor" fillOpacity="0.3"/><path d="M3.5 7.5L8 9l1 4-4-1.5-1.5-4z" fill="currentColor" fillOpacity="0.3"/><path d="M20.5 7.5L16 9l-1 4 4-1.5 1.5-4z" fill="currentColor" fillOpacity="0.3"/></svg>;
@@ -604,9 +605,18 @@ const FlipUnit = ({ value, label }) => {
 
   return (
     <div className="wc-flip-unit">
-      <div className="wc-flip-card">
-        <div className={`wc-flip-inner${phase ? ' wc-flip-' + phase : ''}`}>
-          <span className="wc-flip-num">{shown}</span>
+      <div className="wc-cal-wrapper">
+        <div className="wc-cal-rings">
+          <span className="wc-cal-ring" />
+          <span className="wc-cal-ring" />
+          <span className="wc-cal-ring" />
+        </div>
+        <div className="wc-flip-card">
+          <div className="wc-cal-head" />
+          <div className="wc-cal-fold" />
+          <div className={`wc-flip-inner${phase ? ' wc-flip-' + phase : ''}`}>
+            <span className="wc-flip-num">{shown}</span>
+          </div>
         </div>
       </div>
       <span className="wc-lbl">{label}</span>
