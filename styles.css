@@ -1586,15 +1586,13 @@ section {
   font-size: 96px;
   margin-bottom: 16px;
   display: block;
-  animation: wcBounce 0.9s ease-in-out infinite;
+  animation: wcBounce 2.5s ease-in-out infinite;
   line-height: 1;
 }
 @keyframes wcBounce {
-  0% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-10px) rotate(90deg); }
-  50% { transform: translateY(0) rotate(180deg); }
-  75% { transform: translateY(-10px) rotate(270deg); }
-  100% { transform: translateY(0) rotate(360deg); }
+  0%   { transform: translateX(-28px) rotate(0deg); }
+  50%  { transform: translateX(28px) rotate(360deg); }
+  100% { transform: translateX(-28px) rotate(720deg); }
 }
 .wc-countdown-label {
   font-size: 11px;
