@@ -260,17 +260,17 @@ const STEPS = [
   {
     n: '01',
     title: 'Elegí tu servicio',
-    body: 'Explorá el catálogo y seleccioná el plan que se ajusta a vos. Podés combinar varios servicios y obtener descuentos automáticos.',
+    body: 'Elegí el plan que necesitás. Combiná servicios y ahorrá más.',
   },
   {
     n: '02',
     title: 'Pagá en segundos',
-    body: 'Tarjeta, PayPal, transferencia o cripto. Checkout seguro, sin crear cuenta si no querés. Confirmación inmediata.',
+    body: 'Tarjeta, PayPal, cripto o transferencia. Sin crear cuenta.',
   },
   {
     n: '03',
     title: 'Recibí y disfrutá',
-    body: 'En menos de 5 minutos recibís tus accesos por WhatsApp o correo. Acceso completo desde cualquier dispositivo.',
+    body: 'Accesos en menos de 5 min por WhatsApp o correo.',
   },
 ];
 
