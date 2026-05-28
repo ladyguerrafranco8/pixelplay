@@ -1453,15 +1453,20 @@ section {
   max-width: var(--container);
   padding: 56px 40px 48px;
   background: linear-gradient(150deg, #07100a 0%, #0b1a0d 45%, #090e1a 100%);
-  border: 1px solid rgba(252,209,22,0.25);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--r-xl);
   overflow: hidden;
 }
 .wc-flag-stripe {
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 5px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 6px;
   display: flex;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
 }
 .wc-stripe { flex: 1; }
 .wc-yellow { flex: 2; background: #FCD116; }
@@ -1497,24 +1502,23 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #FCD116;
-  background: linear-gradient(135deg, rgba(252,209,22,0.15), rgba(252,209,22,0.05));
-  border: 1px solid rgba(252,209,22,0.4);
-  padding: 8px 16px;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 8px 18px;
   border-radius: 100px;
   margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(252,209,22,0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
   text-transform: uppercase;
-  animation: wcPulse 2.5s ease-in-out infinite;
+  animation: wcPulse 3s ease-in-out infinite;
 }
 @keyframes wcPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(252,209,22,0.15), inset 0 1px 0 rgba(255,255,255,0.1); }
-  50% { box-shadow: 0 0 36px rgba(252,209,22,0.35), inset 0 1px 0 rgba(255,255,255,0.1); }
+  0%, 100% { box-shadow: 0 2px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1); }
+  50% { box-shadow: 0 2px 24px rgba(0,0,0,0.4), 0 0 28px rgba(255,255,255,0.06), inset 0 1px 0 rgba(255,255,255,0.15); }
 }
-.wc-flag { font-size: 16px; }
 
 .wc-title {
   font-size: clamp(26px, 3.5vw, 38px);
@@ -1524,7 +1528,7 @@ section {
   color: #fff;
 }
 .wc-title-em {
-  color: #FCD116;
+  color: #fff;
   font-style: italic;
 }
 .wc-sub {
@@ -1540,15 +1544,15 @@ section {
   align-items: center;
   gap: 14px;
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(252,209,22,0.12);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   padding: 14px 16px;
   transition: border-color 0.2s ease, background 0.2s ease;
 }
-.wc-service:hover { border-color: rgba(252,209,22,0.3); background: rgba(252,209,22,0.04); }
+.wc-service:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.07); }
 .wc-svc-name { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 2px; }
-.wc-svc-extra { font-size: 11px; color: #FCD116; letter-spacing: 0.04em; margin-bottom: 3px; font-weight: 600; }
-.wc-svc-price { font-size: 18px; font-weight: 700; color: #FCD116; }
+.wc-svc-extra { font-size: 11px; color: var(--text-2); letter-spacing: 0.04em; margin-bottom: 3px; font-weight: 500; }
+.wc-svc-price { font-size: 18px; font-weight: 700; color: #fff; }
 .wc-svc-price span { font-size: 12px; font-weight: 400; color: var(--text-2); }
 .wc-btn {
   margin-left: auto;
@@ -1557,21 +1561,22 @@ section {
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
-  border: 1px solid #FCD116;
-  color: #FCD116;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.85);
   background: transparent;
   transition: background 0.2s, color 0.2s, transform 0.15s;
   white-space: nowrap;
   flex-shrink: 0;
 }
-.wc-btn:hover:not(:disabled) { background: #FCD116; color: #07100a; transform: scale(1.04); }
-.wc-btn-in { border-color: rgba(255,255,255,0.2); color: var(--text-2); cursor: default; }
+.wc-btn:hover:not(:disabled) { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.5); transform: scale(1.04); }
+.wc-btn-in { border-color: rgba(255,255,255,0.15); color: var(--text-2); cursor: default; }
 
 .wc-ball-icon {
-  font-size: 48px;
+  font-size: 96px;
   margin-bottom: 16px;
   display: block;
   animation: wcBounce 2s ease-in-out infinite;
+  line-height: 1;
 }
 @keyframes wcBounce {
   0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -1608,7 +1613,7 @@ section {
   box-shadow: 0 0 16px rgba(252,209,22,0.15);
 }
 .wc-lbl { font-size: 10px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.1em; }
-.wc-sep { font-size: 28px; font-weight: 700; color: rgba(252,209,22,0.4); padding-bottom: 22px; }
+.wc-sep { font-size: 28px; font-weight: 700; color: rgba(255,255,255,0.2); padding-bottom: 22px; }
 .wc-badge {
   font-size: 12px;
   color: var(--text-2);
