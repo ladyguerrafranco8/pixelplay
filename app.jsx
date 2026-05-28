@@ -307,6 +307,9 @@ const Icon = ({ name, size = 20 }) => {
     case 'wallet': return <svg {...props} strokeWidth={1.5}><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 2v6"/><path d="M8 2v6"/><path d="M2 10h20"/><circle cx="16.5" cy="15" r="1.5" fill="currentColor" stroke="none"/></svg>;
     case 'trophy': return <svg {...props} strokeWidth={1.5}><path d="M6 2h12v8a6 6 0 01-12 0V2z"/><path d="M6 6H3a2 2 0 000 4h3"/><path d="M18 6h3a2 2 0 010 4h-3"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>;
     case 'soccer': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M12 3l3 5-3 3-3-3 3-5z" fill="currentColor" fillOpacity="0.3"/><path d="M12 21l-3-5 3-3 3 3-3 5z" fill="currentColor" fillOpacity="0.3"/><path d="M3.5 7.5L8 9l1 4-4-1.5-1.5-4z" fill="currentColor" fillOpacity="0.3"/><path d="M20.5 7.5L16 9l-1 4 4-1.5 1.5-4z" fill="currentColor" fillOpacity="0.3"/></svg>;
+    case 'upload': return <svg {...props}><path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 16v2a2 2 0 002 2h10a2 2 0 002-2v-2"/></svg>;
+    case 'copy': return <svg {...props}><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>;
+    case 'image': return <svg {...props}><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>;
     default: return null;
   }
 };
@@ -924,82 +927,241 @@ const CartDrawer = ({ open, onClose, cart, setCart, accent, onCheckout }) => {
 // ============================================================
 // CHECKOUT MODAL
 // ============================================================
-const CheckoutModal = ({ open, onClose, total, accent }) => {
-  const [step, setStep] = useState(0);
-  const [method, setMethod] = useState('card');
+const PAYMENT_METHODS = (window.PIXELPLAY_CONFIG && window.PIXELPLAY_CONFIG.PAYMENT_METHODS) || [];
+
+const CheckoutModal = ({ open, onClose, cart, subtotal, discount, total, accent, onSuccess }) => {
+  const [step, setStep] = useState('form'); // form | pay | done
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [methodId, setMethodId] = useState(PAYMENT_METHODS[0] ? PAYMENT_METHODS[0].id : '');
+  const [file, setFile] = useState(null);
+  const [preview, setPreview] = useState(null);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
+  const [orderNumber, setOrderNumber] = useState(null);
+  const [copied, setCopied] = useState(false);
+  const fileInputRef = useRef(null);
+
+  // Reset cada vez que se abre el modal.
+  useEffect(() => {
+    if (open) {
+      setStep('form'); setError(''); setSending(false);
+      setFile(null); setPreview(null); setOrderNumber(null); setCopied(false);
+    }
+  }, [open]);
+
   if (!open) return null;
+
+  const method = PAYMENT_METHODS.find(m => m.id === methodId) || PAYMENT_METHODS[0] || null;
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  const canContinue = name.trim().length >= 2 && emailValid;
+
+  const close = () => { if (!sending) onClose(); };
+
+  const goToPay = () => {
+    if (!canContinue) { setError('Completá tu nombre y un email válido.'); return; }
+    setError(''); setStep('pay');
+  };
+
+  const onPickFile = (e) => {
+    const f = e.target.files && e.target.files[0];
+    if (!f) return;
+    if (!f.type.startsWith('image/')) { setError('Subí una imagen (captura de pantalla).'); return; }
+    setError('');
+    setFile(f);
+    const url = URL.createObjectURL(f);
+    setPreview(url);
+  };
+
+  const copyAccount = () => {
+    if (!method) return;
+    try {
+      navigator.clipboard.writeText(String(method.account).replace(/\s/g, ''));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch (_) {}
+  };
+
+  const submit = async () => {
+    if (!file) { setError('Subí el comprobante de pago para continuar.'); return; }
+    setSending(true); setError('');
+    const items = cart.map(c => ({
+      id: c.id,
+      name: c.name,
+      planType: c.plan.type,
+      planLabel: c.plan.label,
+      price: c.plan.price,
+    }));
+    const res = await window.PixelPlayAPI.submitOrder({
+      customer: { name: name.trim(), email: email.trim(), whatsapp: whatsapp.trim() },
+      paymentMethod: method ? method.label : methodId,
+      items, subtotal, discount, total,
+      file,
+    });
+    setSending(false);
+    if (!res.ok) { setError(res.message || 'No se pudo enviar el pedido.'); return; }
+    setOrderNumber(res.order_number);
+    setStep('done');
+  };
+
+  const finish = () => { if (onSuccess) onSuccess(); onClose(); };
+
   return (
-    <div className="modal-backdrop" onClick={onClose}>
+    <div className="modal-backdrop" onClick={close}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
-        {step === 0 ? (
+        {step === 'form' && (
           <>
             <div className="modal-head">
-              <div className="modal-title">Confirmar pago</div>
-              <button className="icon-btn" onClick={onClose}><Icon name="close" size={18} /></button>
+              <div className="modal-title">Tus datos y pago</div>
+              <button className="icon-btn" onClick={close}><Icon name="close" size={18} /></button>
             </div>
             <div className="modal-body">
-              <div className="pay-methods">
-                {[
-                  ['card', 'Tarjeta'],
-                  ['paypal', 'PayPal'],
-                  ['crypto', 'Cripto'],
-                  ['transfer', 'Transferencia'],
-                ].map(([k, l]) => (
-                  <button
-                    key={k}
-                    className={`pay-method ${method === k ? 'active' : ''}`}
-                    onClick={() => setMethod(k)}
-                    style={method === k ? { borderColor: accent, background: `${accent}15` } : {}}
-                  >
-                    {l}
-                  </button>
-                ))}
-              </div>
-              {method === 'card' && (
-                <div className="pay-fields">
-                  <label>Número de tarjeta
-                    <input type="text" placeholder="4242 4242 4242 4242" />
-                  </label>
-                  <div className="pay-row">
-                    <label>Vencimiento
-                      <input type="text" placeholder="MM / AA" />
-                    </label>
-                    <label>CVV
-                      <input type="text" placeholder="123" />
-                    </label>
+              <div className="co-summary">
+                {cart.map((c, i) => (
+                  <div key={i} className="co-line">
+                    <span>{c.name} <em className="co-plan">{c.plan.label}</em></span>
+                    <span>{formatCOP(c.plan.price)}</span>
                   </div>
-                  <label>Email (para recibir tus accesos)
-                    <input type="email" placeholder="tu@email.com" />
-                  </label>
-                  <label>WhatsApp (opcional)
-                    <input type="tel" placeholder="+1 555 0102024" />
-                  </label>
+                ))}
+                {discount > 0 && (
+                  <div className="co-line co-discount">
+                    <span>Descuento combo</span>
+                    <span>-{formatCOP(discount)}</span>
+                  </div>
+                )}
+                <div className="co-line co-total">
+                  <span>Total a pagar</span>
+                  <span>{formatCOP(total)}</span>
                 </div>
+              </div>
+
+              <div className="pay-fields">
+                <label>Nombre completo
+                  <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" />
+                </label>
+                <label>Email (para recibir tus accesos)
+                  <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@email.com" />
+                </label>
+                <label>WhatsApp (recomendado)
+                  <input type="tel" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} placeholder="+57 300 000 0000" />
+                </label>
+              </div>
+
+              {PAYMENT_METHODS.length > 0 && (
+                <>
+                  <div className="co-field-label">¿Por dónde vas a pagar?</div>
+                  <div className="pay-methods" style={{ gridTemplateColumns: `repeat(${Math.min(PAYMENT_METHODS.length, 3)}, 1fr)` }}>
+                    {PAYMENT_METHODS.map((m) => (
+                      <button
+                        key={m.id}
+                        className={`pay-method ${methodId === m.id ? 'active' : ''}`}
+                        onClick={() => setMethodId(m.id)}
+                        style={methodId === m.id ? { borderColor: accent, background: `${accent}15` } : {}}
+                      >
+                        {m.label}
+                      </button>
+                    ))}
+                  </div>
+                </>
               )}
-              {method !== 'card' && (
-                <div className="pay-alt">
-                  <div className="pay-alt-icon"><Icon name="lock" size={28} /></div>
-                  <p>Te redirigiremos a la pasarela segura de <strong>{method === 'paypal' ? 'PayPal' : method === 'crypto' ? 'pago en cripto' : 'transferencia bancaria'}</strong> para completar tu compra.</p>
-                </div>
-              )}
+
+              {error && <div className="co-error">{error}</div>}
+
               <button
                 className="btn-primary btn-lg btn-block"
                 style={{ background: accent, marginTop: 18 }}
-                onClick={() => setStep(1)}
+                onClick={goToPay}
               >
-                <Icon name="lock" size={16} /> Pagar {formatCOP(Math.round(total))}
+                Continuar al pago <Icon name="arrow" size={16} />
               </button>
-              <div className="modal-trust">Pago cifrado SSL · No guardamos datos de tarjeta</div>
+              <div className="modal-trust">Transferís, subís el comprobante y validamos tu pago.</div>
             </div>
           </>
-        ) : (
+        )}
+
+        {step === 'pay' && (
+          <>
+            <div className="modal-head">
+              <button className="icon-btn" onClick={() => !sending && setStep('form')}><Icon name="arrow" size={18} style={{ transform: 'rotate(180deg)' }} /></button>
+              <div className="modal-title">Pagá y subí el comprobante</div>
+              <button className="icon-btn" onClick={close}><Icon name="close" size={18} /></button>
+            </div>
+            <div className="modal-body">
+              <div className="co-amount">
+                <span className="co-amount-label">Monto a transferir</span>
+                <span className="co-amount-num" style={{ color: accent }}>{formatCOP(total)}</span>
+              </div>
+
+              {method ? (
+                <div className="pay-detail">
+                  <div className="pay-detail-row"><span>Método</span><strong>{method.label}</strong></div>
+                  <div className="pay-detail-row"><span>Titular</span><strong>{method.holder}</strong></div>
+                  <div className="pay-detail-row">
+                    <span>Cuenta / número</span>
+                    <strong className="pay-account">
+                      {method.account}
+                      <button className="copy-btn" onClick={copyAccount} title="Copiar">
+                        <Icon name={copied ? 'check' : 'copy'} size={14} /> {copied ? 'Copiado' : 'Copiar'}
+                      </button>
+                    </strong>
+                  </div>
+                  {method.hint && <div className="pay-detail-hint">{method.hint}</div>}
+                </div>
+              ) : (
+                <div className="pay-alt">
+                  <div className="pay-alt-icon"><Icon name="wallet" size={28} /></div>
+                  <p>Escribinos por WhatsApp para coordinar el pago y enviarnos el comprobante.</p>
+                </div>
+              )}
+
+              <div className="co-field-label">Subí la captura de tu pago</div>
+              <input ref={fileInputRef} type="file" accept="image/*" onChange={onPickFile} style={{ display: 'none' }} />
+              <button
+                type="button"
+                className={`upload-zone ${preview ? 'has-file' : ''}`}
+                onClick={() => fileInputRef.current && fileInputRef.current.click()}
+              >
+                {preview ? (
+                  <>
+                    <img src={preview} alt="comprobante" className="upload-preview" />
+                    <span className="upload-change"><Icon name="image" size={14} /> Cambiar imagen</span>
+                  </>
+                ) : (
+                  <>
+                    <div className="upload-icon" style={{ color: accent }}><Icon name="upload" size={26} /></div>
+                    <span className="upload-title">Tocá para subir el comprobante</span>
+                    <span className="upload-hint">JPG o PNG · captura de la transferencia</span>
+                  </>
+                )}
+              </button>
+
+              {error && <div className="co-error">{error}</div>}
+
+              <button
+                className="btn-primary btn-lg btn-block"
+                style={{ background: accent, marginTop: 16, opacity: sending ? 0.7 : 1 }}
+                onClick={submit}
+                disabled={sending}
+              >
+                {sending ? 'Enviando…' : <><Icon name="check" size={16} /> Enviar comprobante</>}
+              </button>
+              <div className="modal-trust"><Icon name="shield" size={13} /> Tu comprobante llega directo al equipo de PixelPlay.</div>
+            </div>
+          </>
+        )}
+
+        {step === 'done' && (
           <div className="checkout-success">
             <div className="success-ring" style={{ borderColor: accent }}>
               <Icon name="check" size={36} />
             </div>
-            <h3>¡Pago confirmado!</h3>
-            <p>Estás recibiendo tus accesos por WhatsApp y correo en los próximos minutos. Si tenés cualquier duda, escribinos.</p>
-            <button className="btn-primary" style={{ background: accent }} onClick={onClose}>Listo</button>
+            <h3>¡Comprobante recibido!</h3>
+            <p>
+              Tu pedido <strong>#{orderNumber}</strong> quedó registrado. Validamos tu pago y te enviamos
+              los accesos a <strong>{email}</strong>{whatsapp ? <> y por WhatsApp</> : null} en minutos.
+            </p>
+            <button className="btn-primary" style={{ background: accent }} onClick={finish}>Listo</button>
           </div>
         )}
       </div>
@@ -1042,7 +1204,8 @@ function App() {
 
   const subtotal = cart.reduce((sum, c) => sum + c.plan.price, 0);
   const discountRate = cart.length >= 4 ? 0.20 : cart.length >= 3 ? 0.15 : cart.length >= 2 ? 0.10 : 0;
-  const total = subtotal * (1 - discountRate);
+  const discount = Math.round(subtotal * discountRate);
+  const total = subtotal - discount;
 
   return (
     <div className={`app density-${t.density}`} style={{ '--accent': t.accent }}>
@@ -1065,8 +1228,12 @@ function App() {
       <CheckoutModal
         open={checkoutOpen}
         onClose={() => setCheckoutOpen(false)}
+        cart={cart}
+        subtotal={subtotal}
+        discount={discount}
         total={total}
         accent={t.accent}
+        onSuccess={() => setCart([])}
       />
       {t.showFloatingWA && <FloatingWA />}
 

@@ -1,8 +1,14 @@
 {
   "rewrites": [
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/admin/", "destination": "/admin.html" },
+    { "source": "/admin.jsx", "destination": "/admin.jsx" },
+    { "source": "/admin.css", "destination": "/admin.css" },
     { "source": "/app.jsx", "destination": "/app.jsx" },
     { "source": "/tweaks-panel.jsx", "destination": "/tweaks-panel.jsx" },
     { "source": "/styles.css", "destination": "/styles.css" },
+    { "source": "/config.js", "destination": "/config.js" },
+    { "source": "/api.js", "destination": "/api.js" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

@@ -1405,6 +1405,165 @@ section {
   line-height: 1.55;
 }
 
+/* ----- Checkout: comprobante de pago ----- */
+.co-summary {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.co-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.co-plan {
+  font-style: normal;
+  color: var(--text-3);
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+.co-discount { color: #34D399; }
+.co-total {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+  margin-top: 2px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+}
+.co-field-label {
+  font-size: 12px;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 18px 0 10px;
+}
+.co-error {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  font-size: 13px;
+}
+.co-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 0 18px;
+}
+.co-amount-label {
+  font-size: 12px;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.co-amount-num {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.pay-detail {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pay-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+.pay-detail-row > span { color: var(--text-3); }
+.pay-detail-row > strong { color: var(--text); font-weight: 600; text-align: right; }
+.pay-account {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: 12px;
+  font-family: var(--font-body);
+  transition: background 0.15s ease;
+}
+.copy-btn:hover { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+.pay-detail-hint {
+  font-size: 12.5px;
+  color: var(--text-3);
+  line-height: 1.5;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.upload-zone {
+  width: 100%;
+  min-height: 150px;
+  border: 1.5px dashed var(--line-2);
+  border-radius: var(--r-md);
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  text-align: center;
+}
+.upload-zone:hover { border-color: var(--accent); background: rgba(139, 92, 246, 0.05); }
+.upload-zone.has-file { border-style: solid; gap: 12px; }
+.upload-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-title { font-size: 14px; font-weight: 600; color: var(--text); }
+.upload-hint { font-size: 12px; color: var(--text-3); }
+.upload-preview {
+  max-width: 100%;
+  max-height: 240px;
+  border-radius: var(--r-sm);
+  object-fit: contain;
+  border: 1px solid var(--line);
+}
+.upload-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+
 /* ============================================================
    FLOATING WA
    ============================================================ */
