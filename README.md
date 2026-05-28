@@ -52,6 +52,8 @@ Sin Supabase configurado, la tienda muestra todo pero el envío avisa "todavía 
 
 ## Conectar el backend
 
-Ver **`LADY-NEXT-STEPS.md`**. Resumen: completar `config.js`, aplicar la migración, deployar
-la edge function (todo vía MCP de Supabase), y setear 2 secrets (`RESEND_API_KEY`,
-`NOTIFY_EMAIL`) en el dashboard. Login del panel: **ladyguerrafranco / lady123**.
+Ver **`LADY-NEXT-STEPS.md`**. Resumen: completar `config.js`, aplicar la migración, crear el
+usuario admin y deployar la edge function (todo vía MCP de Supabase), y setear 2 secrets
+(`RESEND_API_KEY`, `NOTIFY_EMAIL`) en el dashboard. El **usuario y clave del panel los define
+Lady en `.env.local`** (no van al repo); Claude los usa en el setup para crear el usuario en
+Supabase Auth.

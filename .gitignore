@@ -5,9 +5,17 @@ Thumbs.db
 # Vercel
 .vercel
 
+# Env / secrets — NUNCA commitear credenciales
+.env
+.env.local
+.env.*.local
+
 # Playwright / test artifacts
 .playwright-mcp/
 *.local.*
+
+# El template SÍ se commitea (no tiene secrets reales)
+!.env.local.example
 
 # Logs
 *.log

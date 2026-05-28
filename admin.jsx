@@ -61,7 +61,7 @@ function Login({ onLoggedIn }) {
         <div className="adm-field">
           <label>Usuario</label>
           <input type="text" value={user} autoComplete="username"
-            onChange={(e) => setUser(e.target.value)} placeholder="ladyguerrafranco" />
+            onChange={(e) => setUser(e.target.value)} placeholder="tu usuario o email" />
         </div>
         <div className="adm-field">
           <label>Clave</label>

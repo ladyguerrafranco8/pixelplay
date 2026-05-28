@@ -16,8 +16,9 @@ window.PIXELPLAY_CONFIG = {
   SUPABASE_URL: "https://TU-PROYECTO.supabase.co",
   SUPABASE_ANON_KEY: "TU_ANON_KEY_PUBLICA",
 
-  // Email interno del admin (Lady) para el login del panel /admin.
-  // El login acepta el usuario "ladyguerrafranco" y le agrega este dominio.
+  // Login del panel /admin: Lady entra con el email que definió en su .env.local
+  // (ADMIN_EMAIL) y su clave. Si escribe solo el usuario sin "@", se le agrega
+  // este dominio por comodidad. La clave nunca está acá ni en el repo.
   ADMIN_EMAIL_DOMAIN: "pixelplay.local",
 
   // ---- Métodos de pago que ve el cliente al hacer checkout ----

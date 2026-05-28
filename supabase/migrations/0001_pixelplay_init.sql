@@ -10,6 +10,21 @@
 create extension if not exists pgcrypto;
 
 -- ------------------------------------------------------------
+-- Config de la app: guarda el EMAIL del admin (lo define Lady en el setup,
+-- desde su .env.local — NUNCA va hardcodeado en el repo).
+-- Bloqueada: anon/authenticated no la leen desde el cliente. is_admin() la lee
+-- igual porque es SECURITY DEFINER.
+-- ------------------------------------------------------------
+create table if not exists public.app_config (
+  id          smallint primary key default 1 check (id = 1),
+  admin_email text
+);
+insert into public.app_config (id, admin_email) values (1, null)
+  on conflict (id) do nothing;
+alter table public.app_config enable row level security;
+-- (sin policies a propósito: nadie lo lee desde el cliente)
+
+-- ------------------------------------------------------------
 -- Secuencia para el número de pedido legible (#1000, #1001, ...)
 -- ------------------------------------------------------------
 create sequence if not exists public.pixelplay_order_seq start 1000;
@@ -44,7 +59,9 @@ alter table public.orders enable row level security;
 
 -- ------------------------------------------------------------
 -- ¿El usuario autenticado es el admin (Lady)?
--- Defense in depth: no usamos USING(true). Solo el email de Lady pasa.
+-- Defense in depth: no usamos USING(true). Solo pasa el email guardado en
+-- app_config (que Lady setea en el setup). Antes del setup admin_email es null
+-- => nadie es admin.
 -- ------------------------------------------------------------
 create or replace function public.is_admin()
 returns boolean
@@ -54,7 +71,9 @@ security definer
 set search_path = public
 as $$
   select coalesce(
-    lower(auth.jwt() ->> 'email') = 'ladyguerrafranco@pixelplay.local',
+    lower(auth.jwt() ->> 'email') = (
+      select lower(admin_email) from public.app_config where id = 1
+    ),
     false
   );
 $$;
@@ -93,48 +112,8 @@ create policy comprobantes_admin_delete on storage.objects
   for delete using (bucket_id = 'comprobantes' and public.is_admin());
 
 -- ============================================================
--- Usuario admin de Lady (Supabase Auth).
--- Email interno: ladyguerrafranco@pixelplay.local  ·  Clave: lady123
--- El login del panel acepta el usuario "ladyguerrafranco" y le agrega
--- el dominio @pixelplay.local automáticamente.
---
--- NOTA: si este bloque falla por diferencias de versión de GoTrue, crear
--- el usuario a mano en el Dashboard → Authentication → Add user
--- (email ladyguerrafranco@pixelplay.local, password lady123, Auto Confirm).
+-- El usuario admin NO se crea acá (no queremos credenciales en el repo).
+-- En el setup, Claude lee el .env.local de Lady (ADMIN_EMAIL + ADMIN_PASSWORD),
+-- crea el usuario en Supabase Auth y guarda el email en app_config.
+-- Ver LADY-NEXT-STEPS.md → "Crear el usuario admin".
 -- ============================================================
-do $$
-declare
-  v_uid uuid;
-begin
-  select id into v_uid from auth.users
-   where email = 'ladyguerrafranco@pixelplay.local';
-
-  if v_uid is null then
-    v_uid := gen_random_uuid();
-
-    insert into auth.users (
-      instance_id, id, aud, role, email, encrypted_password,
-      email_confirmed_at, created_at, updated_at,
-      raw_app_meta_data, raw_user_meta_data,
-      confirmation_token, recovery_token, email_change_token_new, email_change
-    ) values (
-      '00000000-0000-0000-0000-000000000000',
-      v_uid, 'authenticated', 'authenticated',
-      'ladyguerrafranco@pixelplay.local',
-      crypt('lady123', gen_salt('bf')),
-      now(), now(), now(),
-      '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb,
-      '', '', '', ''
-    );
-
-    insert into auth.identities (
-      id, user_id, identity_data, provider, provider_id,
-      last_sign_in_at, created_at, updated_at
-    ) values (
-      gen_random_uuid(), v_uid,
-      jsonb_build_object('sub', v_uid::text, 'email', 'ladyguerrafranco@pixelplay.local'),
-      'email', v_uid::text,
-      now(), now(), now()
-    );
-  end if;
-end $$;
