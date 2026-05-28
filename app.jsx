@@ -610,11 +610,6 @@ const WorldCupBanner = ({ onAdd, cart }) => {
 
   return (
     <section className="wc-banner">
-      <div className="wc-flag-stripe">
-        <div className="wc-stripe wc-yellow" />
-        <div className="wc-stripe wc-blue" />
-        <div className="wc-stripe wc-red" />
-      </div>
       <div className="wc-glow" />
       <div className="wc-glow-red" />
       <div className="wc-inner">
