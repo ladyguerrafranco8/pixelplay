@@ -209,7 +209,7 @@ const FAQ = [
   },
   {
     q: '¿Hay descuento si compro varios servicios?',
-    a: 'Sí. Al añadir 2 servicios al carrito obtienes 10% de descuento, con 3 servicios un 15%, y con 4 o más un 20% de descuento sobre el total. El descuento se aplica automáticamente.',
+    a: 'Sí. Al añadir 2 o más servicios al carrito obtienes un 10% de descuento sobre el total. El descuento se aplica automáticamente.',
   },
   {
     q: '¿Cómo funciona la renovación?',
@@ -422,7 +422,7 @@ const Hero = ({ accent }) => {
 
         <p className="hero-sub">
           Del carrito a <strong style={{ color: 'var(--text)' }}>Netflix</strong> en 5 minutos.
-          Disney+, Max, Spotify y más — con garantía total y soporte humano 24/7.
+          Disney+, Max, Spotify y más — con garantía total y soporte 24/7.
         </p>
 
         <div className="hero-cta">
@@ -461,47 +461,55 @@ const Hero = ({ accent }) => {
 // ============================================================
 const ServiceCard = ({ service, onAdd, inCart, accent }) => {
   const [planIdx, setPlanIdx] = useState(service.plans.findIndex(p => p.popular) >= 0 ? service.plans.findIndex(p => p.popular) : 0);
+  const [open, setOpen] = useState(false);
   const plan = service.plans[planIdx];
 
   return (
-    <article className="svc-card">
-      <div className="svc-card-top">
+    <article className={`svc-card ${open ? 'svc-card--open' : ''}`}>
+      <div className="svc-card-top" onClick={() => setOpen(o => !o)} style={{ cursor: 'pointer' }}>
         <ServiceBadge service={service} size={56} />
         <div className="svc-card-meta">
           <h3>{service.name}</h3>
           <p>{service.tagline}</p>
         </div>
-      </div>
-
-      <div className="svc-plans">
-        {service.plans.map((p, i) => (
-          <button
-            key={i}
-            className={`plan-pill ${planIdx === i ? 'active' : ''}`}
-            onClick={() => setPlanIdx(i)}
-            style={planIdx === i ? { borderColor: accent, color: '#fff' } : {}}
-          >
-            {p.type}
-            {p.popular && <span className="popular-dot" style={{ background: accent }} />}
-          </button>
-        ))}
-      </div>
-
-      <div className="svc-plan-label">{plan.label}</div>
-
-      <div className="svc-card-bottom">
-        <div className="svc-price">
-          <span className="svc-price-num">{formatCOP(plan.price)}</span>
-          <span className="svc-price-per">/mes</span>
+        <div className="svc-card-chevron" style={{ color: accent }}>
+          <Icon name="arrow" size={16} />
         </div>
-        <button
-          className={`btn-buy ${inCart ? 'in-cart' : ''}`}
-          onClick={() => onAdd(service, plan)}
-          style={!inCart ? { background: accent } : {}}
-        >
-          {inCart ? <><Icon name="check" size={16} /> Agregado</> : <>Agregar <Icon name="plus" size={16} /></>}
-        </button>
       </div>
+
+      {open && (
+        <>
+          <div className="svc-plans">
+            {service.plans.map((p, i) => (
+              <button
+                key={i}
+                className={`plan-pill ${planIdx === i ? 'active' : ''}`}
+                onClick={e => { e.stopPropagation(); setPlanIdx(i); }}
+                style={planIdx === i ? { borderColor: accent, color: '#fff' } : {}}
+              >
+                {p.type}
+                {p.popular && <span className="popular-dot" style={{ background: accent }} />}
+              </button>
+            ))}
+          </div>
+
+          <div className="svc-plan-label">{plan.label}</div>
+
+          <div className="svc-card-bottom">
+            <div className="svc-price">
+              <span className="svc-price-num">{formatCOP(plan.price)}</span>
+              <span className="svc-price-per">/mes</span>
+            </div>
+            <button
+              className={`btn-buy ${inCart ? 'in-cart' : ''}`}
+              onClick={e => { e.stopPropagation(); onAdd(service, plan); }}
+              style={!inCart ? { background: accent } : {}}
+            >
+              {inCart ? <><Icon name="check" size={16} /> Agregado</> : <>Agregar <Icon name="plus" size={16} /></>}
+            </button>
+          </div>
+        </>
+      )}
     </article>
   );
 };
@@ -535,7 +543,7 @@ const Catalog = ({ onAdd, cart, accent }) => {
           </button>
         ))}
         <div className="catalog-bundle-tip">
-          <Icon name="bolt" size={14} /> Llevá 3 servicios y obtené <strong>15% off</strong>
+          <Icon name="bolt" size={14} /> Combiná 2 o más servicios y obtené <strong>10% off</strong>
         </div>
       </div>
 
@@ -676,7 +684,6 @@ const How = ({ accent }) => (
   <section className="how" id="como">
     <div className="section-head">
       <span className="section-eyebrow">CÓMO FUNCIONA</span>
-      <h2 className="section-title">Tan fácil como<br/><em>1, 2, 3.</em></h2>
     </div>
     <div className="how-grid">
       {STEPS.map((s, i) => (
@@ -800,7 +807,7 @@ const Footer = ({ accent }) => (
           <span className="logo-mark" style={{ background: `linear-gradient(135deg, ${accent}, #3b82f6)` }} />
           <span className="logo-text">PixelPlay</span>
         </a>
-        <p>Streaming premium accesible.<br/>Soporte humano, garantía real.</p>
+        <p>Streaming premium accesible.<br/>Soporte 24/7, garantía real.</p>
         <div className="footer-socials">
           <a href="#" className="social-btn"><Icon name="wa" size={18} /></a>
           <a href="#" className="social-btn"><Icon name="ig" size={18} /></a>
@@ -846,7 +853,7 @@ const Footer = ({ accent }) => (
 // ============================================================
 const CartDrawer = ({ open, onClose, cart, setCart, accent, onCheckout }) => {
   const subtotal = cart.reduce((sum, c) => sum + c.plan.price, 0);
-  const discountRate = cart.length >= 4 ? 0.20 : cart.length >= 3 ? 0.15 : cart.length >= 2 ? 0.10 : 0;
+  const discountRate = cart.length >= 2 ? 0.10 : 0;
   const discount = subtotal * discountRate;
   const total = subtotal - discount;
 
@@ -1042,7 +1049,7 @@ function App() {
   };
 
   const subtotal = cart.reduce((sum, c) => sum + c.plan.price, 0);
-  const discountRate = cart.length >= 4 ? 0.20 : cart.length >= 3 ? 0.15 : cart.length >= 2 ? 0.10 : 0;
+  const discountRate = cart.length >= 2 ? 0.10 : 0;
   const total = subtotal * (1 - discountRate);
 
   return (

@@ -556,6 +556,10 @@ section {
   display: flex;
   align-items: center;
   gap: 14px;
+  user-select: none;
+}
+.svc-card-meta {
+  flex: 1;
 }
 .svc-card-meta h3 {
   font-size: 18px;
@@ -564,6 +568,16 @@ section {
 .svc-card-meta p {
   font-size: 13px;
   color: var(--text-3);
+}
+.svc-card-chevron {
+  opacity: 0.5;
+  transition: transform 0.25s ease, opacity 0.2s;
+  flex-shrink: 0;
+  transform: rotate(90deg);
+}
+.svc-card--open .svc-card-chevron {
+  transform: rotate(-90deg);
+  opacity: 1;
 }
 
 .svc-plans {
