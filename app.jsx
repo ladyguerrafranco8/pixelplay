@@ -47,7 +47,7 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#0EA5E9',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzM1JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMjQnIGxldHRlci1zcGFjaW5nPScwLjUnPlByaW1lPC90ZXh0PgogIDxwYXRoIGQ9J00xMCA0NiBRMzAgNDAgNTAgNDYnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzAwQThFMScgc3Ryb2tlLXdpZHRoPSczLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPgo8L3N2Zz4K',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzM0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMjInIGxldHRlci1zcGFjaW5nPSctMC41Jz5QcmltZTwvdGV4dD4KICA8cGF0aCBkPSdNMTIgNDYgUTMwIDQwIDQ4IDQ2JyBmaWxsPSdub25lJyBzdHJva2U9JyMwMEE4RTEnIHN0cm9rZS13aWR0aD0nMy41JyBzdHJva2UtbGluZWNhcD0ncm91bmQnLz4KPC9zdmc+Cg==',
   },
   {
     id: 'vix',
