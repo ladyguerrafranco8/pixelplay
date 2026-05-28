@@ -1044,6 +1044,20 @@ section {
   color: var(--text-2);
   line-height: 1.55;
 }
+.footer-badge-exp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 5px 12px;
+  margin-bottom: 18px;
+}
 .footer-socials {
   display: flex;
   gap: 8px;
