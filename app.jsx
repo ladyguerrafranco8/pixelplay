@@ -26,7 +26,8 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MiA0NCc+PHRleHQgeD0nMjYnIHk9JzM0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMzgnIGxldHRlci1zcGFjaW5nPSctMic+RCs8L3RleHQ+PC9zdmc+',
+    logoSlug: 'disneyplus',
+    logoScale: 0.78,
   },
   {
     id: 'max',
@@ -316,7 +317,7 @@ const Icon = ({ name, size = 20 }) => {
 // ============================================================
 const ServiceBadge = ({ service, size = 64 }) => {
   const s = service;
-  const logoSize = Math.round(size * 0.55);
+  const logoSize = Math.round(size * (s.logoScale || 0.55));
   return (
     <div
       className="svc-badge"
