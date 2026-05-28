@@ -347,6 +347,7 @@ em {
   font-size: clamp(16px, 1.6vw, 19px);
   color: var(--text-2);
   max-width: 580px;
+  margin-top: 20px;
   margin-bottom: 36px;
   line-height: 1.55;
 }
