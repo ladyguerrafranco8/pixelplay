@@ -26,7 +26,7 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMTknIHk9JzQ0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nNDAnPkQ8L3RleHQ+CiAgPHRleHQgeD0nNDcnIHk9JzQyJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjNUJBNEZGJyBmb250LWZhbWlseT0nQXJpYWwgQmxhY2ssQXJpYWwsc2Fucy1zZXJpZicgZm9udC13ZWlnaHQ9JzkwMCcgZm9udC1zaXplPScyNic+KzwvdGV4dD4KPC9zdmc+Cg==',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMTknIHk9JzQ2JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nNDgnPkQ8L3RleHQ+CiAgPHRleHQgeD0nNDgnIHk9JzQzJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjNUJBNEZGJyBmb250LWZhbWlseT0nQXJpYWwgQmxhY2ssQXJpYWwsc2Fucy1zZXJpZicgZm9udC13ZWlnaHQ9JzkwMCcgZm9udC1zaXplPSczMic+KzwvdGV4dD4KPC9zdmc+Cg==',
   },
   {
     id: 'max',
@@ -47,7 +47,7 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · 4K', price: 14000, popular: false },
     ],
     color: '#0EA5E9',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzMzJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMTknIGxldHRlci1zcGFjaW5nPScwLjUnPlByaW1lPC90ZXh0PgogIDxwYXRoIGQ9J00xMSA0NCBRMzAgMzggNDkgNDQnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzAwQThFMScgc3Ryb2tlLXdpZHRoPSczLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPgo8L3N2Zz4K',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzM1JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMjQnIGxldHRlci1zcGFjaW5nPScwLjUnPlByaW1lPC90ZXh0PgogIDxwYXRoIGQ9J00xMCA0NiBRMzAgNDAgNTAgNDYnIGZpbGw9J25vbmUnIHN0cm9rZT0nIzAwQThFMScgc3Ryb2tlLXdpZHRoPSczLjUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPgo8L3N2Zz4K',
   },
   {
     id: 'vix',
@@ -202,7 +202,7 @@ const FAQ = [
   },
   {
     q: '¿Qué métodos de pago aceptan?',
-    a: 'Aceptamos tarjeta de crédito y débito (Visa, Mastercard, Amex), PayPal, transferencia bancaria, criptomonedas y pago en efectivo a través de OXXO y otros puntos físicos.',
+    a: 'Aceptamos tarjeta de crédito y débito (Visa, Mastercard, Amex), PayPal, Nequi y transferencia bancaria.',
   },
   {
     q: '¿Puedo cambiar mi PIN o perfil?',
@@ -253,7 +253,7 @@ const WHY = [
     icon: 'wallet',
     color: '#FB923C',
     title: 'Pago como tú quieras',
-    body: 'Tarjeta, PayPal, transferencia, cripto o efectivo. Adaptados a tu forma de pagar, no al revés.',
+    body: 'Tarjeta, PayPal, Nequi o transferencia. Adaptados a tu forma de pagar, no al revés.',
   },
 ];
 
@@ -266,7 +266,7 @@ const STEPS = [
   {
     n: '02',
     title: 'Pagá en segundos',
-    body: 'Tarjeta, PayPal, cripto o transferencia. Sin crear cuenta.',
+    body: 'Tarjeta, PayPal, Nequi o transferencia. Sin crear cuenta.',
   },
   {
     n: '03',
@@ -289,7 +289,7 @@ const Icon = ({ name, size = 20 }) => {
     case 'shield': return <svg {...props}><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>;
     case 'chat': return <svg {...props}><path d="M21 12a8 8 0 01-12.4 6.7L3 21l1.6-4.4A8 8 0 1121 12z"/></svg>;
     case 'check': return <svg {...props}><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>;
-    case 'card': return <svg {...props}><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19M6 15h3"/></svg>;
+    case 'card': return <svg {...props} strokeWidth={1.5}><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20" strokeWidth={2.5}/><rect x="5" y="13" width="5" height="2.5" rx="0.5" fill="currentColor" stroke="none"/><rect x="13" y="13" width="3" height="2.5" rx="0.5" fill="currentColor" stroke="none"/></svg>;
     case 'wa': return <svg {...props}><path d="M21 11.5a8.5 8.5 0 01-13 7.2L3 20l1.4-4.7A8.5 8.5 0 1121 11.5z"/><path d="M8.5 9.5c0 4 3 7 7 7l1.5-1.7-2.2-1.3-1.2 1c-1.5-.7-2.7-1.9-3.3-3.3l1-1.2L10 7.8 8.5 9.5z" fill="currentColor"/></svg>;
     case 'arrow': return <svg {...props}><path d="M5 12h14M13 5l7 7-7 7"/></svg>;
     case 'plus': return <svg {...props}><path d="M12 5v14M5 12h14"/></svg>;
@@ -987,7 +987,7 @@ const CheckoutModal = ({ open, onClose, total, accent }) => {
                 {[
                   ['card', 'Tarjeta'],
                   ['paypal', 'PayPal'],
-                  ['crypto', 'Cripto'],
+                  ['nequi', 'Nequi'],
                   ['transfer', 'Transferencia'],
                 ].map(([k, l]) => (
                   <button
@@ -1024,7 +1024,7 @@ const CheckoutModal = ({ open, onClose, total, accent }) => {
               {method !== 'card' && (
                 <div className="pay-alt">
                   <div className="pay-alt-icon"><Icon name="lock" size={28} /></div>
-                  <p>Te redirigiremos a la pasarela segura de <strong>{method === 'paypal' ? 'PayPal' : method === 'crypto' ? 'pago en cripto' : 'transferencia bancaria'}</strong> para completar tu compra.</p>
+                  <p>Te redirigiremos a la pasarela segura de <strong>{method === 'paypal' ? 'PayPal' : method === 'nequi' ? 'Nequi' : 'transferencia bancaria'}</strong> para completar tu compra.</p>
                 </div>
               )}
               <button
