@@ -203,7 +203,7 @@ const FAQ = [
   },
   {
     q: '¿Qué métodos de pago aceptan?',
-    a: 'Aceptamos tarjeta de crédito y débito (Visa, Mastercard, Amex), PayPal, Nequi y transferencia bancaria.',
+    a: 'Aceptamos tarjeta de crédito y débito (Visa, Mastercard, Amex), PayPal y transferencia bancaria.',
   },
   {
     q: '¿Puedo cambiar mi PIN o perfil?',
@@ -254,7 +254,7 @@ const WHY = [
     icon: 'wallet',
     color: '#FB923C',
     title: 'Pago como tú quieras',
-    body: 'Tarjeta, PayPal, Nequi o transferencia. Adaptados a tu forma de pagar, no al revés.',
+    body: 'Tarjeta, PayPal o transferencia. Adaptados a tu forma de pagar, no al revés.',
   },
 ];
 
@@ -267,7 +267,7 @@ const STEPS = [
   {
     n: '02',
     title: 'Pagá en segundos',
-    body: 'Tarjeta, PayPal, Nequi o transferencia. Sin crear cuenta.',
+    body: 'Tarjeta, PayPal o transferencia. Sin crear cuenta.',
   },
   {
     n: '03',
@@ -979,7 +979,7 @@ const CheckoutModal = ({ open, onClose, total, accent }) => {
                 {[
                   ['card', 'Tarjeta'],
                   ['paypal', 'PayPal'],
-                  ['nequi', 'Nequi'],
+
                   ['transfer', 'Transferencia'],
                 ].map(([k, l]) => (
                   <button
@@ -1016,7 +1016,7 @@ const CheckoutModal = ({ open, onClose, total, accent }) => {
               {method !== 'card' && (
                 <div className="pay-alt">
                   <div className="pay-alt-icon"><Icon name="lock" size={28} /></div>
-                  <p>Te redirigiremos a la pasarela segura de <strong>{method === 'paypal' ? 'PayPal' : method === 'nequi' ? 'Nequi' : 'transferencia bancaria'}</strong> para completar tu compra.</p>
+                  <p>Te redirigiremos a la pasarela segura de <strong>{method === 'paypal' ? 'PayPal' : 'transferencia bancaria'}</strong> para completar tu compra.</p>
                 </div>
               )}
               <button
