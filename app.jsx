@@ -605,18 +605,9 @@ const FlipUnit = ({ value, label }) => {
 
   return (
     <div className="wc-flip-unit">
-      <div className="wc-cal-wrapper">
-        <div className="wc-cal-rings">
-          <span className="wc-cal-ring" />
-          <span className="wc-cal-ring" />
-          <span className="wc-cal-ring" />
-        </div>
-        <div className="wc-flip-card">
-          <div className="wc-cal-head" />
-          <div className="wc-cal-fold" />
-          <div className={`wc-flip-inner${phase ? ' wc-flip-' + phase : ''}`}>
-            <span className="wc-flip-num">{shown}</span>
-          </div>
+      <div className="wc-flip-card">
+        <div className={`wc-flip-inner${phase ? ' wc-flip-' + phase : ''}`}>
+          <span className="wc-flip-num">{shown}</span>
         </div>
       </div>
       <span className="wc-lbl">{label}</span>
