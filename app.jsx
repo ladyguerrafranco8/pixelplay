@@ -527,8 +527,6 @@ const Catalog = ({ onAdd, cart, accent }) => {
     <section className="catalog" id="catalogo">
       <div className="section-head">
         <span className="section-eyebrow">CATÁLOGO</span>
-        <h2 className="section-title">Elegí lo que <em>realmente</em> vas a ver.</h2>
-        <p className="section-sub">Todos los servicios. Sin paquetes obligatorios. Combina y ahorra.</p>
       </div>
 
       <div className="catalog-filters">
