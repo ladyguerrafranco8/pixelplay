@@ -26,8 +26,8 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoSlug: 'disneyplus',
-    logoScale: 0.78,
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4MCA3MCc+PHBhdGggZD0nTTEwIDM4IFE0MCA1IDcwIDM4JyBmaWxsPSdub25lJyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzMuNScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJy8+PHRleHQgeD0nNDAnIHk9JzYwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9Ikdlb3JnaWEsVGltZXMgTmV3IFJvbWFuLHNlcmlmIiBmb250LXN0eWxlPSdpdGFsaWMnIGZvbnQtd2VpZ2h0PSc3MDAnIGZvbnQtc2l6ZT0nMjAnIGxldHRlci1zcGFjaW5nPScwLjUnPkRpc25leSs8L3RleHQ+PC9zdmc+',
+    logoScale: 0.82,
   },
   {
     id: 'max',
@@ -414,7 +414,7 @@ const Hero = ({ accent }) => {
           <div className="strip-badges">
             {SERVICES.slice(0, 8).map((s) => (
               <div className="strip-badge" key={s.id} title={s.name}>
-                <ServiceBadge service={s} size={44} />
+                <ServiceBadge service={s} size={56} />
               </div>
             ))}
           </div>
@@ -568,7 +568,6 @@ const Catalog = ({ onAdd, cart, accent }) => {
 const Why = ({ accent }) => (
   <section className="why" id="porque">
     <div className="section-head">
-      <span className="section-eyebrow">POR QUÉ PIXELPLAY</span>
       <h2 className="section-title">Precio justo,<br/>servicio <em>premium</em>.</h2>
       <p className="section-sub">Más de 4 años operando, +12.000 clientes activos, 99.2% de retención mensual.</p>
     </div>
