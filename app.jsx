@@ -26,7 +26,7 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PGNpcmNsZSBjeD0nMzAnIGN5PSczMCcgcj0nMjgnIGZpbGw9J25vbmUnIHN0cm9rZT0ncmdiYSgyNTUsMjU1LDI1NSwwLjIpJyBzdHJva2Utd2lkdGg9JzEuNScvPjx0ZXh0IHg9JzMwJyB5PSczNycgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0nd2hpdGUnIGZvbnQtZmFtaWx5PSdBcmlhbCBCbGFjayxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzIyJz5EKzwvdGV4dD48L3N2Zz4=',
+    logoSlug: 'disneyplus',
   },
   {
     id: 'max',
@@ -132,7 +132,7 @@ const SERVICES = [
       { type: '12 Meses', label: '12 Meses', price: 45000, popular: false },
     ],
     color: '#7D2AE8',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PGNpcmNsZSBjeD0nMzAnIGN5PSczMCcgcj0nMjYnIGZpbGw9J25vbmUnIHN0cm9rZT0ncmdiYSgyNTUsMjU1LDI1NSwwLjIpJyBzdHJva2Utd2lkdGg9JzEuNScvPjx0ZXh0IHg9JzMwJyB5PSczNycgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0nd2hpdGUnIGZvbnQtZmFtaWx5PSdBcmlhbCxzYW5zLXNlcmlmJyBmb250LXdlaWdodD0nOTAwJyBmb250LXNpemU9JzI2Jz5DPC90ZXh0Pjwvc3ZnPg==',
+    logoSlug: 'canva',
   },
 ];
 
@@ -404,8 +404,8 @@ const Hero = ({ accent }) => {
         </div>
 
         <h1 className="hero-title">
-          Del carrito a <span className="title-accent" style={{ color: accent }}>Netflix</span>
-          <br />en 5 minutos.
+          Todo el <span className="title-accent" style={{ color: accent }}>streaming</span>
+          <br />a una fracción del precio.
         </h1>
 
         <div className="hero-services-strip">
@@ -420,8 +420,8 @@ const Hero = ({ accent }) => {
         </div>
 
         <p className="hero-sub">
-          Todo el <strong style={{ color: 'var(--text)' }}>streaming</strong> a una fracción del precio.
-          Netflix, Disney+, Max, Spotify y más — con garantía total y soporte humano 24/7.
+          Del carrito a <strong style={{ color: 'var(--text)' }}>Netflix</strong> en 5 minutos.
+          Disney+, Max, Spotify y más — con garantía total y soporte humano 24/7.
         </p>
 
         <div className="hero-cta">
@@ -620,7 +620,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
       <div className="wc-inner">
         <div className="wc-left">
           <div className="wc-eyebrow">
-            <span>⚽</span> PROMO MUNDIAL 2026 <span className="wc-flag">🇨🇴</span> ¡ARRIBA COLOMBIA!
+            PROMO MUNDIAL 2026
           </div>
           <h2 className="wc-title">
             El fútbol más grande<br/>
