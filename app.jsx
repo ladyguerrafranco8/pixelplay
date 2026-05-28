@@ -26,7 +26,7 @@ const SERVICES = [
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+PHRleHQgeD0nMzAnIHk9JzM0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBkb21pbmFudC1iYXNlbGluZT0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMjInIGxldHRlci1zcGFjaW5nPSctMSc+RCs8L3RleHQ+PC9zdmc+',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MiA0NCc+PHRleHQgeD0nMjYnIHk9JzM0JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMzgnIGxldHRlci1zcGFjaW5nPSctMic+RCs8L3RleHQ+PC9zdmc+',
   },
   {
     id: 'max',
