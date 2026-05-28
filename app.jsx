@@ -763,7 +763,6 @@ const Testimonials = ({ accent }) => (
               <div className="testi-avatar" style={{ background: `linear-gradient(135deg, ${accent}, #3b82f6)` }}>{t.avatar}</div>
               <div>
                 <div className="testi-name">{t.name}</div>
-                <div className="testi-handle">{t.handle.replace('@', '')}</div>
               </div>
             </div>
           </div>
