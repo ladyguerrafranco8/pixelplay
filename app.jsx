@@ -337,7 +337,7 @@ const ServiceBadge = ({ service, size = 64 }) => {
         alt={s.name}
         width={logoSize}
         height={logoSize}
-        style={{ objectFit: 'contain', filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.3))' }}
+        style={{ objectFit: 'contain', filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.3))', ...(s.logoScale >= 1.0 ? { borderRadius: '12px', display: 'block' } : {}) }}
         onError={(e) => {
           e.target.style.display = 'none';
           e.target.nextSibling.style.display = 'flex';
