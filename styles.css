@@ -239,8 +239,9 @@ em {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 }
-.cart-btn { border: 1.5px solid rgba(16, 185, 129, 0.55); color: #10B981; }
+.cart-btn { border: 1.5px solid rgba(16, 185, 129, 0.55); color: #10B981; padding: 11px 18px; }
 .cart-btn:hover { color: #10B981; background: rgba(16, 185, 129, 0.08); }
 .cart-label { font-size: 14px; }
 .cart-bubble {
@@ -748,12 +749,18 @@ section {
   margin-bottom: 16px;
 }
 .how-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  position: relative;
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+  scrollbar-width: none;
 }
+.how-grid::-webkit-scrollbar { display: none; }
 .how-card {
+  flex: 0 0 260px;
+  scroll-snap-align: start;
   padding: 20px 16px;
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -817,8 +824,8 @@ section {
 .how-arrow {
   display: none;
 }
-@media (max-width: 880px) {
-  .how-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+@media (max-width: 640px) {
+  .how-card { flex: 0 0 220px; }
 }
 @media (max-width: 640px) {
   .why-card { flex: 0 0 220px; padding: 20px 16px; }

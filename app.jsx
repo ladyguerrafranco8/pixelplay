@@ -376,7 +376,7 @@ const Nav = ({ cartCount, onCartOpen, accent }) => {
         </div>
         <div className="nav-actions">
           <button className="btn-ghost cart-btn" onClick={onCartOpen}>
-            <Icon name="cart" size={18} />
+            <Icon name="cart" size={22} />
             <span className="cart-label">Carrito</span>
             {cartCount > 0 && <span className="cart-bubble" style={{ background: accent }}>{cartCount}</span>}
           </button>
