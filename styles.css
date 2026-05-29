@@ -464,6 +464,7 @@ em {
 section {
   padding: 44px 24px;
   position: relative;
+  scroll-margin-top: 76px;
 }
 .section-head {
   max-width: var(--container);
