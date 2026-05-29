@@ -1124,12 +1124,16 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
 // ============================================================
 // FLOATING WA
 // ============================================================
-const FloatingWA = () => (
-  <a href="#" className="float-wa" aria-label="Contactar por WhatsApp">
-    <Icon name="wa" size={26} />
-    <span className="float-wa-pulse" />
-  </a>
-);
+const FloatingWA = () => {
+  const cfg = window.PIXELPLAY_CONFIG || {};
+  const num = (cfg.WHATSAPP || '').replace(/\D/g, '');
+  return (
+    <a href={`https://wa.me/${num}`} target="_blank" rel="noopener noreferrer" className="float-wa" aria-label="Contactar por WhatsApp">
+      <Icon name="wa" size={24} />
+      <span className="float-wa-pulse" />
+    </a>
+  );
+};
 
 // ============================================================
 // APP
