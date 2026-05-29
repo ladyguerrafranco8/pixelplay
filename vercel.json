@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/admin", "destination": "/admin.html" },
     { "source": "/app.jsx", "destination": "/app.jsx" },
     { "source": "/tweaks-panel.jsx", "destination": "/tweaks-panel.jsx" },
     { "source": "/styles.css", "destination": "/styles.css" },
