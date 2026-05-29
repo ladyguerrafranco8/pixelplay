@@ -535,7 +535,7 @@ const Catalog = ({ onAdd, cart, accent }) => {
       </div>
 
       <div className="catalog-filters">
-        {[['all','Todos'],['video','Video'],['music','Música']].map(([k, l]) => (
+        {[['all','Todos'],['video','Entretenimiento'],['music','Música']].map(([k, l]) => (
           <button
             key={k}
             className={`filter-chip ${filter === k ? 'active' : ''}`}
@@ -671,7 +671,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <div className="wc-espn-badge">ESPN</div>
             </div>
             <div className="wc-promo-info">
-              <div className="wc-promo-name">Disney+ <span className="wc-promo-tag">· Todos los partidos</span></div>
+              <div className="wc-promo-name">Disney+ <span className="wc-promo-tag">+ ESPN</span></div>
               <div className="wc-promo-pricing">
                 <span className="wc-promo-old">{formatCOP(regularPrice)}</span>
                 <span className="wc-promo-new">{formatCOP(promoPrice)}<span className="wc-promo-period"> · 6 meses</span></span>
