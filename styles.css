@@ -1674,12 +1674,12 @@ section {
 .wc-promo-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
-  padding: 16px;
-  margin-top: 8px;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 4px;
   overflow: hidden;
 }
 .wc-promo-top { display: flex; align-items: center; gap: 12px; }
@@ -1871,5 +1871,9 @@ section {
   .final-cta-inner { padding: 48px 20px; }
   .testi-card { flex: 0 0 300px; }
   .catalog-bundle-tip { margin-left: 0; width: 100%; justify-content: center; }
-  .wc-banner { padding: 36px 20px; }
+  .wc-banner { padding: 24px 16px; }
+  .wc-inner { gap: 20px; }
+  .wc-right { width: 100%; }
+  .wc-sub { margin-bottom: 14px; }
+  .wc-title { margin-bottom: 8px; }
 }
