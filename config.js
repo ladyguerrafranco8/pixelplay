@@ -25,28 +25,14 @@ window.PIXELPLAY_CONFIG = {
   // El cliente transfiere a una de estas cuentas y sube el comprobante.
   PAYMENT_METHODS: [
     {
-      id: "nequi",
-      label: "Nequi",
-      holder: "Lady Guerra",
-      account: "300 000 0000",
-      hint: "Enviá a este número desde tu app Nequi.",
-    },
-    {
       id: "bancolombia",
       label: "Bancolombia",
       holder: "Lady Guerra",
-      account: "Ahorros 000-000000-00",
+      account: "Ahorros 51114303619",
       hint: "Transferencia o consignación a esta cuenta de ahorros.",
-    },
-    {
-      id: "daviplata",
-      label: "Daviplata",
-      holder: "Lady Guerra",
-      account: "300 000 0000",
-      hint: "Enviá a este número desde Daviplata.",
     },
   ],
 
   // WhatsApp de contacto/soporte (opcional, solo display).
-  WHATSAPP: "+57 300 000 0000",
+  WHATSAPP: "+57 321 518 3941",
 };
