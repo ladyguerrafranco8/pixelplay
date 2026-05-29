@@ -667,25 +667,26 @@ const WorldCupBanner = ({ onAdd, cart }) => {
 
           <div className="wc-promo-card">
             <div className="wc-promo-logos">
-              <ServiceBadge service={disney} size={52} />
+              <ServiceBadge service={disney} size={48} />
               <div className="wc-espn-badge">ESPN</div>
             </div>
             <div className="wc-promo-info">
-              <div className="wc-promo-name">Disney+ · Con ESPN</div>
-              <div className="wc-promo-tag">Todos los partidos del Mundial</div>
+              <div className="wc-promo-name">Disney+ <span className="wc-promo-tag">· Todos los partidos</span></div>
               <div className="wc-promo-pricing">
                 <span className="wc-promo-old">{formatCOP(regularPrice)}</span>
-                <span className="wc-promo-new">{formatCOP(promoPrice)} · 6 meses</span>
+                <span className="wc-promo-new">{formatCOP(promoPrice)}<span className="wc-promo-period"> · 6 meses</span></span>
               </div>
-              <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
+              <div className="wc-promo-foot">
+                <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
+                <button
+                  className={`wc-btn-promo ${inCart ? 'wc-btn-in' : ''}`}
+                  onClick={() => !inCart && onAdd(disney, promoPlan)}
+                  disabled={inCart}
+                >
+                  {inCart ? '✓ Agregado' : '+ Agregar'}
+                </button>
+              </div>
             </div>
-            <button
-              className={`wc-btn ${inCart ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCart && onAdd(disney, promoPlan)}
-              disabled={inCart}
-            >
-              {inCart ? '✓ En carrito' : '+ Agregar'}
-            </button>
           </div>
         </div>
         <div className="wc-right">
