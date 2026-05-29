@@ -1726,11 +1726,11 @@ section {
   white-space: nowrap;
 }
 .wc-btn-promo {
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 11px 16px;
+  padding: 10px 16px;
   border-radius: 10px;
   background: linear-gradient(135deg, #8b5cf6, #7c3aed);
   color: #fff;
