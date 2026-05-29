@@ -672,8 +672,10 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <div className="wc-promo-tag">Todos los partidos del Mundial</div>
               <div className="wc-promo-pricing">
                 <span className="wc-promo-old">{formatCOP(regularPrice)}</span>
-                <span className="wc-promo-new">{formatCOP(promoPrice)}<span className="wc-promo-period"> — 6 meses</span></span>
+                <span className="wc-promo-arrow">→</span>
+                <span className="wc-promo-new">{formatCOP(promoPrice)}</span>
               </div>
+              <div className="wc-promo-period">6 meses</div>
               <div className="wc-promo-foot">
                 <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
                 <button

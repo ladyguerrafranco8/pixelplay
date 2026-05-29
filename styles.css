@@ -1683,10 +1683,11 @@ section {
 .wc-promo-name { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.2; }
 .wc-promo-espn { font-size: 15px; font-weight: 800; color: #ff4444; }
 .wc-promo-tag { font-size: 11px; font-weight: 500; color: rgba(255,220,50,0.8); margin-bottom: 2px; }
-.wc-promo-pricing { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-.wc-promo-old { font-size: 12px; color: var(--text-3); text-decoration: line-through; }
+.wc-promo-pricing { display: flex; align-items: center; gap: 6px; }
+.wc-promo-old { font-size: 15px; font-weight: 600; color: var(--text-3); text-decoration: line-through; }
+.wc-promo-arrow { font-size: 13px; color: var(--text-3); }
 .wc-promo-new { font-size: 21px; font-weight: 800; color: #fff; }
-.wc-promo-period { font-size: 12px; font-weight: 400; color: var(--text-2); }
+.wc-promo-period { font-size: 11px; font-weight: 500; color: var(--text-2); letter-spacing: 0.04em; text-transform: uppercase; }
 .wc-promo-foot {
   display: flex;
   align-items: center;
