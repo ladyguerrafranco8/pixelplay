@@ -640,13 +640,15 @@ const WorldCupBanner = ({ onAdd, cart }) => {
     return () => clearInterval(id);
   }, []);
 
-  const wc_services = SERVICES.filter(s => s.id === 'disney' || s.id === 'paramount');
+  const wc_services = SERVICES.filter(s => s.id === 'disney');
   const pad = n => String(n).padStart(2, '0');
 
-  const WC_EXTRAS = {
-    disney: 'Incluye ESPN · Todos los partidos',
-    paramount: 'Cobertura completa del Mundial',
-  };
+  const disney = SERVICES.find(s => s.id === 'disney');
+  const promoPrice = 70000;
+  const regularPrice = 15000 * 6;
+  const savings = regularPrice - promoPrice;
+  const inCart = cart.some(c => c.id === 'disney');
+  const promoPlan = { type: 'promo-mundial', label: '6 meses · Promo Mundial', price: promoPrice };
 
   return (
     <section className="wc-banner">
@@ -661,29 +663,26 @@ const WorldCupBanner = ({ onAdd, cart }) => {
             El fútbol más grande<br/>
             <span className="wc-title-em">del planeta viene.</span>
           </h2>
-          <p className="wc-sub">Disney+ (con ESPN) y Paramount+ transmiten todos los partidos. Asegurá tu acceso ahora — los precios suben cuando arranque el torneo.</p>
-          <div className="wc-cards">
-            {wc_services.map(s => {
-              const plan = s.plans[0];
-              const inCart = cart.some(c => c.id === s.id);
-              return (
-                <div className="wc-service" key={s.id}>
-                  <ServiceBadge service={s} size={44} />
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div className="wc-svc-name">{s.name}</div>
-                    <div className="wc-svc-extra">{WC_EXTRAS[s.id]}</div>
-                    <div className="wc-svc-price">{formatCOP(plan.price)}<span>/mes</span></div>
-                  </div>
-                  <button
-                    className={`wc-btn ${inCart ? 'wc-btn-in' : ''}`}
-                    onClick={() => !inCart && onAdd(s, plan)}
-                    disabled={inCart}
-                  >
-                    {inCart ? '✓ En carrito' : '+ Agregar'}
-                  </button>
-                </div>
-              );
-            })}
+          <p className="wc-sub">Disney+ transmite todos los partidos con ESPN. Asegurá 6 meses al mejor precio antes de que arranque el torneo.</p>
+
+          <div className="wc-promo-card">
+            <ServiceBadge service={disney} size={52} />
+            <div className="wc-promo-info">
+              <div className="wc-promo-name">Disney+ · Con ESPN</div>
+              <div className="wc-promo-tag">Todos los partidos del Mundial</div>
+              <div className="wc-promo-pricing">
+                <span className="wc-promo-old">{formatCOP(regularPrice)}</span>
+                <span className="wc-promo-new">{formatCOP(promoPrice)} · 6 meses</span>
+              </div>
+              <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
+            </div>
+            <button
+              className={`wc-btn ${inCart ? 'wc-btn-in' : ''}`}
+              onClick={() => !inCart && onAdd(disney, promoPlan)}
+              disabled={inCart}
+            >
+              {inCart ? '✓ En carrito' : '+ Agregar'}
+            </button>
           </div>
         </div>
         <div className="wc-right">

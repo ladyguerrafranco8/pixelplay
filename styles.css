@@ -1666,6 +1666,38 @@ section {
 .wc-svc-extra { font-size: 11px; color: var(--text-2); letter-spacing: 0.04em; margin-bottom: 3px; font-weight: 500; }
 .wc-svc-price { font-size: 18px; font-weight: 700; color: #fff; }
 .wc-svc-price span { font-size: 12px; font-weight: 400; color: var(--text-2); }
+
+/* ---- Promo card (Mundial) ---- */
+.wc-promo-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,220,50,0.25);
+  border-radius: 16px;
+  padding: 18px 18px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.wc-promo-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.wc-promo-name { font-size: 15px; font-weight: 700; color: #fff; }
+.wc-promo-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255,220,50,0.8); }
+.wc-promo-pricing { display: flex; align-items: baseline; gap: 10px; margin-top: 4px; flex-wrap: wrap; }
+.wc-promo-old { font-size: 13px; color: var(--text-2); text-decoration: line-through; }
+.wc-promo-new { font-size: 20px; font-weight: 800; color: #fff; }
+.wc-promo-savings {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(34,197,94,0.15);
+  border: 1px solid rgba(34,197,94,0.3);
+  color: #86efac;
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+  margin-top: 2px;
+}
 .wc-btn {
   margin-left: auto;
   padding: 9px 18px;
