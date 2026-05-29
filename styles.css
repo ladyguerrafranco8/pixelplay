@@ -1871,5 +1871,7 @@ section {
   .final-cta-inner { padding: 48px 20px; }
   .testi-card { flex: 0 0 300px; }
   .catalog-bundle-tip { margin-left: 0; width: 100%; justify-content: center; }
-  .wc-banner { padding: 36px 20px; }
+  .wc-banner { padding: 28px 16px; margin: 0 12px; }
+  .wc-inner { gap: 24px; }
+  .wc-right { width: 100%; }
 }
