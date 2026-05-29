@@ -364,10 +364,10 @@ em {
 .hero-trust {
   display: flex;
   align-items: center;
-  gap: 20px;
-  color: var(--text-3);
-  font-size: 13px;
-  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--text-2);
+  font-size: 12px;
+  flex-wrap: nowrap;
 }
 .trust-item {
   display: inline-flex;
@@ -1668,6 +1668,18 @@ section {
 .wc-svc-price span { font-size: 12px; font-weight: 400; color: var(--text-2); }
 
 /* ---- Promo card (Mundial) ---- */
+.wc-promo-logos { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.wc-espn-badge {
+  background: #cc0000;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
 .wc-promo-card {
   display: flex;
   align-items: center;

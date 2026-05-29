@@ -666,7 +666,10 @@ const WorldCupBanner = ({ onAdd, cart }) => {
           <p className="wc-sub">Disney+ transmite todos los partidos con ESPN. Asegurá 6 meses al mejor precio antes de que arranque el torneo.</p>
 
           <div className="wc-promo-card">
-            <ServiceBadge service={disney} size={52} />
+            <div className="wc-promo-logos">
+              <ServiceBadge service={disney} size={52} />
+              <div className="wc-espn-badge">ESPN</div>
+            </div>
             <div className="wc-promo-info">
               <div className="wc-promo-name">Disney+ · Con ESPN</div>
               <div className="wc-promo-tag">Todos los partidos del Mundial</div>
