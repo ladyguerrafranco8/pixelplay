@@ -675,9 +675,11 @@ const WorldCupBanner = ({ onAdd, cart }) => {
                 <span className="wc-promo-arrow">→</span>
                 <span className="wc-promo-new">{formatCOP(promoPrice)}</span>
               </div>
-              <div className="wc-promo-period">6 meses</div>
               <div className="wc-promo-foot">
-                <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
+                <div className="wc-promo-badges">
+                  <div className="wc-promo-period">6 meses</div>
+                  <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
+                </div>
                 <button
                   className={`wc-btn-promo ${inCart ? 'wc-btn-in' : ''}`}
                   onClick={() => !inCart && onAdd(disney, promoPlan)}
@@ -973,9 +975,11 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
   const [file, setFile] = useState(null);
   const [errorMsg, setErrorMsg] = useState('');
   const [orderNum, setOrderNum] = useState(null);
+  const openedAtRef = useRef(null);
 
   React.useEffect(() => {
     if (open) {
+      openedAtRef.current = Date.now();
       setStep('form');
       setName(''); setEmail(''); setWhatsapp('');
       setFile(null); setErrorMsg(''); setOrderNum(null);
@@ -1059,8 +1063,13 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
     </div>
   );
 
+  const handleBackdropClick = () => {
+    if (Date.now() - (openedAtRef.current || 0) < 500) return;
+    onClose();
+  };
+
   return (
-    <div className="modal-backdrop" onClick={onClose}>
+    <div className="modal-backdrop" onClick={handleBackdropClick}>
       <div className="modal" onClick={e => e.stopPropagation()}>
         <div className="modal-head">
           <div className="modal-title">Finalizar pedido</div>
