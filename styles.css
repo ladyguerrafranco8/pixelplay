@@ -1690,7 +1690,21 @@ section {
 .wc-promo-old { font-size: 15px; font-weight: 600; color: var(--text-3); text-decoration: line-through; }
 .wc-promo-arrow { font-size: 13px; color: var(--text-3); }
 .wc-promo-new { font-size: 21px; font-weight: 800; color: #fff; }
-.wc-promo-period { font-size: 11px; font-weight: 500; color: var(--text-2); letter-spacing: 0.04em; text-transform: uppercase; }
+.wc-promo-period {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,220,50,0.9);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(255,220,50,0.1);
+  border: 1px solid rgba(255,220,50,0.2);
+  border-radius: 100px;
+  padding: 4px 14px;
+  align-self: flex-start;
+}
 .wc-promo-foot {
   display: flex;
   align-items: center;
