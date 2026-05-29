@@ -1438,6 +1438,74 @@ section {
   margin-bottom: 24px;
   line-height: 1.55;
 }
+.order-number-badge {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: var(--accent);
+  margin-bottom: 8px !important;
+}
+
+/* ---- Transfer info box ---- */
+.pay-transfer-info {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 16px 0 0;
+}
+.pay-transfer-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: 8px;
+}
+.pay-transfer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pay-transfer-bank { font-weight: 600; color: var(--text-1); }
+.pay-transfer-account { font-weight: 700; font-size: 15px; color: var(--text-1); }
+.pay-transfer-holder { font-size: 13px; color: var(--text-2); margin-top: 4px; }
+.pay-transfer-hint { font-size: 12px; color: var(--text-2); margin-top: 6px; font-style: italic; }
+
+/* ---- Comprobante upload ---- */
+.pay-upload-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  margin-top: 16px;
+}
+.pay-upload-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px dashed var(--line);
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  color: var(--text-2);
+}
+.pay-upload-box:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.pay-upload-box.has-file { border-style: solid; border-color: var(--accent); color: var(--text-1); }
+
+/* ---- Error message ---- */
+.pay-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-top: 12px;
+}
 
 /* ============================================================
    FLOATING WA

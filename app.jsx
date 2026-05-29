@@ -312,6 +312,7 @@ const Icon = ({ name, size = 20 }) => {
     case 'trophy': return <svg {...props} strokeWidth={1.5}><path d="M6 2h12v8a6 6 0 01-12 0V2z"/><path d="M6 6H3a2 2 0 000 4h3"/><path d="M18 6h3a2 2 0 010 4h-3"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>;
     case 'soccer': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M12 3l3 5-3 3-3-3 3-5z" fill="currentColor" fillOpacity="0.3"/><path d="M12 21l-3-5 3-3 3 3-3 5z" fill="currentColor" fillOpacity="0.3"/><path d="M3.5 7.5L8 9l1 4-4-1.5-1.5-4z" fill="currentColor" fillOpacity="0.3"/><path d="M20.5 7.5L16 9l-1 4 4-1.5 1.5-4z" fill="currentColor" fillOpacity="0.3"/></svg>;
     case 'clock': return <svg {...props} strokeWidth={1.5}><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/><path d="M12 2v2"/></svg>;
+    case 'upload': return <svg {...props} strokeWidth={1.5}><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>;
     default: return null;
   }
 };
@@ -961,84 +962,157 @@ const CartDrawer = ({ open, onClose, cart, setCart, accent, onCheckout }) => {
 // ============================================================
 // CHECKOUT MODAL
 // ============================================================
-const CheckoutModal = ({ open, onClose, total, accent }) => {
-  const [step, setStep] = useState(0);
-  const [method, setMethod] = useState('card');
+const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
+  const [step, setStep] = useState('form');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [file, setFile] = useState(null);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [orderNum, setOrderNum] = useState(null);
+
+  React.useEffect(() => {
+    if (open) {
+      setStep('form');
+      setName(''); setEmail(''); setWhatsapp('');
+      setFile(null); setErrorMsg(''); setOrderNum(null);
+    }
+  }, [open]);
+
   if (!open) return null;
+
+  const cfg = window.PIXELPLAY_CONFIG || {};
+  const payMethod = (cfg.PAYMENT_METHODS || [])[0];
+
+  const handleSubmit = async () => {
+    if (!name.trim()) { setErrorMsg('Por favor ingresá tu nombre.'); return; }
+    if (!email.trim() || !email.includes('@')) { setErrorMsg('Email inválido.'); return; }
+    if (!file) { setErrorMsg('Por favor subí el comprobante de pago.'); return; }
+    setStep('submitting');
+    setErrorMsg('');
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const base64 = e.target.result;
+      const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+      try {
+        const res = await fetch(`${cfg.SUPABASE_URL}/functions/v1/crear-pedido`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'apikey': cfg.SUPABASE_ANON_KEY },
+          body: JSON.stringify({
+            customer: { name: name.trim(), email: email.trim(), whatsapp: whatsapp.trim() },
+            paymentMethod: payMethod?.id || 'bancolombia',
+            items: cart.map(c => ({
+              id: c.id, name: c.name,
+              planType: c.plan.type, planLabel: c.plan.label,
+              price: c.plan.price
+            })),
+            screenshot: { base64, ext, contentType: file.type || 'image/jpeg' }
+          })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          setOrderNum(data.order_number);
+          setCart([]);
+          setStep('success');
+        } else {
+          setErrorMsg(data.message || 'Error al procesar el pedido.');
+          setStep('form');
+        }
+      } catch {
+        setErrorMsg('Error de conexión. Intentá de nuevo.');
+        setStep('form');
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
+  if (step === 'submitting') return (
+    <div className="modal-backdrop">
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="checkout-success">
+          <div className="success-ring" style={{ borderColor: accent, opacity: 0.7 }}>
+            <Icon name="lock" size={32} />
+          </div>
+          <h3>Procesando tu pedido…</h3>
+          <p>Esto tarda unos segundos.</p>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (step === 'success') return (
+    <div className="modal-backdrop">
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="checkout-success">
+          <div className="success-ring" style={{ borderColor: accent }}>
+            <Icon name="check" size={36} />
+          </div>
+          <h3>¡Pedido recibido!</h3>
+          {orderNum && <p className="order-number-badge" style={{ color: accent }}>Pedido #{orderNum}</p>}
+          <p>Revisaremos tu comprobante y te enviamos los accesos por email en los próximos minutos.</p>
+          <button className="btn-primary" style={{ background: accent }} onClick={onClose}>Listo</button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
-        {step === 0 ? (
-          <>
-            <div className="modal-head">
-              <div className="modal-title">Confirmar pago</div>
-              <button className="icon-btn" onClick={onClose}><Icon name="close" size={18} /></button>
-            </div>
-            <div className="modal-body">
-              <div className="pay-methods">
-                {[
-                  ['card', 'Tarjeta'],
-                  ['paypal', 'PayPal'],
-
-                  ['transfer', 'Transferencia'],
-                ].map(([k, l]) => (
-                  <button
-                    key={k}
-                    className={`pay-method ${method === k ? 'active' : ''}`}
-                    onClick={() => setMethod(k)}
-                    style={method === k ? { borderColor: accent, background: `${accent}15` } : {}}
-                  >
-                    {l}
-                  </button>
-                ))}
-              </div>
-              {method === 'card' && (
-                <div className="pay-fields">
-                  <label>Número de tarjeta
-                    <input type="text" placeholder="4242 4242 4242 4242" />
-                  </label>
-                  <div className="pay-row">
-                    <label>Vencimiento
-                      <input type="text" placeholder="MM / AA" />
-                    </label>
-                    <label>CVV
-                      <input type="text" placeholder="123" />
-                    </label>
-                  </div>
-                  <label>Email (para recibir tus accesos)
-                    <input type="email" placeholder="tu@email.com" />
-                  </label>
-                  <label>WhatsApp (opcional)
-                    <input type="tel" placeholder="+1 555 0102024" />
-                  </label>
-                </div>
-              )}
-              {method !== 'card' && (
-                <div className="pay-alt">
-                  <div className="pay-alt-icon"><Icon name="lock" size={28} /></div>
-                  <p>Te redirigiremos a la pasarela segura de <strong>{method === 'paypal' ? 'PayPal' : 'transferencia bancaria'}</strong> para completar tu compra.</p>
-                </div>
-              )}
-              <button
-                className="btn-primary btn-lg btn-block"
-                style={{ background: accent, marginTop: 18 }}
-                onClick={() => setStep(1)}
-              >
-                <Icon name="lock" size={16} /> Pagar {formatCOP(Math.round(total))}
-              </button>
-              <div className="modal-trust">Pago cifrado SSL · No guardamos datos de tarjeta</div>
-            </div>
-          </>
-        ) : (
-          <div className="checkout-success">
-            <div className="success-ring" style={{ borderColor: accent }}>
-              <Icon name="check" size={36} />
-            </div>
-            <h3>¡Pago confirmado!</h3>
-            <p>Estás recibiendo tus accesos por WhatsApp y correo en los próximos minutos. Si tenés cualquier duda, escribinos.</p>
-            <button className="btn-primary" style={{ background: accent }} onClick={onClose}>Listo</button>
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="modal-head">
+          <div className="modal-title">Finalizar pedido</div>
+          <button className="icon-btn" onClick={onClose}><Icon name="close" size={18} /></button>
+        </div>
+        <div className="modal-body">
+          <div className="pay-fields">
+            <label>Nombre completo
+              <input type="text" placeholder="Tu nombre" value={name} onChange={e => setName(e.target.value)} />
+            </label>
+            <label>Email (te enviamos los accesos aquí)
+              <input type="email" placeholder="tu@email.com" value={email} onChange={e => setEmail(e.target.value)} />
+            </label>
+            <label>WhatsApp (opcional)
+              <input type="tel" placeholder="+57 300 000 0000" value={whatsapp} onChange={e => setWhatsapp(e.target.value)} />
+            </label>
           </div>
-        )}
+
+          {payMethod && (
+            <div className="pay-transfer-info">
+              <div className="pay-transfer-title">Transferí el pago a:</div>
+              <div className="pay-transfer-row">
+                <span className="pay-transfer-bank">{payMethod.label}</span>
+                <span className="pay-transfer-account">{payMethod.account}</span>
+              </div>
+              <div className="pay-transfer-holder">{payMethod.holder}</div>
+              {payMethod.hint && <div className="pay-transfer-hint">{payMethod.hint}</div>}
+            </div>
+          )}
+
+          <div className="pay-upload-label">Comprobante de pago (foto o captura)
+            <label className={`pay-upload-box ${file ? 'has-file' : ''}`} htmlFor="comprobante-input">
+              <input
+                type="file"
+                accept="image/*"
+                id="comprobante-input"
+                style={{ display: 'none' }}
+                onChange={e => setFile(e.target.files[0] || null)}
+              />
+              <Icon name="upload" size={18} />
+              <span>{file ? file.name : 'Subir imagen'}</span>
+            </label>
+          </div>
+
+          {errorMsg && <div className="pay-error">{errorMsg}</div>}
+
+          <button
+            className="btn-primary btn-lg btn-block"
+            style={{ background: accent, marginTop: 18 }}
+            onClick={handleSubmit}
+          >
+            <Icon name="lock" size={16} /> Confirmar pedido · {formatCOP(Math.round(total))}
+          </button>
+          <div className="modal-trust">Tu comprobante es revisado manualmente · Accesos en minutos</div>
+        </div>
       </div>
     </div>
   );
@@ -1102,6 +1176,8 @@ function App() {
       <CheckoutModal
         open={checkoutOpen}
         onClose={() => setCheckoutOpen(false)}
+        cart={cart}
+        setCart={setCart}
         total={total}
         accent={t.accent}
       />
