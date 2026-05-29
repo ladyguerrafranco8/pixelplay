@@ -1682,11 +1682,11 @@ section {
   margin-top: 8px;
 }
 .wc-promo-top { display: flex; align-items: center; gap: 12px; }
-.wc-promo-name-wrap { display: flex; flex-direction: column; gap: 2px; }
+.wc-promo-name-wrap { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .wc-promo-name { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.3; }
 .wc-promo-espn { font-size: 15px; font-weight: 800; color: #fff; }
 .wc-promo-tag { font-size: 11px; font-weight: 500; color: rgba(255,220,50,0.85); }
-.wc-promo-pricing { display: flex; align-items: center; gap: 6px; }
+.wc-promo-pricing { display: flex; align-items: center; gap: 6px; justify-content: center; }
 .wc-promo-old { font-size: 13px; font-weight: 500; color: var(--text-3); text-decoration: line-through; }
 .wc-promo-arrow { font-size: 12px; color: var(--text-3); }
 .wc-promo-new { font-size: 20px; font-weight: 800; color: #fff; }
@@ -1871,7 +1871,7 @@ section {
   .final-cta-inner { padding: 48px 20px; }
   .testi-card { flex: 0 0 300px; }
   .catalog-bundle-tip { margin-left: 0; width: 100%; justify-content: center; }
-  .wc-banner { padding: 28px 16px; margin: 0 12px; }
+  .wc-banner { padding: 28px 16px; }
   .wc-inner { gap: 24px; }
   .wc-right { width: 100%; }
 }
