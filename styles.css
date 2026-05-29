@@ -91,6 +91,8 @@ em {
   transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 20px -4px rgba(139, 92, 246, 0.5);
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn-primary:hover {
   transform: translateY(-1px);
@@ -1243,8 +1245,10 @@ section {
 
 .drawer-foot {
   padding: 20px 24px;
+  padding-bottom: max(20px, calc(env(safe-area-inset-bottom) + 12px));
   border-top: 1px solid var(--line);
   background: var(--bg);
+  flex-shrink: 0;
 }
 .totals {
   margin-bottom: 16px;
@@ -1726,6 +1730,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   padding: 11px 16px;
   border-radius: 10px;
   background: linear-gradient(135deg, #8b5cf6, #7c3aed);
