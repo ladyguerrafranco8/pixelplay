@@ -1668,14 +1668,6 @@ section {
 .wc-svc-price span { font-size: 12px; font-weight: 400; color: var(--text-2); }
 
 /* ---- Promo card (Mundial) ---- */
-.wc-promo-logos { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; }
-.wc-espn-badge {
-  color: #ff4444;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-}
-
 .wc-promo-card {
   display: flex;
   align-items: center;
@@ -1683,17 +1675,18 @@ section {
   background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 20px;
-  padding: 20px;
+  padding: 18px 16px;
   margin-top: 8px;
   flex-wrap: nowrap;
 }
-.wc-promo-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
-.wc-promo-name { font-size: 16px; font-weight: 700; color: #fff; }
-.wc-promo-tag { font-size: 12px; font-weight: 500; color: rgba(255,220,50,0.8); }
-.wc-promo-pricing { display: flex; align-items: baseline; gap: 8px; }
-.wc-promo-old { font-size: 13px; color: var(--text-3); text-decoration: line-through; }
-.wc-promo-new { font-size: 22px; font-weight: 800; color: #fff; }
-.wc-promo-period { font-size: 13px; font-weight: 400; color: var(--text-2); }
+.wc-promo-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.wc-promo-name { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.2; }
+.wc-promo-espn { font-size: 15px; font-weight: 800; color: #ff4444; }
+.wc-promo-tag { font-size: 11px; font-weight: 500; color: rgba(255,220,50,0.8); margin-bottom: 2px; }
+.wc-promo-pricing { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.wc-promo-old { font-size: 12px; color: var(--text-3); text-decoration: line-through; }
+.wc-promo-new { font-size: 21px; font-weight: 800; color: #fff; }
+.wc-promo-period { font-size: 12px; font-weight: 400; color: var(--text-2); }
 .wc-promo-foot {
   display: flex;
   align-items: center;
