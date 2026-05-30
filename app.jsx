@@ -668,7 +668,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
-              <ServiceBadge service={disney} size={44} />
+              <ServiceBadge service={disney} size={62} />
               <div className="wc-promo-name-wrap">
                 <div className="wc-promo-name">Disney Plus <span className="wc-promo-espn">+ ESPN</span></div>
                 <div className="wc-promo-tag">Todos los partidos del Mundial</div>
