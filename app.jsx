@@ -994,8 +994,8 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
 
   const handleSubmit = async () => {
     if (!name.trim()) { setErrorMsg('Por favor ingresá tu nombre.'); return; }
-    if (!email.trim() || !email.includes('@')) { setErrorMsg('Email inválido.'); return; }
-    if (!file) { setErrorMsg('Por favor subí el comprobante de pago.'); return; }
+    if (!whatsapp.trim()) { setErrorMsg('Por favor ingresá tu número de WhatsApp.'); return; }
+    if (!file) { setErrorMsg('Subí el comprobante de pago para continuar.'); return; }
     setStep('submitting');
     setErrorMsg('');
     const reader = new FileReader();
@@ -1057,7 +1057,7 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
           </div>
           <h3>¡Pedido recibido!</h3>
           {orderNum && <p className="order-number-badge" style={{ color: accent }}>Pedido #{orderNum}</p>}
-          <p>Revisaremos tu comprobante y te enviamos los accesos por email en los próximos minutos.</p>
+          <p>Revisaremos tu comprobante y te enviamos los accesos por WhatsApp en los próximos minutos.</p>
           <button className="btn-primary" style={{ background: accent }} onClick={onClose}>Listo</button>
         </div>
       </div>
@@ -1081,11 +1081,11 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
             <label>Nombre completo
               <input type="text" placeholder="Tu nombre" value={name} onChange={e => setName(e.target.value)} />
             </label>
-            <label>Email (te enviamos los accesos aquí)
-              <input type="email" placeholder="tu@email.com" value={email} onChange={e => setEmail(e.target.value)} />
-            </label>
-            <label>WhatsApp (opcional)
+            <label>WhatsApp <span className="field-required-tag">te enviamos los accesos aquí</span>
               <input type="tel" placeholder="+57 300 000 0000" value={whatsapp} onChange={e => setWhatsapp(e.target.value)} />
+            </label>
+            <label>Email <span className="field-optional-tag">opcional</span>
+              <input type="email" placeholder="tu@email.com" value={email} onChange={e => setEmail(e.target.value)} />
             </label>
           </div>
 
@@ -1101,7 +1101,11 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
             </div>
           )}
 
-          <div className="pay-upload-label">Comprobante de pago (foto o captura)
+          <div className="pay-upload-section">
+            <div className="pay-upload-header">
+              <span className="pay-upload-title">Comprobante de pago</span>
+              <span className="pay-upload-required-tag">Requerido</span>
+            </div>
             <label className={`pay-upload-box ${file ? 'has-file' : ''}`} htmlFor="comprobante-input">
               <input
                 type="file"
@@ -1110,8 +1114,9 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
                 style={{ display: 'none' }}
                 onChange={e => setFile(e.target.files[0] || null)}
               />
-              <Icon name="upload" size={18} />
-              <span>{file ? file.name : 'Subir imagen'}</span>
+              <Icon name="upload" size={28} />
+              <span className="pay-upload-main">{file ? file.name : 'Subí la foto o captura del pago'}</span>
+              {!file && <span className="pay-upload-sub">Sin esto no podemos procesar tu pedido</span>}
             </label>
           </div>
 
