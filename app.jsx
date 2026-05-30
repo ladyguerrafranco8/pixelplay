@@ -647,7 +647,8 @@ const WorldCupBanner = ({ onAdd, cart }) => {
   const promoPrice = 70000;
   const regularPrice = 15000 * 6;
   const savings = regularPrice - promoPrice;
-  const inCart = cart.some(c => c.id === 'disney');
+  const promoService = { ...disney, id: 'disney-promo' };
+  const inCart = cart.some(c => c.id === 'disney-promo');
   const promoPlan = { type: 'promo-mundial', label: '6 meses · Promo Mundial', price: promoPrice };
 
   return (
@@ -684,7 +685,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
             </div>
             <button
               className={`wc-btn-promo ${inCart ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCart && onAdd(disney, promoPlan)}
+              onClick={() => !inCart && onAdd(promoService, promoPlan)}
               disabled={inCart}
             >
               {inCart ? '✓ Agregado' : '+ Agregar'}
