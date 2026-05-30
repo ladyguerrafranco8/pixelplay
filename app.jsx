@@ -1129,7 +1129,7 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
           >
             <Icon name="lock" size={16} /> Confirmar pedido · {formatCOP(Math.round(total))}
           </button>
-          <div className="modal-trust">Tu comprobante es revisado manualmente · Accesos en minutos</div>
+          <div className="modal-trust">Tu comprobante será revisado y tendrás acceso en minutos</div>
         </div>
       </div>
     </div>
