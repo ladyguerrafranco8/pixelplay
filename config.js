@@ -27,7 +27,7 @@ window.PIXELPLAY_CONFIG = {
     {
       id: "bancolombia",
       label: "Bancolombia",
-      holder: "Lady Guerra",
+      holder: "",
       account: "Ahorros 51114303619",
       hint: "Transferencia o consignación a esta cuenta de ahorros.",
     },
