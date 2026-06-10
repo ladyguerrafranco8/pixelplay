@@ -621,7 +621,7 @@ const FlipUnit = ({ value, label }) => {
 // WORLD CUP BANNER
 // ============================================================
 const WorldCupBanner = ({ onAdd, cart }) => {
-  const MUNDIAL_DATE = new Date('2026-06-11T00:00:00');
+  const MUNDIAL_DATE = new Date('2026-06-11T14:00:00-05:00');
   const [timeLeft, setTimeLeft] = React.useState({});
 
   React.useEffect(() => {
