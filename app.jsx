@@ -643,12 +643,12 @@ const WorldCupBanner = ({ onAdd, cart }) => {
   const wc_services = SERVICES.filter(s => s.id === 'disney');
   const pad = n => String(n).padStart(2, '0');
 
-  const disney = SERVICES.find(s => s.id === 'disney');
-  const promoPrice = 70000;
-  const regularPrice = 15000 * 6;
+  const paramount = SERVICES.find(s => s.id === 'paramount');
+  const promoPrice = 80000;
+  const regularPrice = 18000 * 6;
   const savings = regularPrice - promoPrice;
-  const promoService = { ...disney, id: 'disney-promo' };
-  const inCart = cart.some(c => c.id === 'disney-promo');
+  const promoService = { ...paramount, id: 'paramount-promo' };
+  const inCart = cart.some(c => c.id === 'paramount-promo');
   const promoPlan = { type: 'promo-mundial', label: '6 meses · Promo Mundial', price: promoPrice };
 
   return (
@@ -664,13 +664,13 @@ const WorldCupBanner = ({ onAdd, cart }) => {
             El fútbol más grande<br/>
             <span className="wc-title-em">del planeta viene.</span>
           </h2>
-          <p className="wc-sub">Disney+ transmite todos los partidos con ESPN. Asegurá 6 meses al mejor precio antes de que arranque el torneo.</p>
+          <p className="wc-sub">Paramount+ te trae toda la acción del Mundial. Asegurá 6 meses al mejor precio antes de que arranque el torneo.</p>
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
-              <ServiceBadge service={disney} size={62} />
+              <ServiceBadge service={paramount} size={62} />
               <div className="wc-promo-name-wrap">
-                <div className="wc-promo-name">Disney Plus <span className="wc-promo-espn">+ ESPN</span></div>
+                <div className="wc-promo-name">Paramount<span className="wc-promo-espn">+</span></div>
                 <div className="wc-promo-tag">Todos los partidos del Mundial</div>
               </div>
             </div>
