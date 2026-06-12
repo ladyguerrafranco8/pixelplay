@@ -644,7 +644,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
   const pad = n => String(n).padStart(2, '0');
 
   const paramount = SERVICES.find(s => s.id === 'paramount');
-  const promoPrice = 80000;
+  const promoPrice = 70000;
   const regularPrice = 18000 * 6;
   const savings = regularPrice - promoPrice;
   const promoService = { ...paramount, id: 'paramount-promo' };
