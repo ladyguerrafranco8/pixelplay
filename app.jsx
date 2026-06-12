@@ -588,60 +588,43 @@ const Why = ({ accent }) => (
 );
 
 // ============================================================
-// FLIP UNIT — countdown digit with calendar-flip animation
+// WORLD CUP MATCH SCHEDULE (Colombia local time)
 // ============================================================
-const FlipUnit = ({ value, label }) => {
-  const [shown, setShown] = useState(value);
-  const [phase, setPhase] = useState('');
-  const busyRef = useRef(false);
-
-  useEffect(() => {
-    if (value === shown && !busyRef.current) return;
-    if (busyRef.current) return;
-    busyRef.current = true;
-    setPhase('exit');
-    const t1 = setTimeout(() => { setShown(value); setPhase('enter'); }, 420);
-    const t2 = setTimeout(() => { setPhase(''); busyRef.current = false; }, 980);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, [value]);
-
-  return (
-    <div className="wc-flip-unit">
-      <div className="wc-flip-card">
-        <div className={`wc-flip-inner${phase ? ' wc-flip-' + phase : ''}`}>
-          <span className="wc-flip-num">{shown}</span>
-        </div>
-      </div>
-      <span className="wc-lbl">{label}</span>
-    </div>
-  );
+const WORLD_CUP_MATCHES = {
+  '2026-06-11': [
+    { teams: 'México vs Sudáfrica', time: '1:00 p.m.' },
+    { teams: 'Corea del Sur vs Chequia', time: '7:00 p.m.' },
+  ],
+  '2026-06-12': [
+    { teams: 'Canadá vs Bosnia y Herzegovina', time: '2:00 p.m.' },
+    { teams: 'Estados Unidos vs Paraguay', time: '8:00 p.m.' },
+  ],
+  '2026-06-13': [
+    { teams: 'Qatar vs Suiza', time: '2:00 p.m.' },
+    { teams: 'Brasil vs Marruecos', time: '5:00 p.m.' },
+    { teams: 'Haití vs Escocia', time: '8:00 p.m.' },
+    { teams: 'Australia vs Turquía', time: '11:00 p.m.' },
+  ],
+  '2026-06-14': [
+    { teams: 'Alemania vs Curazao', time: '12:00 m.' },
+    { teams: 'Países Bajos vs Japón', time: '3:00 p.m.' },
+    { teams: 'Costa de Marfil vs Ecuador', time: '6:00 p.m.' },
+    { teams: 'Suecia vs Túnez', time: '9:00 p.m.' },
+  ],
+  '2026-06-15': [
+    { teams: 'España vs Cabo Verde', time: '12:00 m.' },
+    { teams: 'Bélgica vs Egipto', time: '5:00 p.m.' },
+    { teams: 'Arabia Saudita vs Uruguay', time: '5:00 p.m.' },
+    { teams: 'Irán vs Nueva Zelanda', time: '8:00 p.m.' },
+  ],
 };
 
 // ============================================================
 // WORLD CUP BANNER
 // ============================================================
 const WorldCupBanner = ({ onAdd, cart }) => {
-  const MUNDIAL_DATE = new Date('2026-06-11T14:00:00-05:00');
-  const [timeLeft, setTimeLeft] = React.useState({});
-
-  React.useEffect(() => {
-    const calc = () => {
-      const diff = MUNDIAL_DATE - new Date();
-      if (diff <= 0) return setTimeLeft({ d: 0, h: 0, m: 0, s: 0 });
-      setTimeLeft({
-        d: Math.floor(diff / 86400000),
-        h: Math.floor((diff % 86400000) / 3600000),
-        m: Math.floor((diff % 3600000) / 60000),
-        s: Math.floor((diff % 60000) / 1000),
-      });
-    };
-    calc();
-    const id = setInterval(calc, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const wc_services = SERVICES.filter(s => s.id === 'disney');
-  const pad = n => String(n).padStart(2, '0');
+  const todayKey = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  const todayMatches = WORLD_CUP_MATCHES[todayKey] || [];
 
   const paramount = SERVICES.find(s => s.id === 'paramount');
   const promoPrice = 70000;
@@ -693,16 +676,22 @@ const WorldCupBanner = ({ onAdd, cart }) => {
           </div>
         </div>
         <div className="wc-right">
-          <div className="wc-countdown-label">El Mundial empieza en</div>
-          <div className="wc-countdown">
-            <FlipUnit value={pad(timeLeft.d)} label="días" />
-            <span className="wc-sep">:</span>
-            <FlipUnit value={pad(timeLeft.h)} label="horas" />
-            <span className="wc-sep">:</span>
-            <FlipUnit value={pad(timeLeft.m)} label="min" />
-            <span className="wc-sep">:</span>
-            <FlipUnit value={pad(timeLeft.s)} label="seg" />
-          </div>
+          <div className="wc-live-tag"><span className="wc-live-dot" />EL MUNDIAL YA ESTÁ AQUÍ</div>
+          {todayMatches.length > 0 ? (
+            <>
+              <div className="wc-countdown-label">Partidos de hoy</div>
+              <div className="wc-matches">
+                {todayMatches.map((m, i) => (
+                  <div className="wc-match" key={i}>
+                    <span className="wc-match-teams">{m.teams}</span>
+                    <span className="wc-match-time">{m.time}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="wc-countdown-label">Hoy no hay partidos, pero el torneo sigue</div>
+          )}
           <div className="wc-badge">🏆 FIFA World Cup 2026™</div>
         </div>
       </div>
