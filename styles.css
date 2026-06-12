@@ -1877,20 +1877,39 @@ section {
   display: flex;
   align-items: center;
   gap: 6px;
+  flex: 1;
+  min-width: 0;
   font-size: 13px;
   font-weight: 600;
   color: var(--text-1);
   text-align: left;
 }
+.wc-match-team {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+.wc-match-team-away {
+  justify-content: flex-end;
+}
+.wc-match-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .wc-match-flag {
   font-size: 16px;
   line-height: 1;
+  flex-shrink: 0;
 }
 .wc-match-vs {
   font-size: 10px;
   font-weight: 700;
   color: var(--text-3);
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 .wc-match-time {
   font-family: var(--font-mono);
@@ -1898,6 +1917,7 @@ section {
   font-weight: 700;
   color: #FCD116;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .wc-badge {
   font-size: 12px;

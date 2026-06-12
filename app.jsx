@@ -684,9 +684,15 @@ const WorldCupBanner = ({ onAdd, cart }) => {
                 {todayMatches.map((m, i) => (
                   <div className="wc-match" key={i}>
                     <span className="wc-match-teams">
-                      <span className="wc-match-flag">{m.homeFlag}</span> {m.home}
+                      <span className="wc-match-team">
+                        <span className="wc-match-flag">{m.homeFlag}</span>
+                        <span className="wc-match-name">{m.home}</span>
+                      </span>
                       <span className="wc-match-vs">vs</span>
-                      {m.away} <span className="wc-match-flag">{m.awayFlag}</span>
+                      <span className="wc-match-team wc-match-team-away">
+                        <span className="wc-match-name">{m.away}</span>
+                        <span className="wc-match-flag">{m.awayFlag}</span>
+                      </span>
                     </span>
                     <span className="wc-match-time">{m.time}</span>
                   </div>
