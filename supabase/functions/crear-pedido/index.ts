@@ -77,7 +77,10 @@ Deno.serve(async (req) => {
 
   // ---- Validación de entrada ----
   if (!name) return json({ ok: false, message: "Falta el nombre." }, 400);
-  if (!email || !email.includes("@")) {
+  if (!whatsapp) {
+    return json({ ok: false, message: "Falta el número de WhatsApp." }, 400);
+  }
+  if (email && !email.includes("@")) {
     return json({ ok: false, message: "Email inválido." }, 400);
   }
   if (items.length === 0) {
@@ -128,8 +131,8 @@ Deno.serve(async (req) => {
     .from("orders")
     .insert({
       customer_name: name,
-      customer_email: email,
-      customer_whatsapp: whatsapp || null,
+      customer_email: email || null,
+      customer_whatsapp: whatsapp,
       payment_method: body.paymentMethod ?? null,
       items,
       subtotal,
@@ -164,7 +167,7 @@ Deno.serve(async (req) => {
 Nuevo pedido en PixelPlay.
 
 Pedido #${orderNumber}
-Cliente: ${name} (${email})${whatsapp ? `\nWhatsApp: ${whatsapp}` : ""}
+Cliente: ${name}${email ? ` (${email})` : ""}\nWhatsApp: ${whatsapp}
 Método de pago: ${body.paymentMethod ?? "—"}
 
 Servicios:

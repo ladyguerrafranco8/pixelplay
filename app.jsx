@@ -963,6 +963,33 @@ const CartDrawer = ({ open, onClose, cart, setCart, accent, onCheckout }) => {
 };
 
 // ============================================================
+// IMAGE COMPRESSION — resize comprobante before upload so large
+// camera photos don't fail on slow mobile connections.
+// ============================================================
+const compressImage = (file, maxDim = 1280, quality = 0.75) => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onerror = reject;
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onerror = reject;
+    img.onload = () => {
+      let { width, height } = img;
+      if (width > maxDim || height > maxDim) {
+        if (width > height) { height = Math.round(height * maxDim / width); width = maxDim; }
+        else { width = Math.round(width * maxDim / height); height = maxDim; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+      resolve(canvas.toDataURL('image/jpeg', quality));
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+// ============================================================
 // CHECKOUT MODAL
 // ============================================================
 const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
@@ -995,40 +1022,35 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
     if (!file) { setErrorMsg('Subí el comprobante de pago para continuar.'); return; }
     setStep('submitting');
     setErrorMsg('');
-    const reader = new FileReader();
-    reader.onload = async (e) => {
-      const base64 = e.target.result;
-      const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
-      try {
-        const res = await fetch(`${cfg.SUPABASE_URL}/functions/v1/crear-pedido`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'apikey': cfg.SUPABASE_ANON_KEY },
-          body: JSON.stringify({
-            customer: { name: name.trim(), email: email.trim(), whatsapp: whatsapp.trim() },
-            paymentMethod: payMethod?.id || 'bancolombia',
-            items: cart.map(c => ({
-              id: c.id, name: c.name,
-              planType: c.plan.type, planLabel: c.plan.label,
-              price: c.plan.price
-            })),
-            screenshot: { base64, ext, contentType: file.type || 'image/jpeg' }
-          })
-        });
-        const data = await res.json();
-        if (data.ok) {
-          setOrderNum(data.order_number);
-          setCart([]);
-          setStep('success');
-        } else {
-          setErrorMsg(data.message || 'Error al procesar el pedido.');
-          setStep('form');
-        }
-      } catch {
-        setErrorMsg('Error de conexión. Intentá de nuevo.');
+    try {
+      const base64 = await compressImage(file);
+      const res = await fetch(`${cfg.SUPABASE_URL}/functions/v1/crear-pedido`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'apikey': cfg.SUPABASE_ANON_KEY },
+        body: JSON.stringify({
+          customer: { name: name.trim(), email: email.trim(), whatsapp: whatsapp.trim() },
+          paymentMethod: payMethod?.id || 'bancolombia',
+          items: cart.map(c => ({
+            id: c.id, name: c.name,
+            planType: c.plan.type, planLabel: c.plan.label,
+            price: c.plan.price
+          })),
+          screenshot: { base64, ext: 'jpg', contentType: 'image/jpeg' }
+        })
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setOrderNum(data.order_number);
+        setCart([]);
+        setStep('success');
+      } else {
+        setErrorMsg(data.message || 'Error al procesar el pedido.');
         setStep('form');
       }
-    };
-    reader.readAsDataURL(file);
+    } catch {
+      setErrorMsg('Error de conexión. Verificá tu internet e intentá de nuevo.');
+      setStep('form');
+    }
   };
 
   if (step === 'submitting') return (
