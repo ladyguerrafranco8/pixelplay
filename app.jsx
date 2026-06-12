@@ -68,7 +68,7 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · HD', price: 18000, popular: false },
     ],
     color: '#0064FF',
-    logoSlug: 'paramountplus',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzQwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMzAnIGxldHRlci1zcGFjaW5nPSctMSc+UCs8L3RleHQ+Cjwvc3ZnPgo=',
   },
   {
     id: 'crunchyroll',
