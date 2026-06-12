@@ -65,7 +65,7 @@ const SERVICES = [
     name: 'Paramount+',
     tagline: 'Series y deportes en vivo',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla · HD', price: 12000, popular: false },
+      { type: 'Pantalla', label: '1 Pantalla · HD', price: 18000, popular: false },
     ],
     color: '#0064FF',
     logoSlug: 'paramountplus',
