@@ -68,7 +68,7 @@ const SERVICES = [
       { type: 'Pantalla', label: '1 Pantalla · HD', price: 18000, popular: false },
     ],
     color: '#0064FF',
-    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzQwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMzAnIGxldHRlci1zcGFjaW5nPSctMSc+UCs8L3RleHQ+Cjwvc3ZnPgo=',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UGFyYW1vdW50KzwvdGl0bGU+PHBhdGggZD0iTTE2LjM0NyAyMS4zNzNjLjA1Ny0uMDg0LjE1MS0uMzE0LS4wMjUtLjc0bC0uNTMtMS40MjhjLS4wNzMtLjE4Mi4wODQtLjI5My4xOS0uMTczIDAgMCAxLjAwNCAxLjE1NyAxLjI2NCAxLjY0bC40OTUuODIyYy40MjUuMDI4IDEuNi4wNiAyLjczMi4wNmEzLjI2IDMuMjYgMCAwIDEtLjMxNi0uMzY0Yy0xLjkzLTIuMzkyLTMuMTU0LTMuNzI0LTMuMTY2LTMuNzM3LS4zOTEtLjQyNi0uNTcyLS41MDgtLjg3LS42NDNhNC44MiA0LjgyIDAgMCAxLS4xMzgtLjA2NXYuMzY0YzAgLjA0Ny0uMDU3LjA3My0uMDg2LjAyMmwtMi44NDYtNS4wMDFhMS41OTggMS41OTggMCAwIDAtLjUwOC0uNTg3bC0uMjc3LS4xOTQtMS4zNTQgMy4xMjNjLjIxMiAwIC4zNTQuMjE2LjI3LjQwOWwtMS4yNSAyLjg5M2gxLjE0N2MuNDQzIDAgLjg4My4wODcgMS4yOTQuMjU1bC4zMDIuMTI1cy0uOTEzIDEuODc4LS45MTMgMi44NjdjMCAuMTgxLjAyOC4zNjIuMDc1LjUzNGgyLjEwNGwtLjA5Ni0uNTk1czEuMjY2LjI5NCAyLjUwMi40MTNNMTIgMi40MzdjLTYuNjI3IDAtMTIgNS4zNzMtMTIgMTIgMCAyLjY2OS44NzMgNS4xMzMgMi4zNDYgNy4xMjYuNTAzLS4yMTguNzgzLS41NDIuOTgzLS43OTFsMi4yMzQtMi44NThhLjQ2Ny40NjcgMCAwIDEgLjE3OS0uMTM4bC4zMzYtLjE0NiAzLjY3NC00LjY1OS41MzQtLjQxNyAxLjA5NC0xLjUyNGEuNDgyLjQ4MiAwIDAgMSAuMTAxLS4xMDJsLjQ3OC0uMzQ3YS4zNC4zNCAwIDAgMSAuMzk4LS4wMDRsLjU3OC40MDdjLjMwOC4yMTYuNTU3LjUwNC43MjYuODRsMi4zMjIgNC4wNzdjLjA1MS4wOS4wOS4xMjkuMTgyLjE3NC40NTQuMjI3LjczMi4yNjggMS4zMy45MTMuMjc3LjMwNCAxLjQ5NSAxLjY2NiAzLjIwMyAzLjc4NC4yMzYuMzE4LjUzOC41ODguOTYzLjc4M0ExMS45NDggMTEuOTQ4IDAgMCAwIDI0IDE0LjQzN2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyTTMuMjM2IDE1LjFsLS43NzgtLjI1My0uNDguNjYydi0uODE4bC0uNzc4LS4yNTMuNzc4LS4yNTN2LS44MThsLjQ4LjY2Mi43NzgtLjI1My0uNDguNjYyWm0tLjE4NSAyLjY3Ni0uMjUyLjc3OC0uMjUzLS43NzhoLS44MThsLjY2MS0uNDgxLS4yNTMtLjc3Ny42NjMuNDguNjYtLjQ4LS4yNTIuNzc3LjY2Mi40ODFabS4xNTYtNi4xOTUuMjUzLjc3OC0uNjYxLS40OC0uNjYzLjQ4LjI1My0uNzc4LS42Ni0uNDhoLjgxN2wuMjUzLS43NzguMjUyLjc3N2guODE4Wm0xLjMxNC0xLjc2TDQuMDQgOS4xNmwtLjc3OC4yNTMuNDgtLjY2MS0uNDgtLjY2My43NzguMjU0LjQ4LS42NjJ2LjgxOGwuNzc4LjI1My0uNzc3LjI1MlptMi4wNDUtMi44NjItLjI1My43NzctLjI1Mi0uNzc3aC0uODE4bC42NjItLjQ4LS4yNTMtLjc3OC42NjEuNDguNjYxLS40OC0uMjUyLjc3Ny42NjIuNDhabTIuNTc3LTEuMzEzLS40OC42NjFWNS40OWwtLjc3OS0uMjU0Ljc3OC0uMjUzdi0uODE3bC40OC42Ni43OC0uMjUzLS40ODEuNjYzLjQ4LjY2em0zLjI2NS0uNzUuMjUzLjc3OC0uNjYxLS40OC0uNjYyLjQ4LjI1Mi0uNzc3LS42Ni0uNDgxaC44MThMMTIgMy42MzdsLjI1Mi43NzhoLjgxOHptMi45My41OTV2LjgxNmwtLjQ4MS0uNjYxLS43NzcuMjUyLjQ4LS42NjItLjQ4LS42NjIuNzc3LjI1My40OC0uNjZ2LjgxN2wuNzc5LjI1MnptNS40MjYgOC4yODUuNzc4LjI1My40OC0uNjYydi44MThsLjc3OC4yNTMtLjc3OC4yNTN2LjgxOGwtLjQ4LS42NjItLjc3OC4yNTMuNDgtLjY2MnptLTMuMDc3LTYuMDQtLjI1My0uNzc3aC0uODE4bC42NjItLjQ4LS4yNTMtLjc3OC42NjIuNDguNjYyLS40OC0uMjU0Ljc3OC42NjIuNDhoLS44MTh6bTEuNzkyIDIuMDg2di0uODE4bC0uNzc3LS4yNTIuNzc3LS4yNTNWNy42OGwuNDgxLjY2Mi43NzctLjI1NC0uNDguNjYzLjQ4LjY2LS43NzctLjI1MnptMS40NjkgMS4yNzguMjUzLS43NzcuMjU0Ljc3N2guODE2bC0uNjYuNDgxLjI1Mi43NzgtLjY2Mi0uNDgtLjY2MS40OC4yNTMtLjc3OC0uNjYyLS40OHptLjUwNiA2LjY3Ni0uMjUzLjc3OC0uMjUzLS43NzhoLS44MTdsLjY2Mi0uNDgxLS4yNTMtLjc3Ny42Ni40OC42NjMtLjQ4LS4yNTMuNzc3LjY2MS40ODF6bS0xMi4wOC0uNjE1Ljc2LTEuNTg4Yy4wMjQtLjA0OC0uMDMyLS4xMDgtLjA2Ny0uMDY3bC0uNjY0LjY2OGMtLjMxMy4zMjktLjg0NyAxLjI1LS45NSAxLjQyMWwtLjgwOCAxLjMzNWEuMTA5LjEwOSAwIDAgMSAuMS4xNjJsLS43MzkgMS4yMzhjLS4xOC4zMDkuMTQ1LjUyMy4xODkuNDUyIDEuMTU3LTEuODY4IDEuODMyLTEuNzE5IDEuODMyLTEuNzE5bC4zODctLjg5N2MuMDIyLS4wNDctLjAwMS0uMS0uMDUtLjEyLS4xMi0uMDUtLjMxNi0uMjcuMDEtLjg4NXoiLz48L3N2Zz4=',
   },
   {
     id: 'crunchyroll',
@@ -683,16 +683,14 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <div className="wc-matches">
                 {todayMatches.map((m, i) => (
                   <div className="wc-match" key={i}>
-                    <span className="wc-match-teams">
-                      <span className="wc-match-team">
-                        <span className="wc-match-flag">{m.homeFlag}</span>
-                        <span className="wc-match-name">{m.home}</span>
-                      </span>
-                      <span className="wc-match-vs">vs</span>
-                      <span className="wc-match-team wc-match-team-away">
-                        <span className="wc-match-name">{m.away}</span>
-                        <span className="wc-match-flag">{m.awayFlag}</span>
-                      </span>
+                    <span className="wc-match-team wc-match-home">
+                      <span className="wc-match-name">{m.home}</span>
+                      <span className="wc-match-flag">{m.homeFlag}</span>
+                    </span>
+                    <span className="wc-match-vs">vs</span>
+                    <span className="wc-match-team wc-match-away">
+                      <span className="wc-match-flag">{m.awayFlag}</span>
+                      <span className="wc-match-name">{m.away}</span>
                     </span>
                     <span className="wc-match-time">{m.time}</span>
                   </div>

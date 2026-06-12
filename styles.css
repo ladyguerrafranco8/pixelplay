@@ -1864,35 +1864,31 @@ section {
   min-width: 260px;
 }
 .wc-match {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   background: rgba(252,209,22,0.07);
   border: 1px solid rgba(252,209,22,0.28);
   border-radius: 10px;
   padding: 10px 14px;
-}
-.wc-match-teams {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex: 1;
-  min-width: 0;
   font-size: 13px;
   font-weight: 600;
   color: var(--text-1);
-  text-align: left;
 }
 .wc-match-team {
   display: flex;
   align-items: center;
   gap: 5px;
-  flex: 1;
   min-width: 0;
 }
-.wc-match-team-away {
+.wc-match-home {
   justify-content: flex-end;
+  text-align: right;
+}
+.wc-match-away {
+  justify-content: flex-start;
+  text-align: left;
 }
 .wc-match-name {
   overflow: hidden;
@@ -1910,6 +1906,7 @@ section {
   color: var(--text-3);
   text-transform: uppercase;
   flex-shrink: 0;
+  padding: 0 4px;
 }
 .wc-match-time {
   font-family: var(--font-mono);
@@ -1918,6 +1915,8 @@ section {
   color: #FCD116;
   white-space: nowrap;
   flex-shrink: 0;
+  text-align: right;
+  padding-left: 4px;
 }
 .wc-badge {
   font-size: 12px;
