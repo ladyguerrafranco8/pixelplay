@@ -1874,10 +1874,23 @@ section {
   padding: 10px 14px;
 }
 .wc-match-teams {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
   font-weight: 600;
   color: var(--text-1);
   text-align: left;
+}
+.wc-match-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+.wc-match-vs {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-3);
+  text-transform: uppercase;
 }
 .wc-match-time {
   font-family: var(--font-mono);

@@ -592,30 +592,30 @@ const Why = ({ accent }) => (
 // ============================================================
 const WORLD_CUP_MATCHES = {
   '2026-06-11': [
-    { teams: 'México vs Sudáfrica', time: '1:00 p.m.' },
-    { teams: 'Corea del Sur vs Chequia', time: '7:00 p.m.' },
+    { home: 'México', homeFlag: '🇲🇽', away: 'Sudáfrica', awayFlag: '🇿🇦', time: '1:00 p.m.' },
+    { home: 'Corea del Sur', homeFlag: '🇰🇷', away: 'Chequia', awayFlag: '🇨🇿', time: '7:00 p.m.' },
   ],
   '2026-06-12': [
-    { teams: 'Canadá vs Bosnia y Herzegovina', time: '2:00 p.m.' },
-    { teams: 'Estados Unidos vs Paraguay', time: '8:00 p.m.' },
+    { home: 'Canadá', homeFlag: '🇨🇦', away: 'Bosnia y Herzegovina', awayFlag: '🇧🇦', time: '2:00 p.m.' },
+    { home: 'Estados Unidos', homeFlag: '🇺🇸', away: 'Paraguay', awayFlag: '🇵🇾', time: '8:00 p.m.' },
   ],
   '2026-06-13': [
-    { teams: 'Qatar vs Suiza', time: '2:00 p.m.' },
-    { teams: 'Brasil vs Marruecos', time: '5:00 p.m.' },
-    { teams: 'Haití vs Escocia', time: '8:00 p.m.' },
-    { teams: 'Australia vs Turquía', time: '11:00 p.m.' },
+    { home: 'Qatar', homeFlag: '🇶🇦', away: 'Suiza', awayFlag: '🇨🇭', time: '2:00 p.m.' },
+    { home: 'Brasil', homeFlag: '🇧🇷', away: 'Marruecos', awayFlag: '🇲🇦', time: '5:00 p.m.' },
+    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: '🏴', time: '8:00 p.m.' },
+    { home: 'Australia', homeFlag: '🇦🇺', away: 'Turquía', awayFlag: '🇹🇷', time: '11:00 p.m.' },
   ],
   '2026-06-14': [
-    { teams: 'Alemania vs Curazao', time: '12:00 m.' },
-    { teams: 'Países Bajos vs Japón', time: '3:00 p.m.' },
-    { teams: 'Costa de Marfil vs Ecuador', time: '6:00 p.m.' },
-    { teams: 'Suecia vs Túnez', time: '9:00 p.m.' },
+    { home: 'Alemania', homeFlag: '🇩🇪', away: 'Curazao', awayFlag: '🇨🇼', time: '12:00 m.' },
+    { home: 'Países Bajos', homeFlag: '🇳🇱', away: 'Japón', awayFlag: '🇯🇵', time: '3:00 p.m.' },
+    { home: 'Costa de Marfil', homeFlag: '🇨🇮', away: 'Ecuador', awayFlag: '🇪🇨', time: '6:00 p.m.' },
+    { home: 'Suecia', homeFlag: '🇸🇪', away: 'Túnez', awayFlag: '🇹🇳', time: '9:00 p.m.' },
   ],
   '2026-06-15': [
-    { teams: 'España vs Cabo Verde', time: '12:00 m.' },
-    { teams: 'Bélgica vs Egipto', time: '5:00 p.m.' },
-    { teams: 'Arabia Saudita vs Uruguay', time: '5:00 p.m.' },
-    { teams: 'Irán vs Nueva Zelanda', time: '8:00 p.m.' },
+    { home: 'España', homeFlag: '🇪🇸', away: 'Cabo Verde', awayFlag: '🇨🇻', time: '12:00 m.' },
+    { home: 'Bélgica', homeFlag: '🇧🇪', away: 'Egipto', awayFlag: '🇪🇬', time: '5:00 p.m.' },
+    { home: 'Arabia Saudita', homeFlag: '🇸🇦', away: 'Uruguay', awayFlag: '🇺🇾', time: '5:00 p.m.' },
+    { home: 'Irán', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayFlag: '🇳🇿', time: '8:00 p.m.' },
   ],
 };
 
@@ -683,7 +683,11 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <div className="wc-matches">
                 {todayMatches.map((m, i) => (
                   <div className="wc-match" key={i}>
-                    <span className="wc-match-teams">{m.teams}</span>
+                    <span className="wc-match-teams">
+                      <span className="wc-match-flag">{m.homeFlag}</span> {m.home}
+                      <span className="wc-match-vs">vs</span>
+                      {m.away} <span className="wc-match-flag">{m.awayFlag}</span>
+                    </span>
                     <span className="wc-match-time">{m.time}</span>
                   </div>
                 ))}
