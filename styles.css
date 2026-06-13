@@ -1900,6 +1900,13 @@ section {
   line-height: 1;
   flex-shrink: 0;
 }
+.wc-match-flag-img {
+  width: 20px;
+  height: 12px;
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 .wc-match-vs {
   font-size: 10px;
   font-weight: 700;

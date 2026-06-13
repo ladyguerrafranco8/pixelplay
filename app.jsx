@@ -602,7 +602,7 @@ const WORLD_CUP_MATCHES = {
   '2026-06-13': [
     { home: 'Qatar', homeFlag: '🇶🇦', away: 'Suiza', awayFlag: '🇨🇭', time: '2:00 p.m.' },
     { home: 'Brasil', homeFlag: '🇧🇷', away: 'Marruecos', awayFlag: '🇲🇦', time: '5:00 p.m.' },
-    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: '🇬🇧', time: '8:00 p.m.' },
+    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjMDA2NUJEIi8+PHBhdGggZD0iTTAsMCBMNjAsMzYgTTYwLDAgTDAsMzYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+Cg==', time: '8:00 p.m.' },
     { home: 'Australia', homeFlag: '🇦🇺', away: 'Turquía', awayFlag: '🇹🇷', time: '11:00 p.m.' },
   ],
   '2026-06-14': [
@@ -618,6 +618,12 @@ const WORLD_CUP_MATCHES = {
     { home: 'Irán', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayFlag: '🇳🇿', time: '8:00 p.m.' },
   ],
 };
+
+const Flag = ({ value }) => (
+  value && value.startsWith('data:')
+    ? <img className="wc-match-flag wc-match-flag-img" src={value} alt="" />
+    : <span className="wc-match-flag">{value}</span>
+);
 
 // ============================================================
 // WORLD CUP BANNER
@@ -685,11 +691,11 @@ const WorldCupBanner = ({ onAdd, cart }) => {
                   <div className="wc-match" key={i}>
                     <span className="wc-match-team wc-match-home">
                       <span className="wc-match-name">{m.home}</span>
-                      <span className="wc-match-flag">{m.homeFlag}</span>
+                      <Flag value={m.homeFlag} />
                     </span>
                     <span className="wc-match-vs">vs</span>
                     <span className="wc-match-team wc-match-away">
-                      <span className="wc-match-flag">{m.awayFlag}</span>
+                      <Flag value={m.awayFlag} />
                       <span className="wc-match-name">{m.away}</span>
                     </span>
                     <span className="wc-match-time">{m.time}</span>
