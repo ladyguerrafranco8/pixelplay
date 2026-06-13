@@ -1865,7 +1865,7 @@ section {
 }
 .wc-match {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 64px;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 70px;
   align-items: center;
   gap: 6px;
   background: rgba(252,209,22,0.07);
@@ -1917,13 +1917,13 @@ section {
 }
 .wc-match-time {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   color: #FCD116;
   white-space: nowrap;
   flex-shrink: 0;
   text-align: right;
-  padding-left: 4px;
+  overflow: hidden;
 }
 .wc-badge {
   font-size: 12px;
