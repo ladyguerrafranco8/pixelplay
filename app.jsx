@@ -651,9 +651,9 @@ const WorldCupBanner = ({ onAdd, cart }) => {
           </div>
           <h2 className="wc-title">
             El fútbol más grande<br/>
-            <span className="wc-title-em">del planeta viene.</span>
+            <span className="wc-title-em">del planeta ya está aquí.</span>
           </h2>
-          <p className="wc-sub">Paramount+ te trae toda la acción del Mundial. Asegurá 3 meses al mejor precio antes de que arranque el torneo.</p>
+          <p className="wc-sub">Paramount+ te trae toda la acción del Mundial, en vivo. Asegurá 3 meses al mejor precio y no te perdás ni un partido.</p>
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
