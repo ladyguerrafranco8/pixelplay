@@ -602,7 +602,7 @@ const WORLD_CUP_MATCHES = {
   '2026-06-13': [
     { home: 'Qatar', homeFlag: '🇶🇦', away: 'Suiza', awayFlag: '🇨🇭', time: '2:00 p.m.' },
     { home: 'Brasil', homeFlag: '🇧🇷', away: 'Marruecos', awayFlag: '🇲🇦', time: '5:00 p.m.' },
-    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: '🏴', time: '8:00 p.m.' },
+    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', time: '8:00 p.m.' },
     { home: 'Australia', homeFlag: '🇦🇺', away: 'Turquía', awayFlag: '🇹🇷', time: '11:00 p.m.' },
   ],
   '2026-06-14': [
@@ -627,12 +627,12 @@ const WorldCupBanner = ({ onAdd, cart }) => {
   const todayMatches = WORLD_CUP_MATCHES[todayKey] || [];
 
   const paramount = SERVICES.find(s => s.id === 'paramount');
-  const promoPrice = 70000;
-  const regularPrice = 18000 * 6;
+  const promoPrice = 35000;
+  const regularPrice = 18000 * 3;
   const savings = regularPrice - promoPrice;
   const promoService = { ...paramount, id: 'paramount-promo' };
   const inCart = cart.some(c => c.id === 'paramount-promo');
-  const promoPlan = { type: 'promo-mundial', label: '6 meses · Promo Mundial', price: promoPrice };
+  const promoPlan = { type: 'promo-mundial', label: '3 meses · Promo Mundial', price: promoPrice };
 
   return (
     <section className="wc-banner">
@@ -647,7 +647,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
             El fútbol más grande<br/>
             <span className="wc-title-em">del planeta viene.</span>
           </h2>
-          <p className="wc-sub">Paramount+ te trae toda la acción del Mundial. Asegurá 6 meses al mejor precio antes de que arranque el torneo.</p>
+          <p className="wc-sub">Paramount+ te trae toda la acción del Mundial. Asegurá 3 meses al mejor precio antes de que arranque el torneo.</p>
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
@@ -663,7 +663,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <span className="wc-promo-new">{formatCOP(promoPrice)}</span>
             </div>
             <div className="wc-promo-badges">
-              <div className="wc-promo-period">6 meses</div>
+              <div className="wc-promo-period">3 meses</div>
               <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
             </div>
             <button
