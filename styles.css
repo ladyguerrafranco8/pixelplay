@@ -1865,7 +1865,7 @@ section {
 }
 .wc-match {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 70px;
+  grid-template-columns: minmax(0, 1fr) 22px auto 22px minmax(0, 1fr) 70px;
   align-items: center;
   gap: 6px;
   background: rgba(252,209,22,0.07);
@@ -1876,29 +1876,19 @@ section {
   font-weight: 600;
   color: var(--text-1);
 }
-.wc-match-team {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  min-width: 0;
-}
-.wc-match-home {
-  justify-content: flex-end;
-  text-align: right;
-}
-.wc-match-away {
-  justify-content: flex-start;
-  text-align: left;
-}
 .wc-match-name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
 }
+.wc-match-name-home { text-align: right; }
+.wc-match-name-away { text-align: left; }
 .wc-match-flag {
   font-size: 16px;
   line-height: 1;
   flex-shrink: 0;
+  text-align: center;
 }
 .wc-match-flag-img {
   width: 20px;
@@ -1906,6 +1896,7 @@ section {
   border-radius: 2px;
   object-fit: cover;
   flex-shrink: 0;
+  justify-self: center;
 }
 .wc-match-vs {
   font-size: 10px;
