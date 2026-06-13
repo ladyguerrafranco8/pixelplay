@@ -1865,7 +1865,7 @@ section {
 }
 .wc-match {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 64px;
   align-items: center;
   gap: 6px;
   background: rgba(252,209,22,0.07);
