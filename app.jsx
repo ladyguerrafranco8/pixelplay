@@ -633,7 +633,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
   const todayMatches = WORLD_CUP_MATCHES[todayKey] || [];
 
   const paramount = SERVICES.find(s => s.id === 'paramount');
-  const promoPrice = 35000;
+  const promoPrice = 45000;
   const regularPrice = 18000 * 3;
   const savings = regularPrice - promoPrice;
   const promoService = { ...paramount, id: 'paramount-promo' };
