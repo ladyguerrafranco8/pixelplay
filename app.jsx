@@ -602,7 +602,7 @@ const WORLD_CUP_MATCHES = {
   '2026-06-13': [
     { home: 'Qatar', homeFlag: '🇶🇦', away: 'Suiza', awayFlag: '🇨🇭', time: '2:00 p.m.' },
     { home: 'Brasil', homeFlag: '🇧🇷', away: 'Marruecos', awayFlag: '🇲🇦', time: '5:00 p.m.' },
-    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', time: '8:00 p.m.' },
+    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: '🇬🇧', time: '8:00 p.m.' },
     { home: 'Australia', homeFlag: '🇦🇺', away: 'Turquía', awayFlag: '🇹🇷', time: '11:00 p.m.' },
   ],
   '2026-06-14': [
