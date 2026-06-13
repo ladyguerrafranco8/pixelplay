@@ -592,30 +592,30 @@ const Why = ({ accent }) => (
 // ============================================================
 const WORLD_CUP_MATCHES = {
   '2026-06-11': [
-    { home: 'México', homeFlag: '🇲🇽', away: 'Sudáfrica', awayFlag: '🇿🇦', time: '1:00 p.m.' },
-    { home: 'Corea del Sur', homeFlag: '🇰🇷', away: 'Chequia', awayFlag: '🇨🇿', time: '7:00 p.m.' },
+    { home: 'México', homeFlag: '🇲🇽', away: 'Sudáfrica', awayFlag: '🇿🇦', time: '01:00 p.m.' },
+    { home: 'Corea del Sur', homeFlag: '🇰🇷', away: 'Chequia', awayFlag: '🇨🇿', time: '07:00 p.m.' },
   ],
   '2026-06-12': [
-    { home: 'Canadá', homeFlag: '🇨🇦', away: 'Bosnia y Herzegovina', awayFlag: '🇧🇦', time: '2:00 p.m.' },
-    { home: 'Estados Unidos', homeFlag: '🇺🇸', away: 'Paraguay', awayFlag: '🇵🇾', time: '8:00 p.m.' },
+    { home: 'Canadá', homeFlag: '🇨🇦', away: 'Bosnia y Herzegovina', awayFlag: '🇧🇦', time: '02:00 p.m.' },
+    { home: 'Estados Unidos', homeFlag: '🇺🇸', away: 'Paraguay', awayFlag: '🇵🇾', time: '08:00 p.m.' },
   ],
   '2026-06-13': [
-    { home: 'Qatar', homeFlag: '🇶🇦', away: 'Suiza', awayFlag: '🇨🇭', time: '2:00 p.m.' },
-    { home: 'Brasil', homeFlag: '🇧🇷', away: 'Marruecos', awayFlag: '🇲🇦', time: '5:00 p.m.' },
-    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjMDA2NUJEIi8+PHBhdGggZD0iTTAsMCBMNjAsMzYgTTYwLDAgTDAsMzYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+Cg==', time: '8:00 p.m.' },
+    { home: 'Qatar', homeFlag: '🇶🇦', away: 'Suiza', awayFlag: '🇨🇭', time: '02:00 p.m.' },
+    { home: 'Brasil', homeFlag: '🇧🇷', away: 'Marruecos', awayFlag: '🇲🇦', time: '05:00 p.m.' },
+    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjMDA2NUJEIi8+PHBhdGggZD0iTTAsMCBMNjAsMzYgTTYwLDAgTDAsMzYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+Cg==', time: '08:00 p.m.' },
     { home: 'Australia', homeFlag: '🇦🇺', away: 'Turquía', awayFlag: '🇹🇷', time: '11:00 p.m.' },
   ],
   '2026-06-14': [
-    { home: 'Alemania', homeFlag: '🇩🇪', away: 'Curazao', awayFlag: '🇨🇼', time: '12:00 m.' },
-    { home: 'Países Bajos', homeFlag: '🇳🇱', away: 'Japón', awayFlag: '🇯🇵', time: '3:00 p.m.' },
-    { home: 'Costa de Marfil', homeFlag: '🇨🇮', away: 'Ecuador', awayFlag: '🇪🇨', time: '6:00 p.m.' },
-    { home: 'Suecia', homeFlag: '🇸🇪', away: 'Túnez', awayFlag: '🇹🇳', time: '9:00 p.m.' },
+    { home: 'Alemania', homeFlag: '🇩🇪', away: 'Curazao', awayFlag: '🇨🇼', time: '12:00 m.  ' },
+    { home: 'Países Bajos', homeFlag: '🇳🇱', away: 'Japón', awayFlag: '🇯🇵', time: '03:00 p.m.' },
+    { home: 'Costa de Marfil', homeFlag: '🇨🇮', away: 'Ecuador', awayFlag: '🇪🇨', time: '06:00 p.m.' },
+    { home: 'Suecia', homeFlag: '🇸🇪', away: 'Túnez', awayFlag: '🇹🇳', time: '09:00 p.m.' },
   ],
   '2026-06-15': [
-    { home: 'España', homeFlag: '🇪🇸', away: 'Cabo Verde', awayFlag: '🇨🇻', time: '12:00 m.' },
-    { home: 'Bélgica', homeFlag: '🇧🇪', away: 'Egipto', awayFlag: '🇪🇬', time: '5:00 p.m.' },
-    { home: 'Arabia Saudita', homeFlag: '🇸🇦', away: 'Uruguay', awayFlag: '🇺🇾', time: '5:00 p.m.' },
-    { home: 'Irán', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayFlag: '🇳🇿', time: '8:00 p.m.' },
+    { home: 'España', homeFlag: '🇪🇸', away: 'Cabo Verde', awayFlag: '🇨🇻', time: '12:00 m.  ' },
+    { home: 'Bélgica', homeFlag: '🇧🇪', away: 'Egipto', awayFlag: '🇪🇬', time: '05:00 p.m.' },
+    { home: 'Arabia Saudita', homeFlag: '🇸🇦', away: 'Uruguay', awayFlag: '🇺🇾', time: '05:00 p.m.' },
+    { home: 'Irán', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayFlag: '🇳🇿', time: '08:00 p.m.' },
   ],
 };
 
