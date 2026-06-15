@@ -1865,7 +1865,7 @@ section {
 }
 .wc-match {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) 22px auto 22px minmax(0, 1.15fr) 78px;
+  grid-template-columns: minmax(0, 1fr) 22px auto 22px minmax(0, 1fr) 78px;
   align-items: center;
   gap: 6px;
   background: rgba(252,209,22,0.07);
@@ -1881,9 +1881,13 @@ section {
   text-overflow: ellipsis;
   white-space: nowrap;
   min-width: 0;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
 }
-.wc-match-name-home { text-align: right; }
-.wc-match-name-away { text-align: left; }
+.wc-match-name-home { text-align: center; }
+.wc-match-name-away { text-align: center; }
 .wc-match-flag {
   font-size: 16px;
   line-height: 1;

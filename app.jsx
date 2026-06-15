@@ -592,30 +592,30 @@ const Why = ({ accent }) => (
 // ============================================================
 const WORLD_CUP_MATCHES = {
   '2026-06-11': [
-    { home: 'México', homeFlag: '🇲🇽', away: 'Sudáfrica', awayFlag: '🇿🇦', time: '01:00 p.m.' },
-    { home: 'Corea del Sur', homeFlag: '🇰🇷', away: 'Chequia', awayFlag: '🇨🇿', time: '07:00 p.m.' },
+    { home: 'México', homeCode: 'MEX', homeFlag: '🇲🇽', away: 'Sudáfrica', awayCode: 'RSA', awayFlag: '🇿🇦', time: '01:00 p.m.' },
+    { home: 'Corea del Sur', homeCode: 'KOR', homeFlag: '🇰🇷', away: 'Chequia', awayCode: 'CZE', awayFlag: '🇨🇿', time: '07:00 p.m.' },
   ],
   '2026-06-12': [
-    { home: 'Canadá', homeFlag: '🇨🇦', away: 'Bosnia y Herzegovina', awayFlag: '🇧🇦', time: '02:00 p.m.' },
-    { home: 'Estados Unidos', homeFlag: '🇺🇸', away: 'Paraguay', awayFlag: '🇵🇾', time: '08:00 p.m.' },
+    { home: 'Canadá', homeCode: 'CAN', homeFlag: '🇨🇦', away: 'Bosnia y Herzegovina', awayCode: 'BIH', awayFlag: '🇧🇦', time: '02:00 p.m.' },
+    { home: 'Estados Unidos', homeCode: 'USA', homeFlag: '🇺🇸', away: 'Paraguay', awayCode: 'PAR', awayFlag: '🇵🇾', time: '08:00 p.m.' },
   ],
   '2026-06-13': [
-    { home: 'Qatar', homeFlag: '🇶🇦', away: 'Suiza', awayFlag: '🇨🇭', time: '02:00 p.m.' },
-    { home: 'Brasil', homeFlag: '🇧🇷', away: 'Marruecos', awayFlag: '🇲🇦', time: '05:00 p.m.' },
-    { home: 'Haití', homeFlag: '🇭🇹', away: 'Escocia', awayFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjMDA2NUJEIi8+PHBhdGggZD0iTTAsMCBMNjAsMzYgTTYwLDAgTDAsMzYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+Cg==', time: '08:00 p.m.' },
-    { home: 'Australia', homeFlag: '🇦🇺', away: 'Turquía', awayFlag: '🇹🇷', time: '11:00 p.m.' },
+    { home: 'Qatar', homeCode: 'QAT', homeFlag: '🇶🇦', away: 'Suiza', awayCode: 'SUI', awayFlag: '🇨🇭', time: '02:00 p.m.' },
+    { home: 'Brasil', homeCode: 'BRA', homeFlag: '🇧🇷', away: 'Marruecos', awayCode: 'MAR', awayFlag: '🇲🇦', time: '05:00 p.m.' },
+    { home: 'Haití', homeCode: 'HAI', homeFlag: '🇭🇹', away: 'Escocia', awayCode: 'SCO', awayFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjMDA2NUJEIi8+PHBhdGggZD0iTTAsMCBMNjAsMzYgTTYwLDAgTDAsMzYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+Cg==', time: '08:00 p.m.' },
+    { home: 'Australia', homeCode: 'AUS', homeFlag: '🇦🇺', away: 'Turquía', awayCode: 'TUR', awayFlag: '🇹🇷', time: '11:00 p.m.' },
   ],
   '2026-06-14': [
-    { home: 'Alemania', homeFlag: '🇩🇪', away: 'Curazao', awayFlag: '🇨🇼', time: '12:00 m.  ' },
-    { home: 'Países Bajos', homeFlag: '🇳🇱', away: 'Japón', awayFlag: '🇯🇵', time: '03:00 p.m.' },
-    { home: 'Costa de Marfil', homeFlag: '🇨🇮', away: 'Ecuador', awayFlag: '🇪🇨', time: '06:00 p.m.' },
-    { home: 'Suecia', homeFlag: '🇸🇪', away: 'Túnez', awayFlag: '🇹🇳', time: '09:00 p.m.' },
+    { home: 'Alemania', homeCode: 'GER', homeFlag: '🇩🇪', away: 'Curazao', awayCode: 'CUW', awayFlag: '🇨🇼', time: '12:00 m.  ' },
+    { home: 'Países Bajos', homeCode: 'NED', homeFlag: '🇳🇱', away: 'Japón', awayCode: 'JPN', awayFlag: '🇯🇵', time: '03:00 p.m.' },
+    { home: 'Costa de Marfil', homeCode: 'CIV', homeFlag: '🇨🇮', away: 'Ecuador', awayCode: 'ECU', awayFlag: '🇪🇨', time: '06:00 p.m.' },
+    { home: 'Suecia', homeCode: 'SWE', homeFlag: '🇸🇪', away: 'Túnez', awayCode: 'TUN', awayFlag: '🇹🇳', time: '09:00 p.m.' },
   ],
   '2026-06-15': [
-    { home: 'España', homeFlag: '🇪🇸', away: 'Cabo Verde', awayFlag: '🇨🇻', time: '12:00 m.  ' },
-    { home: 'Bélgica', homeFlag: '🇧🇪', away: 'Egipto', awayFlag: '🇪🇬', time: '05:00 p.m.' },
-    { home: 'Arabia Saudita', homeFlag: '🇸🇦', away: 'Uruguay', awayFlag: '🇺🇾', time: '05:00 p.m.' },
-    { home: 'Irán', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayFlag: '🇳🇿', time: '08:00 p.m.' },
+    { home: 'España', homeCode: 'ESP', homeFlag: '🇪🇸', away: 'Cabo Verde', awayCode: 'CPV', awayFlag: '🇨🇻', time: '12:00 m.  ' },
+    { home: 'Bélgica', homeCode: 'BEL', homeFlag: '🇧🇪', away: 'Egipto', awayCode: 'EGY', awayFlag: '🇪🇬', time: '05:00 p.m.' },
+    { home: 'Arabia Saudita', homeCode: 'KSA', homeFlag: '🇸🇦', away: 'Uruguay', awayCode: 'URU', awayFlag: '🇺🇾', time: '05:00 p.m.' },
+    { home: 'Irán', homeCode: 'IRN', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayCode: 'NZL', awayFlag: '🇳🇿', time: '08:00 p.m.' },
   ],
 };
 
@@ -689,11 +689,11 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <div className="wc-matches">
                 {todayMatches.map((m, i) => (
                   <div className="wc-match" key={i}>
-                    <span className="wc-match-name wc-match-name-home">{m.home}</span>
+                    <span className="wc-match-name wc-match-name-home">{m.homeCode}</span>
                     <Flag value={m.homeFlag} />
                     <span className="wc-match-vs">vs</span>
                     <Flag value={m.awayFlag} />
-                    <span className="wc-match-name wc-match-name-away">{m.away}</span>
+                    <span className="wc-match-name wc-match-name-away">{m.awayCode}</span>
                     <span className="wc-match-time">{m.time}</span>
                   </div>
                 ))}
