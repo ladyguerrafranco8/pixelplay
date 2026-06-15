@@ -644,7 +644,11 @@ const WorldCupBanner = ({ onAdd, cart }) => {
 
   const directvgo = SERVICES.find(s => s.id === 'directvgo');
   const directvgoPlan = directvgo.plans[0];
-  const inCart = cart.some(c => c.id === 'directvgo');
+  const inCartDtv = cart.some(c => c.id === 'directvgo');
+
+  const paramount = SERVICES.find(s => s.id === 'paramount');
+  const paramountPlan = paramount.plans[0];
+  const inCartPar = cart.some(c => c.id === 'paramount');
 
   return (
     <section className="wc-banner">
@@ -659,7 +663,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
             El fútbol más grande<br/>
             <span className="wc-title-em">del planeta ya está aquí.</span>
           </h2>
-          <p className="wc-sub">Con DIRECTV GO podés ver toda la acción del Mundial, en vivo, desde tu celular, tablet o smart TV.</p>
+          <p className="wc-sub">Seguí cada partido del Mundial en vivo con cualquiera de estas opciones.</p>
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
@@ -674,11 +678,32 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <span className="wc-promo-tag">/mes</span>
             </div>
             <button
-              className={`wc-btn-promo ${inCart ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCart && onAdd(directvgo, directvgoPlan)}
-              disabled={inCart}
+              className={`wc-btn-promo ${inCartDtv ? 'wc-btn-in' : ''}`}
+              onClick={() => !inCartDtv && onAdd(directvgo, directvgoPlan)}
+              disabled={inCartDtv}
             >
-              {inCart ? '✓ Agregado' : '+ Agregar'}
+              {inCartDtv ? '✓ Agregado' : '+ Agregar'}
+            </button>
+          </div>
+
+          <div className="wc-promo-card" style={{marginTop: '10px'}}>
+            <div className="wc-promo-top">
+              <ServiceBadge service={paramount} size={62} />
+              <div className="wc-promo-name-wrap">
+                <div className="wc-promo-name">Paramount<span className="wc-promo-espn">+</span></div>
+                <div className="wc-promo-tag">Todos los partidos del Mundial</div>
+              </div>
+            </div>
+            <div className="wc-promo-pricing">
+              <span className="wc-promo-new">{formatCOP(paramountPlan.price)}</span>
+              <span className="wc-promo-tag">/mes</span>
+            </div>
+            <button
+              className={`wc-btn-promo ${inCartPar ? 'wc-btn-in' : ''}`}
+              onClick={() => !inCartPar && onAdd(paramount, paramountPlan)}
+              disabled={inCartPar}
+            >
+              {inCartPar ? '✓ Agregado' : '+ Agregar'}
             </button>
           </div>
         </div>
