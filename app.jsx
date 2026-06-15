@@ -606,13 +606,13 @@ const WORLD_CUP_MATCHES = {
     { home: 'Australia', homeCode: 'AUS', homeFlag: '🇦🇺', away: 'Turquía', awayCode: 'TUR', awayFlag: '🇹🇷', time: '11:00 p.m.' },
   ],
   '2026-06-14': [
-    { home: 'Alemania', homeCode: 'GER', homeFlag: '🇩🇪', away: 'Curazao', awayCode: 'CUW', awayFlag: '🇨🇼', time: '12:00 m.' },
+    { home: 'Alemania', homeCode: 'GER', homeFlag: '🇩🇪', away: 'Curazao', awayCode: 'CUW', awayFlag: '🇨🇼', time: '12:00 p.m.' },
     { home: 'Países Bajos', homeCode: 'NED', homeFlag: '🇳🇱', away: 'Japón', awayCode: 'JPN', awayFlag: '🇯🇵', time: '03:00 p.m.' },
     { home: 'Costa de Marfil', homeCode: 'CIV', homeFlag: '🇨🇮', away: 'Ecuador', awayCode: 'ECU', awayFlag: '🇪🇨', time: '06:00 p.m.' },
     { home: 'Suecia', homeCode: 'SWE', homeFlag: '🇸🇪', away: 'Túnez', awayCode: 'TUN', awayFlag: '🇹🇳', time: '09:00 p.m.' },
   ],
   '2026-06-15': [
-    { home: 'España', homeCode: 'ESP', homeFlag: '🇪🇸', away: 'Cabo Verde', awayCode: 'CPV', awayFlag: '🇨🇻', time: '12:00 m.' },
+    { home: 'España', homeCode: 'ESP', homeFlag: '🇪🇸', away: 'Cabo Verde', awayCode: 'CPV', awayFlag: '🇨🇻', time: '12:00 p.m.' },
     { home: 'Bélgica', homeCode: 'BEL', homeFlag: '🇧🇪', away: 'Egipto', awayCode: 'EGY', awayFlag: '🇪🇬', time: '05:00 p.m.' },
     { home: 'Arabia Saudita', homeCode: 'KSA', homeFlag: '🇸🇦', away: 'Uruguay', awayCode: 'URU', awayFlag: '🇺🇾', time: '05:00 p.m.' },
     { home: 'Irán', homeCode: 'IRN', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayCode: 'NZL', awayFlag: '🇳🇿', time: '08:00 p.m.' },
