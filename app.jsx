@@ -667,27 +667,6 @@ const WorldCupBanner = ({ onAdd, cart }) => {
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
-              <ServiceBadge service={directvgo} size={62} />
-              <div className="wc-promo-name-wrap">
-                <div className="wc-promo-name">DIRECTV GO</div>
-                <div className="wc-promo-tag">Todos los partidos del Mundial</div>
-              </div>
-            </div>
-            <div className="wc-promo-pricing">
-              <span className="wc-promo-new">{formatCOP(directvgoPlan.price)}</span>
-              <span className="wc-promo-tag">/mes</span>
-            </div>
-            <button
-              className={`wc-btn-promo ${inCartDtv ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCartDtv && onAdd(directvgo, directvgoPlan)}
-              disabled={inCartDtv}
-            >
-              {inCartDtv ? '✓ Agregado' : '+ Agregar'}
-            </button>
-          </div>
-
-          <div className="wc-promo-card" style={{marginTop: '10px'}}>
-            <div className="wc-promo-top">
               <ServiceBadge service={paramount} size={62} />
               <div className="wc-promo-name-wrap">
                 <div className="wc-promo-name">Paramount<span className="wc-promo-espn">+</span></div>
@@ -704,6 +683,27 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               disabled={inCartPar}
             >
               {inCartPar ? '✓ Agregado' : '+ Agregar'}
+            </button>
+          </div>
+
+          <div className="wc-promo-card" style={{marginTop: '10px'}}>
+            <div className="wc-promo-top">
+              <ServiceBadge service={directvgo} size={62} />
+              <div className="wc-promo-name-wrap">
+                <div className="wc-promo-name">DIRECTV GO</div>
+                <div className="wc-promo-tag">Todos los partidos del Mundial</div>
+              </div>
+            </div>
+            <div className="wc-promo-pricing">
+              <span className="wc-promo-new">{formatCOP(directvgoPlan.price)}</span>
+              <span className="wc-promo-tag">/mes</span>
+            </div>
+            <button
+              className={`wc-btn-promo ${inCartDtv ? 'wc-btn-in' : ''}`}
+              onClick={() => !inCartDtv && onAdd(directvgo, directvgoPlan)}
+              disabled={inCartDtv}
+            >
+              {inCartDtv ? '✓ Agregado' : '+ Agregar'}
             </button>
           </div>
         </div>
