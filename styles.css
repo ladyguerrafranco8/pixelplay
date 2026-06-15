@@ -1882,12 +1882,11 @@ section {
   white-space: nowrap;
   min-width: 0;
   font-family: var(--font-mono);
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 1px;
-  text-align: center;
 }
-.wc-match-name-home { text-align: center; }
-.wc-match-name-away { text-align: center; }
+.wc-match-name-home { text-align: right; }
+.wc-match-name-away { text-align: left; }
 .wc-match-flag {
   font-size: 16px;
   line-height: 1;
