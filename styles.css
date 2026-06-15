@@ -1914,10 +1914,13 @@ section {
   font-size: 11px;
   font-weight: 700;
   color: #FCD116;
-  white-space: pre;
+  white-space: nowrap;
   flex-shrink: 0;
   text-align: right;
   overflow: hidden;
+}
+.wc-match-time-pad {
+  visibility: hidden;
 }
 .wc-badge {
   font-size: 12px;
