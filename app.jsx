@@ -623,7 +623,7 @@ const WORLD_CUP_MATCHES = {
   ],
   '2026-06-15': [
     { home: 'España', homeCode: 'ESP', homeFlag: '🇪🇸', away: 'Cabo Verde', awayCode: 'CPV', awayFlag: '🇨🇻', time: '12:00 p.m.' },
-    { home: 'Bélgica', homeCode: 'BEL', homeFlag: '🇧🇪', away: 'Egipto', awayCode: 'EGY', awayFlag: '🇪🇬', time: '05:00 p.m.' },
+    { home: 'Bélgica', homeCode: 'BEL', homeFlag: '🇧🇪', away: 'Egipto', awayCode: 'EGY', awayFlag: '🇪🇬', time: '02:00 p.m.' },
     { home: 'Arabia Saudita', homeCode: 'KSA', homeFlag: '🇸🇦', away: 'Uruguay', awayCode: 'URU', awayFlag: '🇺🇾', time: '05:00 p.m.' },
     { home: 'Irán', homeCode: 'IRN', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayCode: 'NZL', awayFlag: '🇳🇿', time: '08:00 p.m.' },
   ],
