@@ -137,6 +137,16 @@ const SERVICES = [
     logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9J2cnIHgxPScwJyB5MT0nMCcgeDI9JzEnIHkyPScxJz4KICAgICAgPHN0b3Agb2Zmc2V0PScwJScgc3RvcC1jb2xvcj0nIzAwQzRDQycvPgogICAgICA8c3RvcCBvZmZzZXQ9JzEwMCUnIHN0b3AtY29sb3I9JyM3RDJBRTgnLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSc2MCcgaGVpZ2h0PSc2MCcgZmlsbD0ndXJsKCNnKScvPgogIDx0ZXh0IHg9JzMwJyB5PSc0MicgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0nd2hpdGUnIGZvbnQtZmFtaWx5PSJQYWxhdGlubywnUGFsYXRpbm8gTGlub3R5cGUnLCdCb29rIEFudGlxdWEnLEdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0nMzcnIGZvbnQtc3R5bGU9J2l0YWxpYycgZm9udC13ZWlnaHQ9JzYwMCc+QzwvdGV4dD4KPC9zdmc+Cg==',
     logoScale: 1.0,
   },
+  {
+    id: 'directvgo',
+    name: 'DIRECTV GO',
+    tagline: 'Deportes y TV en vivo',
+    plans: [
+      { type: 'Pantalla', label: '1 Pantalla', price: 26000, popular: false },
+    ],
+    color: '#0057B8',
+    logoUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2MCA2MCc+CiAgPHRleHQgeD0nMzAnIHk9JzQwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSd3aGl0ZScgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLEFyaWFsLHNhbnMtc2VyaWYnIGZvbnQtd2VpZ2h0PSc5MDAnIGZvbnQtc2l6ZT0nMjAnIGxldHRlci1zcGFjaW5nPSctMC41Jz5HTzwvdGV4dD4KPC9zdmc+Cg==',
+  },
 ];
 
 const TESTIMONIALS = [
@@ -632,13 +642,9 @@ const WorldCupBanner = ({ onAdd, cart }) => {
   const todayKey = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
   const todayMatches = WORLD_CUP_MATCHES[todayKey] || [];
 
-  const paramount = SERVICES.find(s => s.id === 'paramount');
-  const promoPrice = 40000;
-  const regularPrice = 18000 * 3;
-  const savings = regularPrice - promoPrice;
-  const promoService = { ...paramount, id: 'paramount-promo' };
-  const inCart = cart.some(c => c.id === 'paramount-promo');
-  const promoPlan = { type: 'promo-mundial', label: '3 meses · Promo Mundial', price: promoPrice };
+  const directvgo = SERVICES.find(s => s.id === 'directvgo');
+  const directvgoPlan = directvgo.plans[0];
+  const inCart = cart.some(c => c.id === 'directvgo');
 
   return (
     <section className="wc-banner">
@@ -647,34 +653,29 @@ const WorldCupBanner = ({ onAdd, cart }) => {
       <div className="wc-inner">
         <div className="wc-left">
           <div className="wc-eyebrow">
-            PROMO MUNDIAL 2026
+            MUNDIAL 2026
           </div>
           <h2 className="wc-title">
             El fútbol más grande<br/>
             <span className="wc-title-em">del planeta ya está aquí.</span>
           </h2>
-          <p className="wc-sub">Paramount+ te trae toda la acción del Mundial, en vivo. Asegurá 3 meses al mejor precio y no te perdás ni un partido.</p>
+          <p className="wc-sub">Con DIRECTV GO podés ver toda la acción del Mundial, en vivo, desde tu celular, tablet o smart TV.</p>
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
-              <ServiceBadge service={paramount} size={62} />
+              <ServiceBadge service={directvgo} size={62} />
               <div className="wc-promo-name-wrap">
-                <div className="wc-promo-name">Paramount<span className="wc-promo-espn">+</span></div>
+                <div className="wc-promo-name">DIRECTV GO</div>
                 <div className="wc-promo-tag">Todos los partidos del Mundial</div>
               </div>
             </div>
             <div className="wc-promo-pricing">
-              <span className="wc-promo-old">{formatCOP(regularPrice)}</span>
-              <span className="wc-promo-arrow">→</span>
-              <span className="wc-promo-new">{formatCOP(promoPrice)}</span>
-            </div>
-            <div className="wc-promo-badges">
-              <div className="wc-promo-period">3 meses</div>
-              <div className="wc-promo-savings">Ahorrás {formatCOP(savings)}</div>
+              <span className="wc-promo-new">{formatCOP(directvgoPlan.price)}</span>
+              <span className="wc-promo-tag">/mes</span>
             </div>
             <button
               className={`wc-btn-promo ${inCart ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCart && onAdd(promoService, promoPlan)}
+              onClick={() => !inCart && onAdd(directvgo, directvgoPlan)}
               disabled={inCart}
             >
               {inCart ? '✓ Agregado' : '+ Agregar'}
