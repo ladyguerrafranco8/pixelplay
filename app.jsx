@@ -22,7 +22,7 @@ const SERVICES = [
     name: 'Disney+',
     tagline: 'Marvel, Star Wars, Pixar',
     plans: [
-      { type: 'Con ESPN', label: 'Pantalla · Con ESPN', price: 15000, popular: true },
+      { type: 'Con ESPN', label: 'Pantalla · Con ESPN', price: 16000, popular: true },
       { type: 'Sin ESPN', label: 'Pantalla · Sin ESPN', price: 12000, popular: false },
     ],
     color: '#1E3A8A',
@@ -75,7 +75,7 @@ const SERVICES = [
     name: 'Crunchyroll',
     tagline: 'Anime sin límites',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla', price: 12000, popular: false },
+      { type: 'Pantalla', label: '1 Pantalla', price: 13000, popular: false },
     ],
     color: '#F47521',
     logoSlug: 'crunchyroll',
@@ -85,7 +85,7 @@ const SERVICES = [
     name: 'Plex',
     tagline: 'Streaming y media personal',
     plans: [
-      { type: 'Pantalla', label: '1 Pantalla', price: 12000, popular: false },
+      { type: 'Pantalla', label: '1 Pantalla', price: 14000, popular: false },
     ],
     color: '#E5A00D',
     logoSlug: 'plex',
@@ -107,7 +107,7 @@ const SERVICES = [
     name: 'YouTube Premium',
     tagline: 'Sin anuncios + Music',
     plans: [
-      { type: 'Mensual', label: '1 Mes', price: 12000, popular: false },
+      { type: 'Mensual', label: '1 Mes', price: 14000, popular: false },
     ],
     color: '#FF0000',
     logoSlug: 'youtube',
