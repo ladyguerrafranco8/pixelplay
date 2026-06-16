@@ -15,3 +15,10 @@
 - Rama de trabajo: `claude/pixelplay-vercel-deploy-fnXhi`
 - URL producción: `pixels-plays.vercel.app`
 - Siempre hacer commit + push + deploy a Vercel al terminar cambios.
+
+## Mundial 2026 — Partidos diarios
+
+- El Mundial FIFA 2026 va del 11 de junio al 19 de julio de 2026. **Hay partidos todos los días sin excepción.**
+- El objeto `WORLD_CUP_MATCHES` en `app.jsx` debe mantenerse siempre actualizado con los partidos correctos.
+- Los horarios van en **hora Colombia (UTC-5)**. Para convertir desde ET (EDT, UTC-4) restar 1 hora.
+- Cuando Lady avise que faltan partidos o hay horarios incorrectos: buscar el calendario real con WebSearch/WebFetch y actualizar `app.jsx` cubriendo al menos los próximos 7 días.
