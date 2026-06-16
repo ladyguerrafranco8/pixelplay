@@ -627,6 +627,48 @@ const WORLD_CUP_MATCHES = {
     { home: 'Arabia Saudita', homeCode: 'KSA', homeFlag: '🇸🇦', away: 'Uruguay', awayCode: 'URU', awayFlag: '🇺🇾', time: '05:00 p.m.' },
     { home: 'Irán', homeCode: 'IRN', homeFlag: '🇮🇷', away: 'Nueva Zelanda', awayCode: 'NZL', awayFlag: '🇳🇿', time: '08:00 p.m.' },
   ],
+  '2026-06-16': [
+    { home: 'Francia', homeCode: 'FRA', homeFlag: '🇫🇷', away: 'Senegal', awayCode: 'SEN', awayFlag: '🇸🇳', time: '02:00 p.m.' },
+    { home: 'Irak', homeCode: 'IRQ', homeFlag: '🇮🇶', away: 'Noruega', awayCode: 'NOR', awayFlag: '🇳🇴', time: '05:00 p.m.' },
+    { home: 'Argentina', homeCode: 'ARG', homeFlag: '🇦🇷', away: 'Argelia', awayCode: 'ALG', awayFlag: '🇩🇿', time: '08:00 p.m.' },
+    { home: 'Austria', homeCode: 'AUT', homeFlag: '🇦🇹', away: 'Jordania', awayCode: 'JOR', awayFlag: '🇯🇴', time: '11:00 p.m.' },
+  ],
+  '2026-06-17': [
+    { home: 'Portugal', homeCode: 'POR', homeFlag: '🇵🇹', away: 'RD Congo', awayCode: 'COD', awayFlag: '🇨🇩', time: '12:00 p.m.' },
+    { home: 'Inglaterra', homeCode: 'ENG', homeFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjRkZGRkZGIi8+PHJlY3QgeD0iMjQiIHk9IjAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIzNiIgZmlsbD0iI0NGMDkxQiIvPjxyZWN0IHg9IjAiIHk9IjEyIiB3aWR0aD0iNjAiIGhlaWdodD0iMTIiIGZpbGw9IiNDRjA5MUIiLz48L3N2Zz4=', away: 'Croacia', awayCode: 'CRO', awayFlag: '🇭🇷', time: '03:00 p.m.' },
+    { home: 'Ghana', homeCode: 'GHA', homeFlag: '🇬🇭', away: 'Panamá', awayCode: 'PAN', awayFlag: '🇵🇦', time: '06:00 p.m.' },
+    { home: 'Uzbekistán', homeCode: 'UZB', homeFlag: '🇺🇿', away: 'Colombia', awayCode: 'COL', awayFlag: '🇨🇴', time: '09:00 p.m.' },
+  ],
+  '2026-06-18': [
+    { home: 'Chequia', homeCode: 'CZE', homeFlag: '🇨🇿', away: 'Sudáfrica', awayCode: 'RSA', awayFlag: '🇿🇦', time: '11:00 a.m.' },
+    { home: 'Suiza', homeCode: 'SUI', homeFlag: '🇨🇭', away: 'Bosnia y Herz.', awayCode: 'BIH', awayFlag: '🇧🇦', time: '02:00 p.m.' },
+    { home: 'Canadá', homeCode: 'CAN', homeFlag: '🇨🇦', away: 'Qatar', awayCode: 'QAT', awayFlag: '🇶🇦', time: '05:00 p.m.' },
+    { home: 'México', homeCode: 'MEX', homeFlag: '🇲🇽', away: 'Corea del Sur', awayCode: 'KOR', awayFlag: '🇰🇷', time: '08:00 p.m.' },
+  ],
+  '2026-06-19': [
+    { home: 'EE. UU.', homeCode: 'USA', homeFlag: '🇺🇸', away: 'Australia', awayCode: 'AUS', awayFlag: '🇦🇺', time: '02:00 p.m.' },
+    { home: 'Escocia', homeCode: 'SCO', homeFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjMDA2NUJEIi8+PHBhdGggZD0iTTAsMCBMNjAsMzYgTTYwLDAgTDAsMzYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+Cg==', away: 'Marruecos', awayCode: 'MAR', awayFlag: '🇲🇦', time: '05:00 p.m.' },
+    { home: 'Brasil', homeCode: 'BRA', homeFlag: '🇧🇷', away: 'Haití', awayCode: 'HAI', awayFlag: '🇭🇹', time: '07:30 p.m.' },
+    { home: 'Turquía', homeCode: 'TUR', homeFlag: '🇹🇷', away: 'Paraguay', awayCode: 'PAR', awayFlag: '🇵🇾', time: '11:00 p.m.' },
+  ],
+  '2026-06-20': [
+    { home: 'Países Bajos', homeCode: 'NED', homeFlag: '🇳🇱', away: 'Suecia', awayCode: 'SWE', awayFlag: '🇸🇪', time: '12:00 p.m.' },
+    { home: 'Alemania', homeCode: 'GER', homeFlag: '🇩🇪', away: 'Costa de Marfil', awayCode: 'CIV', awayFlag: '🇨🇮', time: '03:00 p.m.' },
+    { home: 'Ecuador', homeCode: 'ECU', homeFlag: '🇪🇨', away: 'Curazao', awayCode: 'CUW', awayFlag: '🇨🇼', time: '07:00 p.m.' },
+    { home: 'Túnez', homeCode: 'TUN', homeFlag: '🇹🇳', away: 'Japón', awayCode: 'JPN', awayFlag: '🇯🇵', time: '11:00 p.m.' },
+  ],
+  '2026-06-21': [
+    { home: 'España', homeCode: 'ESP', homeFlag: '🇪🇸', away: 'Arabia Saudita', awayCode: 'KSA', awayFlag: '🇸🇦', time: '11:00 a.m.' },
+    { home: 'Bélgica', homeCode: 'BEL', homeFlag: '🇧🇪', away: 'Irán', awayCode: 'IRN', awayFlag: '🇮🇷', time: '02:00 p.m.' },
+    { home: 'Uruguay', homeCode: 'URU', homeFlag: '🇺🇾', away: 'Cabo Verde', awayCode: 'CPV', awayFlag: '🇨🇻', time: '05:00 p.m.' },
+    { home: 'Nueva Zelanda', homeCode: 'NZL', homeFlag: '🇳🇿', away: 'Egipto', awayCode: 'EGY', awayFlag: '🇪🇬', time: '08:00 p.m.' },
+  ],
+  '2026-06-22': [
+    { home: 'Argentina', homeCode: 'ARG', homeFlag: '🇦🇷', away: 'Austria', awayCode: 'AUT', awayFlag: '🇦🇹', time: '12:00 p.m.' },
+    { home: 'Francia', homeCode: 'FRA', homeFlag: '🇫🇷', away: 'Irak', awayCode: 'IRQ', awayFlag: '🇮🇶', time: '04:00 p.m.' },
+    { home: 'Noruega', homeCode: 'NOR', homeFlag: '🇳🇴', away: 'Senegal', awayCode: 'SEN', awayFlag: '🇸🇳', time: '07:00 p.m.' },
+    { home: 'Jordania', homeCode: 'JOR', homeFlag: '🇯🇴', away: 'Argelia', awayCode: 'ALG', awayFlag: '🇩🇿', time: '10:00 p.m.' },
+  ],
 };
 
 const Flag = ({ value }) => (
