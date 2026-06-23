@@ -22,3 +22,6 @@
 - El objeto `WORLD_CUP_MATCHES` en `app.jsx` debe mantenerse siempre actualizado con los partidos correctos.
 - Los horarios van en **hora Colombia (UTC-5)**. Para convertir desde ET (EDT, UTC-4) restar 1 hora.
 - Cuando Lady avise que faltan partidos o hay horarios incorrectos: buscar el calendario real con WebSearch/WebFetch y actualizar `app.jsx` cubriendo al menos los próximos 7 días.
+- **IMPORTANTE — revisar SIEMPRE al inicio de cualquier tarea en este repo:** comparar la fecha de hoy contra la última fecha cargada en `WORLD_CUP_MATCHES`. Si la fecha de hoy no tiene partidos cargados (o faltan días), buscar el calendario real y completarlo ANTES de hacer cualquier otra cosa, sin esperar a que Lady lo pida.
+- Para partidos de fase de grupos: usar siempre los nombres reales de los equipos.
+- Para fases de eliminación directa (octavos en adelante) cuyo cruce todavía no esté definido (depende de resultados pendientes): usar marcadores tipo `2° Grupo A` / `1° Grupo C` con bandera 🏆 en vez de inventar equipos — y volver a actualizar con los nombres reales tan pronto se conozcan los resultados de grupos.

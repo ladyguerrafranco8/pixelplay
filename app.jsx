@@ -670,6 +670,51 @@ const WORLD_CUP_MATCHES = {
     { home: 'Noruega', homeCode: 'NOR', homeFlag: '🇳🇴', away: 'Senegal', awayCode: 'SEN', awayFlag: '🇸🇳', time: '07:00 p.m.' },
     { home: 'Jordania', homeCode: 'JOR', homeFlag: '🇯🇴', away: 'Argelia', awayCode: 'ALG', awayFlag: '🇩🇿', time: '10:00 p.m.' },
   ],
+  '2026-06-23': [
+    { home: 'Portugal', homeCode: 'POR', homeFlag: '🇵🇹', away: 'Uzbekistán', awayCode: 'UZB', awayFlag: '🇺🇿', time: '12:00 p.m.' },
+    { home: 'Inglaterra', homeCode: 'ENG', homeFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjRkZGRkZGIi8+PHJlY3QgeD0iMjQiIHk9IjAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIzNiIgZmlsbD0iI0NGMDkxQiIvPjxyZWN0IHg9IjAiIHk9IjEyIiB3aWR0aD0iNjAiIGhlaWdodD0iMTIiIGZpbGw9IiNDRjA5MUIiLz48L3N2Zz4=', away: 'Ghana', awayCode: 'GHA', awayFlag: '🇬🇭', time: '03:00 p.m.' },
+    { home: 'Panamá', homeCode: 'PAN', homeFlag: '🇵🇦', away: 'Croacia', awayCode: 'CRO', awayFlag: '🇭🇷', time: '06:00 p.m.' },
+    { home: 'Colombia', homeCode: 'COL', homeFlag: '🇨🇴', away: 'RD Congo', awayCode: 'COD', awayFlag: '🇨🇩', time: '09:00 p.m.' },
+  ],
+  '2026-06-24': [
+    { home: 'Suiza', homeCode: 'SUI', homeFlag: '🇨🇭', away: 'Canadá', awayCode: 'CAN', awayFlag: '🇨🇦', time: '02:00 p.m.' },
+    { home: 'Bosnia y Herz.', homeCode: 'BIH', homeFlag: '🇧🇦', away: 'Qatar', awayCode: 'QAT', awayFlag: '🇶🇦', time: '02:00 p.m.' },
+    { home: 'Escocia', homeCode: 'SCO', homeFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjMDA2NUJEIi8+PHBhdGggZD0iTTAsMCBMNjAsMzYgTTYwLDAgTDAsMzYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI4Ii8+PC9zdmc+Cg==', away: 'Brasil', awayCode: 'BRA', awayFlag: '🇧🇷', time: '05:00 p.m.' },
+    { home: 'Marruecos', homeCode: 'MAR', homeFlag: '🇲🇦', away: 'Haití', awayCode: 'HAI', awayFlag: '🇭🇹', time: '05:00 p.m.' },
+    { home: 'Chequia', homeCode: 'CZE', homeFlag: '🇨🇿', away: 'México', awayCode: 'MEX', awayFlag: '🇲🇽', time: '08:00 p.m.' },
+    { home: 'Sudáfrica', homeCode: 'RSA', homeFlag: '🇿🇦', away: 'Corea del Sur', awayCode: 'KOR', awayFlag: '🇰🇷', time: '08:00 p.m.' },
+  ],
+  '2026-06-25': [
+    { home: 'Ecuador', homeCode: 'ECU', homeFlag: '🇪🇨', away: 'Alemania', awayCode: 'GER', awayFlag: '🇩🇪', time: '03:00 p.m.' },
+    { home: 'Curazao', homeCode: 'CUW', homeFlag: '🇨🇼', away: 'Costa de Marfil', awayCode: 'CIV', awayFlag: '🇨🇮', time: '03:00 p.m.' },
+    { home: 'Japón', homeCode: 'JPN', homeFlag: '🇯🇵', away: 'Suecia', awayCode: 'SWE', awayFlag: '🇸🇪', time: '06:00 p.m.' },
+    { home: 'Túnez', homeCode: 'TUN', homeFlag: '🇹🇳', away: 'Países Bajos', awayCode: 'NED', awayFlag: '🇳🇱', time: '06:00 p.m.' },
+    { home: 'Turquía', homeCode: 'TUR', homeFlag: '🇹🇷', away: 'Estados Unidos', awayCode: 'USA', awayFlag: '🇺🇸', time: '09:00 p.m.' },
+    { home: 'Paraguay', homeCode: 'PAR', homeFlag: '🇵🇾', away: 'Australia', awayCode: 'AUS', awayFlag: '🇦🇺', time: '09:00 p.m.' },
+  ],
+  '2026-06-26': [
+    { home: 'Noruega', homeCode: 'NOR', homeFlag: '🇳🇴', away: 'Francia', awayCode: 'FRA', awayFlag: '🇫🇷', time: '02:00 p.m.' },
+    { home: 'Senegal', homeCode: 'SEN', homeFlag: '🇸🇳', away: 'Irak', awayCode: 'IRQ', awayFlag: '🇮🇶', time: '02:00 p.m.' },
+    { home: 'Cabo Verde', homeCode: 'CPV', homeFlag: '🇨🇻', away: 'Arabia Saudita', awayCode: 'KSA', awayFlag: '🇸🇦', time: '07:00 p.m.' },
+    { home: 'Uruguay', homeCode: 'URU', homeFlag: '🇺🇾', away: 'España', awayCode: 'ESP', awayFlag: '🇪🇸', time: '07:00 p.m.' },
+    { home: 'Egipto', homeCode: 'EGY', homeFlag: '🇪🇬', away: 'Irán', awayCode: 'IRN', awayFlag: '🇮🇷', time: '10:00 p.m.' },
+    { home: 'Nueva Zelanda', homeCode: 'NZL', homeFlag: '🇳🇿', away: 'Bélgica', awayCode: 'BEL', awayFlag: '🇧🇪', time: '10:00 p.m.' },
+  ],
+  '2026-06-27': [
+    { home: 'Panamá', homeCode: 'PAN', homeFlag: '🇵🇦', away: 'Inglaterra', awayCode: 'ENG', awayFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjRkZGRkZGIi8+PHJlY3QgeD0iMjQiIHk9IjAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIzNiIgZmlsbD0iI0NGMDkxQiIvPjxyZWN0IHg9IjAiIHk9IjEyIiB3aWR0aD0iNjAiIGhlaWdodD0iMTIiIGZpbGw9IiNDRjA5MUIiLz48L3N2Zz4=', time: '04:00 p.m.' },
+    { home: 'Croacia', homeCode: 'CRO', homeFlag: '🇭🇷', away: 'Ghana', awayCode: 'GHA', awayFlag: '🇬🇭', time: '04:00 p.m.' },
+    { home: 'Colombia', homeCode: 'COL', homeFlag: '🇨🇴', away: 'Portugal', awayCode: 'POR', awayFlag: '🇵🇹', time: '06:30 p.m.' },
+    { home: 'RD Congo', homeCode: 'COD', homeFlag: '🇨🇩', away: 'Uzbekistán', awayCode: 'UZB', awayFlag: '🇺🇿', time: '06:30 p.m.' },
+    { home: 'Argelia', homeCode: 'ALG', homeFlag: '🇩🇿', away: 'Austria', awayCode: 'AUT', awayFlag: '🇦🇹', time: '09:00 p.m.' },
+    { home: 'Jordania', homeCode: 'JOR', homeFlag: '🇯🇴', away: 'Argentina', awayCode: 'ARG', awayFlag: '🇦🇷', time: '09:00 p.m.' },
+  ],
+  '2026-06-28': [
+    { home: '2° Grupo A', homeCode: '2A', homeFlag: '🏆', away: '2° Grupo B', awayCode: '2B', awayFlag: '🏆', time: '06:00 p.m.' },
+  ],
+  '2026-06-29': [
+    { home: '1° Grupo C', homeCode: '1C', homeFlag: '🏆', away: '2° Grupo F', awayCode: '2F', awayFlag: '🏆', time: '04:00 p.m.' },
+    { home: 'Alemania', homeCode: 'GER', homeFlag: '🇩🇪', away: '3° Mejor A-F', awayCode: '3AF', awayFlag: '🏆', time: '07:30 p.m.' },
+  ],
 };
 
 const Flag = ({ value }) => (
