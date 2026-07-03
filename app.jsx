@@ -736,6 +736,48 @@ const WORLD_CUP_MATCHES = {
     { home: 'Argentina', homeCode: 'ARG', homeFlag: '🇦🇷', away: 'Cabo Verde', awayCode: 'CPV', awayFlag: '🇨🇻', time: '05:00 p.m.' },
     { home: 'Colombia', homeCode: 'COL', homeFlag: '🇨🇴', away: 'Ghana', awayCode: 'GHA', awayFlag: '🇬🇭', time: '08:30 p.m.' },
   ],
+  // Octavos de Final (Round of 16)
+  '2026-07-04': [
+    { home: 'Canadá', homeCode: 'CAN', homeFlag: '🇨🇦', away: 'Marruecos', awayCode: 'MAR', awayFlag: '🇲🇦', time: '12:00 p.m.' },
+    { home: 'Paraguay', homeCode: 'PAR', homeFlag: '🇵🇾', away: 'Francia', awayCode: 'FRA', awayFlag: '🇫🇷', time: '04:00 p.m.' },
+  ],
+  '2026-07-05': [
+    { home: 'Brasil', homeCode: 'BRA', homeFlag: '🇧🇷', away: 'Noruega', awayCode: 'NOR', awayFlag: '🇳🇴', time: '03:00 p.m.' },
+    { home: 'México', homeCode: 'MEX', homeFlag: '🇲🇽', away: 'Inglaterra', awayCode: 'ENG', awayFlag: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzNiI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjM2IiBmaWxsPSIjRkZGRkZGIi8+PHJlY3QgeD0iMjQiIHk9IjAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIzNiIgZmlsbD0iI0NGMDkxQiIvPjxyZWN0IHg9IjAiIHk9IjEyIiB3aWR0aD0iNjAiIGhlaWdodD0iMTIiIGZpbGw9IiNDRjA5MUIiLz48L3N2Zz4=', time: '07:00 p.m.' },
+  ],
+  '2026-07-06': [
+    { home: 'Portugal', homeCode: 'POR', homeFlag: '🇵🇹', away: 'España', awayCode: 'ESP', awayFlag: '🇪🇸', time: '02:00 p.m.' },
+    { home: 'EE.UU.', homeCode: 'USA', homeFlag: '🇺🇸', away: 'Bélgica', awayCode: 'BEL', awayFlag: '🇧🇪', time: '07:00 p.m.' },
+  ],
+  '2026-07-07': [
+    { home: 'Australia/Egipto', homeCode: 'TBD', homeFlag: '🏆', away: 'Argentina/Cabo Verde', awayCode: 'TBD', awayFlag: '🏆', time: '11:00 a.m.' },
+    { home: 'Suiza', homeCode: 'SUI', homeFlag: '🇨🇭', away: 'Colombia/Ghana', awayCode: 'TBD', awayFlag: '🏆', time: '03:00 p.m.' },
+  ],
+  // Cuartos de Final
+  '2026-07-09': [
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '03:00 p.m.' },
+  ],
+  '2026-07-10': [
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '02:00 p.m.' },
+  ],
+  '2026-07-11': [
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '04:00 p.m.' },
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '08:00 p.m.' },
+  ],
+  // Semifinales
+  '2026-07-14': [
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '02:00 p.m.' },
+  ],
+  '2026-07-15': [
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '02:00 p.m.' },
+  ],
+  // Tercer Puesto y Final
+  '2026-07-18': [
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '04:00 p.m.' },
+  ],
+  '2026-07-19': [
+    { home: 'Por definir', homeCode: 'TBD', homeFlag: '🏆', away: 'Por definir', awayCode: 'TBD', awayFlag: '🏆', time: '02:00 p.m.' },
+  ],
 };
 
 const Flag = ({ value }) => (
