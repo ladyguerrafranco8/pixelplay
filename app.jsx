@@ -790,9 +790,6 @@ const Flag = ({ value }) => (
 // WORLD CUP BANNER
 // ============================================================
 const WorldCupBanner = ({ onAdd, cart }) => {
-  const todayKey = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
-  const todayMatches = WORLD_CUP_MATCHES[todayKey] || [];
-
   const directvgo = SERVICES.find(s => s.id === 'directvgo');
   const directvgoPlan = directvgo.plans[0];
   const inCartDtv = cart.some(c => c.id === 'directvgo');
@@ -807,21 +804,19 @@ const WorldCupBanner = ({ onAdd, cart }) => {
       <div className="wc-glow-red" />
       <div className="wc-inner">
         <div className="wc-left">
-          <div className="wc-eyebrow">
-            MUNDIAL 2026
-          </div>
+          <div className="wc-eyebrow">MUNDIAL 2026</div>
           <h2 className="wc-title">
-            El fútbol más grande<br/>
-            <span className="wc-title-em">del planeta ya está aquí.</span>
+            El torneo terminó,<br/>
+            <span className="wc-title-em">el entretenimiento no para.</span>
           </h2>
-          <p className="wc-sub">Seguí cada partido del Mundial en vivo con cualquiera de estas opciones.</p>
+          <p className="wc-sub" style={{marginBottom: '24px'}}>Seguí disfrutando series, películas y deporte en vivo con estas plataformas.</p>
 
           <div className="wc-promo-card">
             <div className="wc-promo-top">
               <ServiceBadge service={paramount} size={62} />
               <div className="wc-promo-name-wrap">
                 <div className="wc-promo-name">Paramount<span className="wc-promo-espn">+</span></div>
-                <div className="wc-promo-tag">Todos los partidos del Mundial</div>
+                <div className="wc-promo-tag">Series, películas y deportes en vivo</div>
               </div>
             </div>
             <div className="wc-promo-pricing">
@@ -842,7 +837,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
               <ServiceBadge service={directvgo} size={62} />
               <div className="wc-promo-name-wrap">
                 <div className="wc-promo-name">DIRECTV GO</div>
-                <div className="wc-promo-tag">Todos los partidos del Mundial</div>
+                <div className="wc-promo-tag">La mejor programación deportiva</div>
               </div>
             </div>
             <div className="wc-promo-pricing">
@@ -858,31 +853,14 @@ const WorldCupBanner = ({ onAdd, cart }) => {
             </button>
           </div>
         </div>
-        <div className="wc-right">
-          <div className="wc-live-tag"><span className="wc-live-dot" />EL MUNDIAL YA ESTÁ AQUÍ</div>
-          {todayMatches.length > 0 ? (
-            <>
-              <div className="wc-countdown-label">Partidos de hoy</div>
-              <div className="wc-matches">
-                {todayMatches.map((m, i) => (
-                  <div className="wc-match" key={i}>
-                    <span className="wc-match-name wc-match-name-home">{m.homeCode}</span>
-                    <Flag value={m.homeFlag} />
-                    <span className="wc-match-vs">vs</span>
-                    <Flag value={m.awayFlag} />
-                    <span className="wc-match-name wc-match-name-away">{m.awayCode}</span>
-                    <span className="wc-match-time">
-                      {m.time.length < 10 && <span className="wc-match-time-pad">{'0'.repeat(10 - m.time.length)}</span>}
-                      {m.time}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </>
-          ) : (
-            <div className="wc-countdown-label">Hoy no hay partidos, pero el torneo sigue</div>
-          )}
-          <div className="wc-badge">🏆 FIFA World Cup 2026™</div>
+
+        <div className="wc-right" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', textAlign:'center'}}>
+          <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.18em', color:'rgba(255,255,255,0.5)', textTransform:'uppercase'}}>Mundial 2026</div>
+          <div style={{fontSize:'13px', fontWeight:600, letterSpacing:'0.14em', color:'#facc15', textTransform:'uppercase', marginBottom:'4px'}}>Campeón del Mundo</div>
+          <div style={{fontSize:'76px', lineHeight:1}}>🇪🇸</div>
+          <div style={{fontSize:'30px', fontWeight:900, color:'#fff', letterSpacing:'0.06em', textTransform:'uppercase', lineHeight:1.1}}>España</div>
+          <div style={{fontSize:'22px', marginTop:'6px'}}>🏆</div>
+          <div className="wc-badge" style={{marginTop:'10px'}}>FIFA World Cup 2026™</div>
         </div>
       </div>
     </section>
