@@ -789,79 +789,22 @@ const Flag = ({ value }) => (
 // ============================================================
 // SPAIN CHAMPION BANNER
 // ============================================================
-const WorldCupBanner = ({ onAdd, cart }) => {
-  const directvgo = SERVICES.find(s => s.id === 'directvgo');
-  const directvgoPlan = directvgo.plans[0];
-  const inCartDtv = cart.some(c => c.id === 'directvgo');
-
-  const paramount = SERVICES.find(s => s.id === 'paramount');
-  const paramountPlan = paramount.plans[0];
-  const inCartPar = cart.some(c => c.id === 'paramount');
-
+const WorldCupBanner = () => {
   return (
     <section className="wc-banner">
       <div className="wc-glow" />
       <div className="wc-glow-red" />
-      <div className="wc-inner">
-        <div className="wc-left">
-          <div className="wc-eyebrow">
-            CAMPEÓN DEL MUNDO 2026
-          </div>
-          <h2 className="wc-title">
-            ¡Felicitaciones<br/>
-            <span className="wc-title-em">España! 🏆🇪🇸</span>
-          </h2>
-          <p className="wc-sub">El mejor contenido de entretenimiento y deporte lo tenés con cualquiera de estas opciones.</p>
-
-          <div className="wc-promo-card">
-            <div className="wc-promo-top">
-              <ServiceBadge service={paramount} size={62} />
-              <div className="wc-promo-name-wrap">
-                <div className="wc-promo-name">Paramount<span className="wc-promo-espn">+</span></div>
-                <div className="wc-promo-tag">Series, películas y deportes en vivo</div>
-              </div>
-            </div>
-            <div className="wc-promo-pricing">
-              <span className="wc-promo-new">{formatCOP(paramountPlan.price)}</span>
-              <span className="wc-promo-tag">/mes</span>
-            </div>
-            <button
-              className={`wc-btn-promo ${inCartPar ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCartPar && onAdd(paramount, paramountPlan)}
-              disabled={inCartPar}
-            >
-              {inCartPar ? '✓ Agregado' : '+ Agregar'}
-            </button>
-          </div>
-
-          <div className="wc-promo-card" style={{marginTop: '10px'}}>
-            <div className="wc-promo-top">
-              <ServiceBadge service={directvgo} size={62} />
-              <div className="wc-promo-name-wrap">
-                <div className="wc-promo-name">DIRECTV GO</div>
-                <div className="wc-promo-tag">La mejor programación deportiva</div>
-              </div>
-            </div>
-            <div className="wc-promo-pricing">
-              <span className="wc-promo-new">{formatCOP(directvgoPlan.price)}</span>
-              <span className="wc-promo-tag">/mes</span>
-            </div>
-            <button
-              className={`wc-btn-promo ${inCartDtv ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCartDtv && onAdd(directvgo, directvgoPlan)}
-              disabled={inCartDtv}
-            >
-              {inCartDtv ? '✓ Agregado' : '+ Agregar'}
-            </button>
-          </div>
-        </div>
-        <div className="wc-right" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '12px'}}>
-          <div style={{fontSize: '72px', lineHeight: 1}}>🇪🇸</div>
-          <div style={{fontSize: '22px', fontWeight: 800, color: '#fff', textAlign: 'center', lineHeight: 1.2}}>España</div>
-          <div style={{fontSize: '13px', fontWeight: 600, color: '#facc15', textAlign: 'center', letterSpacing: '0.08em', textTransform: 'uppercase'}}>Campeón del Mundo</div>
-          <div style={{fontSize: '28px', marginTop: '4px'}}>🏆</div>
-          <div className="wc-badge" style={{marginTop: '8px'}}>FIFA World Cup 2026™</div>
-        </div>
+      <div className="wc-inner" style={{justifyContent: 'center', textAlign: 'center', flexDirection: 'column', alignItems: 'center', gap: '16px', padding: '48px 24px'}}>
+        <div className="wc-eyebrow">CAMPEÓN DEL MUNDO 2026</div>
+        <div style={{fontSize: '80px', lineHeight: 1}}>🇪🇸</div>
+        <h2 className="wc-title" style={{textAlign: 'center'}}>
+          ¡Felicitaciones<br/>
+          <span className="wc-title-em">España! 🏆</span>
+        </h2>
+        <p className="wc-sub" style={{textAlign: 'center', maxWidth: '480px'}}>
+          Los campeones del mundo merecen la mejor pantalla. Encontrá tu plataforma ideal más abajo.
+        </p>
+        <div className="wc-badge">FIFA World Cup 2026™</div>
       </div>
     </section>
   );
