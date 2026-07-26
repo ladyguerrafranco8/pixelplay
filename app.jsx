@@ -1229,8 +1229,9 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
 
       setCart([]);
       setStep('success');
-    } catch {
-      setErrorMsg('Error de conexión. Verificá tu internet e intentá de nuevo.');
+    } catch (err) {
+      const msg = err?.message || 'desconocido';
+      setErrorMsg(`Error: ${msg}`);
       setStep('form');
     }
   };
