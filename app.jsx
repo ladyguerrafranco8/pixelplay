@@ -1183,55 +1183,34 @@ const CheckoutModal = ({ open, onClose, cart, setCart, total, accent }) => {
     setStep('submitting');
     setErrorMsg('');
     try {
-      const supabase = window.PixelPlayAPI?.getClient();
-      if (!supabase) throw new Error('no-client');
-
       const base64 = await compressImage(file);
-      const raw = base64.split(',').pop();
-      const bytes = Uint8Array.from(atob(raw), c => c.charCodeAt(0));
-      const blob = new Blob([bytes], { type: 'image/jpeg' });
-      const path = `${crypto.randomUUID()}.jpg`;
-
-      const { error: upErr } = await supabase.storage
-        .from('comprobantes')
-        .upload(path, blob, { contentType: 'image/jpeg' });
-      if (upErr) throw new Error(upErr.message);
+      const supabaseUrl = (window.PIXELPLAY_CONFIG || {}).SUPABASE_URL || '';
+      const fnUrl = `${supabaseUrl}/functions/v1/CREAR-PEDIDO`;
 
       const items = cart.map(c => ({
         id: c.id, name: c.name,
         planType: c.plan.type, planLabel: c.plan.label,
         price: c.plan.price
       }));
-      const subtotal = items.reduce((s, it) => s + (Number(it.price) || 0), 0);
-      const n = items.length;
-      const rate = n >= 4 ? 0.2 : n >= 3 ? 0.15 : n >= 2 ? 0.1 : 0;
-      const discount = Math.round(subtotal * rate);
-      const total = subtotal - discount;
 
-      const { error: insErr } = await supabase
-        .from('orders')
-        .insert({
-          customer_name: name.trim(),
-          customer_email: email.trim() || null,
-          customer_whatsapp: whatsapp.trim(),
-          payment_method: payMethod?.id || 'bancolombia',
+      const res = await fetch(fnUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          customer: { name: name.trim(), email: email.trim(), whatsapp: whatsapp.trim() },
+          paymentMethod: payMethod?.id || 'bancolombia',
           items,
-          subtotal,
-          discount,
-          total,
-          screenshot_path: path,
-          status: 'pendiente',
-        });
-      if (insErr) {
-        await supabase.storage.from('comprobantes').remove([path]);
-        throw new Error(insErr.message);
-      }
+          screenshot: { base64, ext: 'jpg', contentType: 'image/jpeg' },
+        }),
+      });
+
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.message || 'Error del servidor');
 
       setCart([]);
       setStep('success');
     } catch (err) {
-      const msg = err?.message || 'desconocido';
-      setErrorMsg(`Error: ${msg}`);
+      setErrorMsg('Error de conexión. Verificá tu internet e intentá de nuevo.');
       setStep('form');
     }
   };
