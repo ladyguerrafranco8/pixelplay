@@ -787,80 +787,78 @@ const Flag = ({ value }) => (
 );
 
 // ============================================================
-// WORLD CUP BANNER
+// FEATURED SHOW BANNER — The Bear
 // ============================================================
 const WorldCupBanner = ({ onAdd, cart }) => {
-  const directvgo = SERVICES.find(s => s.id === 'directvgo');
-  const directvgoPlan = directvgo.plans[0];
-  const inCartDtv = cart.some(c => c.id === 'directvgo');
-
-  const paramount = SERVICES.find(s => s.id === 'paramount');
-  const paramountPlan = paramount.plans[0];
-  const inCartPar = cart.some(c => c.id === 'paramount');
+  const disney = SERVICES.find(s => s.id === 'disney');
+  const disneyPlan = disney?.plans[0];
+  const inCartDisney = cart.some(c => c.id === 'disney');
 
   return (
-    <section className="wc-banner">
-      <div className="wc-glow" />
-      <div className="wc-glow-red" />
+    <section className="wc-banner" style={{background: 'linear-gradient(135deg, #0a0e1a 0%, #0d1b2e 50%, #0a1628 100%)'}}>
+      <div className="wc-glow" style={{background: 'radial-gradient(ellipse at 20% 50%, rgba(29,78,216,0.35) 0%, transparent 65%)'}} />
+      <div className="wc-glow-red" style={{background: 'radial-gradient(ellipse at 80% 30%, rgba(30,58,138,0.2) 0%, transparent 60%)'}} />
       <div className="wc-inner">
         <div className="wc-left">
-          <div className="wc-eyebrow">MUNDIAL 2026</div>
-          <h2 className="wc-title">
-            El torneo terminó,<br/>
-            <span className="wc-title-em">el entretenimiento no para.</span>
+          <div className="wc-eyebrow" style={{color:'#60a5fa', letterSpacing:'0.2em'}}>SERIE DEL MOMENTO</div>
+          <h2 className="wc-title" style={{fontFamily:'serif', fontSize:'clamp(2rem,5vw,3.2rem)', lineHeight:1, marginBottom:'8px'}}>
+            The Bear
           </h2>
-          <p className="wc-sub" style={{marginBottom: '24px'}}>Seguí disfrutando series, películas y deporte en vivo con estas plataformas.</p>
-
-          <div className="wc-promo-card">
-            <div className="wc-promo-top">
-              <ServiceBadge service={paramount} size={62} />
-              <div className="wc-promo-name-wrap">
-                <div className="wc-promo-name">Paramount<span className="wc-promo-espn">+</span></div>
-                <div className="wc-promo-tag">Series, películas y deportes en vivo</div>
-              </div>
-            </div>
-            <div className="wc-promo-pricing">
-              <span className="wc-promo-new">{formatCOP(paramountPlan.price)}</span>
-              <span className="wc-promo-tag">/mes</span>
-            </div>
-            <button
-              className={`wc-btn-promo ${inCartPar ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCartPar && onAdd(paramount, paramountPlan)}
-              disabled={inCartPar}
-            >
-              {inCartPar ? '✓ Agregado' : '+ Agregar'}
-            </button>
+          <div style={{fontSize:'13px', fontWeight:700, color:'rgba(255,255,255,0.4)', letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:'16px'}}>
+            Disney+ · Drama
           </div>
+          <p className="wc-sub" style={{fontSize:'15px', lineHeight:1.7, color:'rgba(255,255,255,0.8)', marginBottom:'10px'}}>
+            Un chef de alta cocina abandona los mejores restaurantes del mundo para salvar la sanduchería de su familia en Chicago. Lo que parece simple se convierte en caos, presión y redención.
+          </p>
+          <p style={{fontSize:'13px', color:'#60a5fa', fontStyle:'italic', marginBottom:'24px', lineHeight:1.5}}>
+            "Frenética, brutal y absolutamente adictiva. No podés parar de verla."
+          </p>
 
-          <div className="wc-promo-card" style={{marginTop: '10px'}}>
-            <div className="wc-promo-top">
-              <ServiceBadge service={directvgo} size={62} />
-              <div className="wc-promo-name-wrap">
-                <div className="wc-promo-name">DIRECTV GO</div>
-                <div className="wc-promo-tag">La mejor programación deportiva</div>
+          {disney && disneyPlan && (
+            <div className="wc-promo-card">
+              <div className="wc-promo-top">
+                <ServiceBadge service={disney} size={62} />
+                <div className="wc-promo-name-wrap">
+                  <div className="wc-promo-name">Disney+</div>
+                  <div className="wc-promo-tag">The Bear + todo el catálogo</div>
+                </div>
               </div>
+              <div className="wc-promo-pricing">
+                <span className="wc-promo-new">{formatCOP(disneyPlan.price)}</span>
+                <span className="wc-promo-tag">/mes</span>
+              </div>
+              <button
+                className={`wc-btn-promo ${inCartDisney ? 'wc-btn-in' : ''}`}
+                onClick={() => !inCartDisney && onAdd(disney, disneyPlan)}
+                disabled={inCartDisney}
+              >
+                {inCartDisney ? '✓ Agregado' : '+ Agregar'}
+              </button>
             </div>
-            <div className="wc-promo-pricing">
-              <span className="wc-promo-new">{formatCOP(directvgoPlan.price)}</span>
-              <span className="wc-promo-tag">/mes</span>
-            </div>
-            <button
-              className={`wc-btn-promo ${inCartDtv ? 'wc-btn-in' : ''}`}
-              onClick={() => !inCartDtv && onAdd(directvgo, directvgoPlan)}
-              disabled={inCartDtv}
-            >
-              {inCartDtv ? '✓ Agregado' : '+ Agregar'}
-            </button>
-          </div>
+          )}
         </div>
 
-        <div className="wc-right" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', textAlign:'center'}}>
-          <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.18em', color:'rgba(255,255,255,0.5)', textTransform:'uppercase'}}>Mundial 2026</div>
-          <div style={{fontSize:'13px', fontWeight:600, letterSpacing:'0.14em', color:'#facc15', textTransform:'uppercase', marginBottom:'4px'}}>Campeón del Mundo</div>
-          <div style={{fontSize:'76px', lineHeight:1}}>🇪🇸</div>
-          <div style={{fontSize:'30px', fontWeight:900, color:'#fff', letterSpacing:'0.06em', textTransform:'uppercase', lineHeight:1.1}}>España</div>
-          <div style={{fontSize:'22px', marginTop:'6px'}}>🏆</div>
-          <div className="wc-badge" style={{marginTop:'10px'}}>FIFA World Cup 2026™</div>
+        <div className="wc-right" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'16px', textAlign:'center'}}>
+          <div style={{
+            fontFamily:'monospace', fontSize:'clamp(1.4rem,3.5vw,2.2rem)', fontWeight:700,
+            color:'#3b82f6', letterSpacing:'0.08em',
+            textShadow:'0 0 30px rgba(59,130,246,0.8), 0 0 60px rgba(59,130,246,0.4)',
+            border:'2px solid rgba(59,130,246,0.3)', borderRadius:'8px',
+            padding:'12px 20px', background:'rgba(59,130,246,0.05)'
+          }}>
+            0 3 6 3 : 0 9 : 1 2
+          </div>
+          <div style={{fontSize:'11px', color:'rgba(255,255,255,0.35)', letterSpacing:'0.2em', textTransform:'uppercase'}}>cada segundo cuenta</div>
+          <div style={{
+            marginTop:'8px', fontSize:'clamp(1.1rem,2.5vw,1.4rem)', fontWeight:900,
+            color:'#fff', letterSpacing:'0.05em', textTransform:'uppercase',
+            textShadow:'0 0 20px rgba(255,255,255,0.3)'
+          }}>
+            YES, CHEF.
+          </div>
+          <div style={{fontSize:'11px', color:'rgba(255,255,255,0.4)', fontStyle:'italic'}}>
+            (say it back)
+          </div>
         </div>
       </div>
     </section>
