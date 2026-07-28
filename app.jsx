@@ -795,23 +795,28 @@ const WorldCupBanner = ({ onAdd, cart }) => {
   const inCartDisney = cart.some(c => c.id === 'disney');
 
   return (
-    <section className="wc-banner" style={{background: 'linear-gradient(135deg, #0a0e1a 0%, #0d1b2e 50%, #0a1628 100%)'}}>
-      <div className="wc-glow" style={{background: 'radial-gradient(ellipse at 20% 50%, rgba(29,78,216,0.35) 0%, transparent 65%)'}} />
-      <div className="wc-glow-red" style={{background: 'radial-gradient(ellipse at 80% 30%, rgba(30,58,138,0.2) 0%, transparent 60%)'}} />
-      <div className="wc-inner">
-        <div className="wc-left">
-          <div className="wc-eyebrow" style={{color:'#60a5fa', letterSpacing:'0.2em'}}>SERIE DEL MOMENTO</div>
-          <h2 className="wc-title" style={{fontFamily:'serif', fontSize:'clamp(2rem,5vw,3.2rem)', lineHeight:1, marginBottom:'8px'}}>
+    <section className="wc-banner" style={{background:'linear-gradient(135deg,#060c18 0%,#0a1628 60%,#0d1f3c 100%)', overflow:'hidden'}}>
+      <div className="wc-glow" style={{background:'radial-gradient(ellipse at 15% 60%,rgba(37,99,235,0.4) 0%,transparent 60%)'}} />
+      <div className="wc-glow-red" style={{background:'radial-gradient(ellipse at 85% 20%,rgba(30,64,175,0.25) 0%,transparent 55%)'}} />
+      <div className="wc-inner" style={{alignItems:'stretch', gap:'0'}}>
+
+        {/* LEFT — reseña primero */}
+        <div className="wc-left" style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+          <div className="wc-eyebrow" style={{color:'#93c5fd', letterSpacing:'0.22em', fontSize:'10px'}}>SERIE DEL MOMENTO · DISNEY+</div>
+
+          <h2 style={{fontFamily:'Georgia,serif', fontSize:'clamp(2.6rem,6vw,4rem)', fontWeight:700, lineHeight:0.95, color:'#fff', margin:'10px 0 6px', letterSpacing:'-0.01em'}}>
             The Bear
           </h2>
-          <div style={{fontSize:'13px', fontWeight:700, color:'rgba(255,255,255,0.4)', letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:'16px'}}>
-            Disney+ · Drama
+
+          <div style={{fontFamily:'monospace', fontSize:'clamp(0.75rem,1.8vw,0.95rem)', color:'#3b82f6', letterSpacing:'0.12em', marginBottom:'18px', textShadow:'0 0 16px rgba(59,130,246,0.7)'}}>
+            ▶ 00:03:09:12 — cada segundo cuenta
           </div>
-          <p className="wc-sub" style={{fontSize:'15px', lineHeight:1.7, color:'rgba(255,255,255,0.8)', marginBottom:'10px'}}>
-            Un chef de alta cocina abandona los mejores restaurantes del mundo para salvar la sanduchería de su familia en Chicago. Lo que parece simple se convierte en caos, presión y redención.
+
+          <p style={{fontSize:'clamp(13px,1.8vw,15px)', lineHeight:1.75, color:'rgba(255,255,255,0.85)', margin:'0 0 10px'}}>
+            Un chef estrella abandona los mejores restaurantes del mundo para salvar la sanduchería familiar en Chicago. Lo que parece simple se convierte en caos, fuego y redención a fuego lento.
           </p>
-          <p style={{fontSize:'13px', color:'#60a5fa', fontStyle:'italic', marginBottom:'24px', lineHeight:1.5}}>
-            "Frenética, brutal y absolutamente adictiva. No podés parar de verla."
+          <p style={{fontSize:'13px', color:'#93c5fd', fontStyle:'italic', margin:'0 0 28px', lineHeight:1.5}}>
+            "Frenética, brutal y absolutamente adictiva. Una de las mejores series de la década."
           </p>
 
           {disney && disneyPlan && (
@@ -838,28 +843,48 @@ const WorldCupBanner = ({ onAdd, cart }) => {
           )}
         </div>
 
-        <div className="wc-right" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'16px', textAlign:'center'}}>
-          <div style={{
-            fontFamily:'monospace', fontSize:'clamp(1.4rem,3.5vw,2.2rem)', fontWeight:700,
-            color:'#3b82f6', letterSpacing:'0.08em',
-            textShadow:'0 0 30px rgba(59,130,246,0.8), 0 0 60px rgba(59,130,246,0.4)',
-            border:'2px solid rgba(59,130,246,0.3)', borderRadius:'8px',
-            padding:'12px 20px', background:'rgba(59,130,246,0.05)'
-          }}>
-            0 3 6 3 : 0 9 : 1 2
-          </div>
-          <div style={{fontSize:'11px', color:'rgba(255,255,255,0.35)', letterSpacing:'0.2em', textTransform:'uppercase'}}>cada segundo cuenta</div>
-          <div style={{
-            marginTop:'8px', fontSize:'clamp(1.1rem,2.5vw,1.4rem)', fontWeight:900,
-            color:'#fff', letterSpacing:'0.05em', textTransform:'uppercase',
-            textShadow:'0 0 20px rgba(255,255,255,0.3)'
-          }}>
-            YES, CHEF.
-          </div>
-          <div style={{fontSize:'11px', color:'rgba(255,255,255,0.4)', fontStyle:'italic'}}>
-            (say it back)
+        {/* RIGHT — silueta cinematográfica del chef */}
+        <div className="wc-right" style={{display:'flex', alignItems:'flex-end', justifyContent:'center', position:'relative', minHeight:'320px'}}>
+          <svg viewBox="0 0 200 340" style={{width:'min(180px,45vw)', filter:'drop-shadow(0 0 40px rgba(59,130,246,0.5))', position:'relative', zIndex:1}} aria-hidden="true">
+            {/* cuerpo */}
+            <ellipse cx="100" cy="310" rx="55" ry="18" fill="rgba(59,130,246,0.15)"/>
+            {/* piernas */}
+            <rect x="78" y="230" width="18" height="80" rx="9" fill="#1e3a5f"/>
+            <rect x="104" y="230" width="18" height="80" rx="9" fill="#1e3a5f"/>
+            {/* torso — delantal */}
+            <rect x="62" y="130" width="76" height="110" rx="14" fill="#1d3461"/>
+            <rect x="80" y="128" width="40" height="6" rx="3" fill="#2563eb"/>
+            {/* brazos */}
+            <rect x="38" y="135" width="26" height="70" rx="13" fill="#1d3461" transform="rotate(-10 51 170)"/>
+            <rect x="136" y="135" width="26" height="70" rx="13" fill="#1d3461" transform="rotate(12 149 170)"/>
+            {/* mano con cuchillo */}
+            <rect x="28" y="196" width="6" height="32" rx="3" fill="#60a5fa" transform="rotate(-15 31 212)"/>
+            {/* cuello */}
+            <rect x="88" y="108" width="24" height="28" rx="8" fill="#2d4a6e"/>
+            {/* cabeza */}
+            <ellipse cx="100" cy="90" rx="32" ry="36" fill="#2d4a6e"/>
+            {/* pelo */}
+            <ellipse cx="100" cy="60" rx="30" ry="14" fill="#1a2e45"/>
+            <ellipse cx="78" cy="72" rx="10" ry="18" fill="#1a2e45"/>
+            <ellipse cx="122" cy="72" rx="10" ry="18" fill="#1a2e45"/>
+            {/* cara — mirando arriba */}
+            <ellipse cx="93" cy="85" rx="4" ry="3" fill="#0d1f3c"/>
+            <ellipse cx="107" cy="85" rx="4" ry="3" fill="#0d1f3c"/>
+            <path d="M 92 97 Q 100 93 108 97" stroke="#0d1f3c" strokeWidth="2" fill="none"/>
+            {/* gorro de chef */}
+            <rect x="72" y="44" width="56" height="22" rx="4" fill="#e2e8f0"/>
+            <ellipse cx="100" cy="44" rx="30" ry="10" fill="#f8fafc"/>
+            <rect x="78" y="22" width="44" height="26" rx="6" fill="#f8fafc"/>
+          </svg>
+          {/* YES CHEF flotante */}
+          <div style={{position:'absolute', bottom:'16px', left:'50%', transform:'translateX(-50%)', textAlign:'center', whiteSpace:'nowrap'}}>
+            <div style={{fontSize:'clamp(0.85rem,2vw,1.1rem)', fontWeight:900, color:'#fff', letterSpacing:'0.1em', textTransform:'uppercase', textShadow:'0 0 20px rgba(255,255,255,0.4)'}}>
+              YES, CHEF.
+            </div>
+            <div style={{fontSize:'10px', color:'rgba(255,255,255,0.35)', fontStyle:'italic', letterSpacing:'0.08em'}}>(say it back)</div>
           </div>
         </div>
+
       </div>
     </section>
   );
