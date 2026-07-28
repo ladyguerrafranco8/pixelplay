@@ -789,6 +789,28 @@ const Flag = ({ value }) => (
 // ============================================================
 // FEATURED SHOW BANNER — The Bear
 // ============================================================
+const KitchenTimer = () => {
+  const [secs, setSecs] = React.useState(0);
+  React.useEffect(() => {
+    const id = setInterval(() => setSecs(s => s + 1), 1000);
+    return () => clearInterval(id);
+  }, []);
+  const h = String(Math.floor(secs / 3600)).padStart(2, '0');
+  const m = String(Math.floor((secs % 3600) / 60)).padStart(2, '0');
+  const s = String(secs % 60).padStart(2, '0');
+  return (
+    <div style={{
+      fontFamily:'monospace', fontSize:'clamp(1.6rem,3.5vw,2.4rem)', fontWeight:700,
+      color:'#3b82f6', letterSpacing:'0.12em',
+      textShadow:'0 0 30px rgba(59,130,246,0.8), 0 0 60px rgba(59,130,246,0.4)',
+      border:'2px solid rgba(59,130,246,0.3)', borderRadius:'8px',
+      padding:'12px 24px', background:'rgba(59,130,246,0.05)'
+    }}>
+      {h}:{m}:{s}
+    </div>
+  );
+};
+
 const WorldCupBanner = ({ onAdd, cart }) => {
   const disney = SERVICES.find(s => s.id === 'disney');
   const disneyPlan = disney?.plans[0];
@@ -808,10 +830,10 @@ const WorldCupBanner = ({ onAdd, cart }) => {
             Disney+ · Drama
           </div>
           <p className="wc-sub" style={{fontSize:'15px', lineHeight:1.7, color:'rgba(255,255,255,0.8)', marginBottom:'10px'}}>
-            Un chef de alta cocina abandona los mejores restaurantes del mundo para salvar la sanduchería de su familia en Chicago. Lo que parece simple se convierte en caos, presión y redención.
+            Carmy Berzatto lo tenía todo: estrellas Michelin, cocinas de élite, el mundo de la alta gastronomía a sus pies. Hasta que su hermano murió y todo se derrumbó. Ahora dirige una cocina caótica con un equipo al límite, deudas que no esperan y una sola obsesión: no volver a fallar. The Bear no es una serie de cocina. Es una serie sobre el peso de cargar con todo.
           </p>
           <p style={{fontSize:'13px', color:'#60a5fa', fontStyle:'italic', marginBottom:'24px', lineHeight:1.5}}>
-            "Frenética, brutal y absolutamente adictiva. No podés parar de verla."
+            "Frenética, brutal y absolutamente adictiva. Una de las mejores series de la década."
           </p>
 
           {disney && disneyPlan && (
@@ -839,15 +861,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
         </div>
 
         <div className="wc-right" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'16px', textAlign:'center'}}>
-          <div style={{
-            fontFamily:'monospace', fontSize:'clamp(1.4rem,3.5vw,2.2rem)', fontWeight:700,
-            color:'#3b82f6', letterSpacing:'0.08em',
-            textShadow:'0 0 30px rgba(59,130,246,0.8), 0 0 60px rgba(59,130,246,0.4)',
-            border:'2px solid rgba(59,130,246,0.3)', borderRadius:'8px',
-            padding:'12px 20px', background:'rgba(59,130,246,0.05)'
-          }}>
-            0 3 6 3 : 0 9 : 1 2
-          </div>
+          <KitchenTimer />
           <div style={{fontSize:'11px', color:'rgba(255,255,255,0.35)', letterSpacing:'0.2em', textTransform:'uppercase'}}>cada segundo cuenta</div>
           <div style={{
             marginTop:'8px', fontSize:'clamp(1.1rem,2.5vw,1.4rem)', fontWeight:900,
