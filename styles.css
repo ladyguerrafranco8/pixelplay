@@ -1668,12 +1668,26 @@ section {
 }
 .wc-inner {
   display: flex;
-  align-items: center;
-  gap: 48px;
+  align-items: stretch;
+  gap: 0;
   flex-wrap: wrap;
 }
-.wc-left { flex: 1; min-width: 280px; }
-.wc-right { flex-shrink: 0; text-align: center; }
+.wc-left {
+  flex: 1 1 320px;
+  max-width: 520px;
+  padding-right: 48px;
+}
+.wc-right {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  padding-left: 48px;
+}
 
 .wc-eyebrow {
   display: inline-flex;
@@ -1943,8 +1957,9 @@ section {
   .testi-card { flex: 0 0 300px; }
   .catalog-bundle-tip { margin-left: 0; width: 100%; justify-content: center; }
   .wc-banner { padding: 90px 16px 32px; }
-  .wc-inner { gap: 20px; }
-  .wc-right { width: 100%; }
+  .wc-inner { gap: 28px; }
+  .wc-left { padding-right: 0; max-width: 100%; }
+  .wc-right { flex: 0 0 100%; border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 24px; }
   .wc-matches { width: calc(100% - 90px); margin-left: auto; margin-right: auto; }
   .wc-sub { margin-bottom: 14px; }
   .wc-title { margin-bottom: 8px; }

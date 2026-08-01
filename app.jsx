@@ -829,10 +829,13 @@ const WorldCupBanner = ({ onAdd, cart }) => {
           <div style={{fontSize:'13px', fontWeight:700, color:'rgba(255,255,255,0.4)', letterSpacing:'0.15em', textTransform:'uppercase', marginBottom:'16px'}}>
             Disney+ · Drama
           </div>
-          <p className="wc-sub" style={{fontSize:'15px', lineHeight:1.7, color:'rgba(255,255,255,0.8)', marginBottom:'10px'}}>
-            Carmy Berzatto lo tenía todo: estrellas Michelin, cocinas de élite, el mundo de la alta gastronomía a sus pies. Hasta que su hermano murió y todo se derrumbó. Ahora dirige una cocina caótica con un equipo al límite, deudas que no esperan y una sola obsesión: no volver a fallar. The Bear no es una serie de cocina. Es una serie sobre el peso de cargar con todo.
+          <p className="wc-sub" style={{fontSize:'15px', lineHeight:1.75, color:'rgba(255,255,255,0.82)', marginBottom:'14px'}}>
+            Carmy Berzatto lo tenía todo: estrellas Michelin, las cocinas más exigentes del mundo. Hasta que su hermano murió y todo se derrumbó. Ahora dirige una cocina caótica con un equipo al límite y una sola obsesión: no volver a fallar.
           </p>
-          <p style={{fontSize:'13px', color:'#60a5fa', fontStyle:'italic', marginBottom:'24px', lineHeight:1.5}}>
+          <p style={{fontSize:'14px', fontWeight:600, color:'rgba(255,255,255,0.5)', letterSpacing:'0.01em', marginBottom:'6px'}}>
+            The Bear no es una serie de cocina.
+          </p>
+          <p style={{fontSize:'13px', color:'#60a5fa', fontStyle:'italic', marginBottom:'28px', lineHeight:1.5}}>
             "Frenética, brutal y absolutamente adictiva. Una de las mejores series de la década."
           </p>
 
@@ -860,7 +863,7 @@ const WorldCupBanner = ({ onAdd, cart }) => {
           )}
         </div>
 
-        <div className="wc-right" style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'16px', textAlign:'center'}}>
+        <div className="wc-right">
           <KitchenTimer />
           <div style={{fontSize:'11px', color:'rgba(255,255,255,0.35)', letterSpacing:'0.2em', textTransform:'uppercase'}}>cada segundo cuenta</div>
           <div style={{
