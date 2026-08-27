@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lady Guerra — Model</title>
+<meta name="description" content="Lady Guerra — Model based in Medellín, Colombia. Book: Casual, Editorial, Comercial." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <a class="topbar__brand" href="#top">LG</a>
+  <nav class="topbar__nav">
+    <a href="#book">Book</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="topbar__toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#book">Book</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <section class="hero" id="top">
+    <img class="hero__img" src="public/images/hero/hero-placeholder.jpg" onerror="this.onerror=null;this.src='public/images/hero/hero-placeholder.svg'" alt="Lady Guerra" />
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__name">LADY GUERRA</h1>
+      <p class="hero__tagline">Model based in Medellín, Colombia</p>
+      <a class="hero__scroll" href="#book" aria-label="Ver book">
+        <span>Book</span>
+        <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1V21M7 21L1 15M7 21L13 15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="section-head">
+      <h2>Book</h2>
+      <p>Selección de trabajo por categoría</p>
+    </div>
+
+    <div class="book__tabs" role="tablist" aria-label="Categorías del book">
+      <button class="book__tab is-active" data-category="casual" role="tab" aria-selected="true">Casual</button>
+      <button class="book__tab" data-category="editorial" role="tab" aria-selected="false">Editorial</button>
+      <button class="book__tab" data-category="comercial" role="tab" aria-selected="false">Comercial</button>
+    </div>
+
+    <div class="book__gallery" id="gallery" role="tabpanel"></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>Bookings &amp; colaboraciones</p>
+    </div>
+
+    <div class="contact__grid">
+      <a class="contact__item" href="https://instagram.com/ladyguerra" target="_blank" rel="noopener">
+        <span class="contact__label">Instagram</span>
+        <span class="contact__value">@ladyguerra</span>
+      </a>
+      <a class="contact__item" href="https://pinterest.com/ladyguerra" target="_blank" rel="noopener">
+        <span class="contact__label">Pinterest</span>
+        <span class="contact__value">@ladyguerra</span>
+      </a>
+      <a class="contact__item" href="mailto:booking@ladyguerra.com">
+        <span class="contact__label">Email</span>
+        <span class="contact__value">booking@ladyguerra.com</span>
+      </a>
+      <a class="contact__item" href="https://wa.me/573000000000" target="_blank" rel="noopener">
+        <span class="contact__label">WhatsApp</span>
+        <span class="contact__value">+57 300 000 0000</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Lady Guerra. Medellín, Colombia.</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
