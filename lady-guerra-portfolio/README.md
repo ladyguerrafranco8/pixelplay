@@ -1,52 +1,41 @@
 # Lady Guerra — Portfolio
 
-Sitio de portafolio (modeling book) de Lady Guerra. HTML/CSS/JS simple, sin build,
-pensado para deployar en Vercel como proyecto independiente (dominio propio, separado
-de la tienda PixelPlay que vive en la raíz de este repo).
+Sitio de portafolio (modeling book) de Lady Guerra. HTML/CSS puro, sin build ni
+dependencias — funciona en cualquier navegador, en cualquier dispositivo, sin
+necesidad de ninguna cuenta ni app. Pensado para deployar en Vercel como
+proyecto independiente (dominio propio, separado de la tienda PixelPlay que
+vive en la raíz de este repo).
 
 ## Estructura
 
 ```
-index.html   # Hero + Book (Casual/Editorial/Comercial) + Contact
-styles.css   # diseño editorial oscuro
-script.js    # cambio de categoría del book + menú móvil
-public/images/
-  hero/hero-placeholder.svg
-  casual/casual-1.svg … casual-6.svg
-  editorial/editorial-1.svg … editorial-6.svg
-  comercial/comercial-1.svg … comercial-6.svg
+index.html   # Nombre + titular (Casual/Editorial/Comercial) + fotos + contacto
+styles.css   # diseño editorial claro (tipografía Cormorant Garamond + Bodoni Moda)
+public/images/book/
+  01-black-coat.jpg
+  02-porch-strawberry.jpg
+  03-orange-sweater.jpg
+  04-zebra-cube.jpg
+  05-sunglasses-blue.jpg
 ```
 
-## Cómo reemplazar las fotos
+## Cómo reemplazar o reordenar las fotos
 
-Cada imagen SVG es un placeholder temporal. Para poner tus fotos reales **no hay que
-tocar el código**: solo sube un `.jpg` con el mismo nombre en la misma carpeta y el
-sitio lo usa automáticamente (si el `.jpg` no existe, sigue mostrando el placeholder).
+Cada foto es un archivo numerado en `public/images/book/`. Para cambiar una
+foto, sube el archivo nuevo con el mismo nombre. Para reordenarlas o agregar
+más, edita las etiquetas `<img>` dentro de la sección `.gallery` en
+`index.html` (el orden en el HTML es el orden en que se ven en la página).
 
-- Hero: `public/images/hero/hero-placeholder.jpg`
-- Casual: `public/images/casual/casual-1.jpg` … `casual-6.jpg`
-- Editorial: `public/images/editorial/editorial-1.jpg` … `editorial-6.jpg`
-- Comercial: `public/images/comercial/comercial-1.jpg` … `comercial-6.jpg`
-
-Si quieres más o menos fotos por categoría, avísame y ajusto `script.js`
-(la variable `CATEGORIES` al inicio del archivo).
-
-**Specs recomendadas de las fotos:**
-- Formato JPG, orientación vertical/retrato (relación 3:4 aprox.).
-- Ancho mínimo 1200px (para que se vea nítido en pantallas grandes).
-- Peso ideal por foto: menos de 500KB (comprimidas) para que cargue rápido en celular.
-- La foto del hero puede ser horizontal o vertical; se recorta automáticamente para
-  llenar la pantalla.
+**Specs recomendadas de las fotos:** JPG, orientación vertical, ancho mínimo
+1000px, sin comprimir de más (mándalas como archivo/documento, no como "foto"
+de WhatsApp, para no perder calidad).
 
 ## Contacto (editar en `index.html`)
 
-En la sección `#contact` hay 4 datos de ejemplo que hay que reemplazar por los reales:
-Instagram, Pinterest, email y WhatsApp (busca `ladyguerra`, `booking@ladyguerra.com`
-y `+57 300 000 0000`).
+El link de Instagram está en la sección `.contact` — busca `ladyguerraf` y
+reemplázalo si cambia el usuario.
 
 ## Correr local
-
-No necesita instalación. Basta con:
 
 ```bash
 cd lady-guerra-portfolio
@@ -57,7 +46,9 @@ Y abrir `http://localhost:3000`.
 
 ## Deploy en Vercel
 
-Este folder es un proyecto de Vercel independiente:
+Este folder es un proyecto de Vercel independiente, con su propio dominio
+`.vercel.app` gratis — no depende de ninguna cuenta ni app para que la gente
+lo abra, solo del link:
 
 1. En Vercel → **Add New Project** → importar el repo `pixelplay`.
 2. En **Root Directory** elegir `lady-guerra-portfolio`.
