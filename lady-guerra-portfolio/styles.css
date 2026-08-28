@@ -69,12 +69,40 @@ a { color: #111111; }
 }
 
 .measurements-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 11px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: #7a7a7a;
   padding-bottom: 14px;
   border-bottom: 1px solid #111111;
+  cursor: pointer;
+  list-style: none;
+}
+
+.measurements-title::-webkit-details-marker {
+  display: none;
+}
+
+.measurements-title::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #7a7a7a;
+  border-bottom: 1px solid #7a7a7a;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  margin-left: 12px;
+}
+
+.measurements[open] .measurements-title::after {
+  transform: rotate(-135deg);
+}
+
+.measurements-body {
+  padding-top: 4px;
 }
 
 .measurements-row {
