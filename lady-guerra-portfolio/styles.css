@@ -71,12 +71,14 @@ a { color: #111111; }
 .measurements-title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: 11px;
-  letter-spacing: 0.24em;
+  justify-content: center;
+  gap: 14px;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.5rem, 5vw, 1.9rem);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #7a7a7a;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #111111;
   cursor: pointer;
   list-style: none;
@@ -88,13 +90,12 @@ a { color: #111111; }
 
 .measurements-title::after {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-right: 1px solid #7a7a7a;
   border-bottom: 1px solid #7a7a7a;
   transform: rotate(45deg);
   transition: transform 0.2s ease;
-  margin-left: 12px;
 }
 
 .measurements[open] .measurements-title::after {
