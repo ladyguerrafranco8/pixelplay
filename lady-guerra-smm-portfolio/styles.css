@@ -62,6 +62,10 @@ body{ margin:0; }
 .case-label{ position:absolute; left:12px; bottom:12px; background:rgba(10,10,9,0.78); padding:5px 12px; border-radius:999px; font-size:8.5px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#fff; }
 .case-pending{ height:108px; border:1px dashed rgba(255,255,255,0.16); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:9.5px; letter-spacing:1.3px; text-transform:uppercase; color:#5c584e; text-align:center; }
 
+.insta-row{ grid-template-columns:1fr 1fr; }
+.case-media .frame-row.insta-row img{ height:220px; object-fit:cover; object-position:top; }
+.insta-cap{ display:block; margin-top:7px; font-size:8.5px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#8f8b82; text-align:center; }
+
 
 /* right: qualifications style */
 .pad{ padding:24px 26px; }
@@ -109,6 +113,7 @@ body{ margin:0; }
   .case-block, .case-media, .frame-row{ min-width:0; }
   .case-media img{ height:auto; aspect-ratio:16/9; min-width:0; }
   .frame-row img{ width:100%; height:auto; aspect-ratio:1/1; min-width:0; }
+  .case-media .frame-row.insta-row img{ aspect-ratio:3/4; height:auto; }
   .qual-row{ flex-direction:column; }
   .qual-row, .qual-cert{ min-width:0; }
   .qual-cert{ width:100%; }
