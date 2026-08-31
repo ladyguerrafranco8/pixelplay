@@ -19,7 +19,7 @@ body{ margin:0; }
 .impact-title{ font-size:99px; line-height:0.86; letter-spacing:0.5px; margin:0 0 14px; }
 .role-line{ font-weight:600; font-size:16px; letter-spacing:2px; text-transform:uppercase; color:#e7e4dc; margin:0; text-align:center; }
 .header-photo-block{ flex:none; width:150px; box-sizing:border-box; display:flex; align-items:center; margin-bottom:-26px; }
-.header-photo{ width:100%; height:auto; object-fit:contain; border:4px solid rgba(255,255,255,0.4); border-radius:16px; display:block; }
+.header-photo{ width:100%; height:auto; object-fit:contain; border:2px solid rgba(255,255,255,0.35); display:block; }
 .contact-toggle{ position:relative; }
 .contact-toggle summary{ display:flex; align-items:center; gap:7px; cursor:pointer; list-style:none; }
 .contact-toggle summary::-webkit-details-marker{ display:none; }
@@ -48,7 +48,7 @@ body{ margin:0; }
 .case-media{ position:relative; }
 .case-media img{ width:100%; height:108px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,0.28); display:block; }
 .case-media .frame-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
-.case-media .frame-row img{ height:56px; }
+.case-media .frame-row img, .case-media .frame-row .case-pending{ height:56px; }
 .insta-duo{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .insta-shot{ border:1px solid rgba(255,255,255,0.35); border-radius:12px; overflow:hidden; background:#000; }
 .insta-shot img{ width:100%; height:340px; object-fit:cover; object-position:top; display:block; }
@@ -71,6 +71,7 @@ body{ margin:0; }
 .work-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
 .work-card{ background:#222; border:1px solid rgba(255,255,255,0.07); border-radius:16px; overflow:hidden; }
 .work-card img{ width:100%; height:44px; object-fit:cover; border-bottom:1px solid rgba(255,255,255,0.28); display:block; }
+.work-card .case-pending{ height:44px; border-radius:0; font-size:7px; }
 .work-card-body{ padding:10px 11px 12px; }
 .work-card-title{ font-size:8.8px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:#fff; margin:0 0 4px; }
 .work-card-desc{ font-size:7.8px; line-height:1.4; color:#9d9990; margin:0; }
@@ -142,10 +143,10 @@ body{ margin:0; }
           </div>
           <p class="case-block-desc">Piezas gr&aacute;ficas creadas en Illustrator y Canva para marcas y colaboraciones, cuidando tipograf&iacute;a, color y composici&oacute;n.</p>
           <div class="case-media">
-            <img src="/images/strategy2.jpg" alt="Dise&ntilde;o de una pieza en Illustrator" style="object-position:center 22%;">
+            <div class="case-pending">Imagen<br>pendiente</div>
             <div class="frame-row">
-              <img src="/images/ollie.jpg" alt="Muestra de dise&ntilde;o de piezas" style="object-fit:contain; background:#efe9d6;">
-              <img src="/images/nitrato.jpg" alt="D&iacute;a Mundial del Beso &mdash; Nitrato">
+              <div class="case-pending">Imagen<br>pendiente</div>
+              <div class="case-pending">Imagen<br>pendiente</div>
             </div>
             <span class="case-label">Dise&ntilde;o 01</span>
           </div>
@@ -209,49 +210,49 @@ body{ margin:0; }
         <h2 class="impact sub-title" style="font-size:22px;">Mi trabajo incluye</h2>
         <div class="work-grid">
           <div class="work-card">
-            <div class="case-pending" style="height:56px; border-radius:0; border-width:1px; font-size:7px;">Foto pendiente</div>
+            <div class="case-pending">Foto pendiente</div>
             <div class="work-card-body">
               <p class="work-card-title">UGC Videos</p>
               <p class="work-card-desc">Contenido generado como creadora para marcas, listo para pauta y redes.</p>
             </div>
           </div>
           <div class="work-card">
-            <img src="/images/strategy.jpg" alt="Meta Ads">
+            <div class="case-pending">Imagen pendiente</div>
             <div class="work-card-body">
               <p class="work-card-title">Meta Ads</p>
               <p class="work-card-desc">Configuraci&oacute;n, segmentaci&oacute;n y optimizaci&oacute;n de campa&ntilde;as en Facebook e Instagram.</p>
             </div>
           </div>
           <div class="work-card">
-            <img src="/images/skull.jpg" alt="Dise&ntilde;o de piezas" style="object-fit:contain; background:#410a07;">
+            <div class="case-pending">Imagen pendiente</div>
             <div class="work-card-body">
               <p class="work-card-title">Dise&ntilde;o de piezas</p>
               <p class="work-card-desc">Piezas gr&aacute;ficas para marcas.</p>
             </div>
           </div>
           <div class="work-card">
-            <img src="/images/strategy2.jpg" alt="Estrategia de contenido">
+            <div class="case-pending">Imagen pendiente</div>
             <div class="work-card-body">
               <p class="work-card-title">Estrategia</p>
               <p class="work-card-desc">Planeaci&oacute;n editorial y tono de marca en redes.</p>
             </div>
           </div>
           <div class="work-card">
-            <img src="/images/support.jpg" alt="Seguimiento &amp; soporte">
+            <div class="case-pending">Imagen pendiente</div>
             <div class="work-card-body">
               <p class="work-card-title">Soporte</p>
               <p class="work-card-desc">Monitoreo de campa&ntilde;as y soporte t&eacute;cnico de cuenta.</p>
             </div>
           </div>
           <div class="work-card">
-            <img src="/images/dim_photo.jpg" alt="Creaci&oacute;n de contenido">
+            <div class="case-pending">Imagen pendiente</div>
             <div class="work-card-body">
               <p class="work-card-title">Creaci&oacute;n de contenido</p>
               <p class="work-card-desc">Fotos y video como creadora de contenido para marcas.</p>
             </div>
           </div>
           <div class="work-card">
-            <img src="/images/essentials.jpg" alt="Branding &amp; est&eacute;tica">
+            <div class="case-pending">Imagen pendiente</div>
             <div class="work-card-body">
               <p class="work-card-title">Branding &amp; est&eacute;tica</p>
               <p class="work-card-desc">Identidad visual y curadur&iacute;a de feed para marcas.</p>
