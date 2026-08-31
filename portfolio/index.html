@@ -12,14 +12,14 @@ body{ margin:0; }
 .script{ font-family:'Playfair Display',Georgia,serif; font-weight:600; font-style:italic; }
 .header-row{ display:flex; gap:18px; align-items:stretch; margin-bottom:18px; }
 .header-card{ flex:1; padding:22px 26px 26px; display:flex; flex-direction:column; justify-content:space-between; }
-.nav-row{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
+.nav-row{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; background:#222; border:1px solid rgba(255,255,255,0.08); border-radius:999px; padding:10px 22px; width:fit-content; }
 .nav-row a{ font-size:10.5px; font-weight:600; letter-spacing:1.6px; text-transform:uppercase; color:#c9c6bf; text-decoration:none; }
 .nav-row a:hover{ color:#fff; }
 .header-text-block{ margin-top:20px; text-align:left; }
 .script-name{ font-size:80px; color:#f2f1ee; margin:0 0 -12px; position:relative; z-index:1; }
 .impact-title{ font-size:140px; line-height:0.86; letter-spacing:0.5px; margin:0 0 18px; }
-.role-line{ font-weight:600; font-size:19px; letter-spacing:2.5px; text-transform:uppercase; color:#e7e4dc; margin:0; }
-.header-contact-row{ display:flex; gap:22px; flex-wrap:wrap; margin-top:18px; font-size:11px; letter-spacing:0.6px; color:#c9c5ba; }
+.role-line{ font-weight:600; font-size:19px; letter-spacing:2.5px; text-transform:uppercase; color:#e7e4dc; margin:0; text-align:center; }
+.header-contact-row{ display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-top:18px; font-size:11px; letter-spacing:0.6px; color:#c9c5ba; }
 .header-photo-card{ flex:none; width:230px; padding:18px; display:flex; align-items:center; gap:14px; }
 .social-rail{ flex:none; display:flex; flex-direction:column; gap:16px; }
 .social-rail svg{ width:20px; height:20px; }
@@ -99,7 +99,7 @@ body{ margin:0; }
 .header-photo-card{ width:100%; order:-1; justify-content:center; padding:14px; }
 .header-photo{ max-height:180px; width:auto; flex:none; }
 .social-rail{ flex-direction:row; }
-.nav-row{ justify-content:center; }
+.nav-row{ margin:0 auto; }
 .header-text-block{ text-align:center; }
 .header-contact-row{ justify-content:center; text-align:center; }
 .impact-title{ font-size:12vw; text-align:center; }
