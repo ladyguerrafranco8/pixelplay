@@ -10,20 +10,17 @@ body{ margin:0; }
 .card{ background:#000; border:1px solid rgba(255,255,255,0.09); border-radius:22px; }
 .impact{ font-family:'Montserrat',Arial,sans-serif; font-weight:900; text-transform:uppercase; color:#f7f6f3; }
 .script{ font-family:'Playfair Display',Georgia,serif; font-weight:600; font-style:italic; }
-.header-row{ display:flex; gap:18px; align-items:stretch; margin-bottom:18px; }
-.header-card{ flex:1; padding:22px 26px 26px; display:flex; flex-direction:column; justify-content:space-between; }
+.header-card{ padding:22px 26px 26px; }
 .nav-row{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; background:#222; border:1px solid rgba(255,255,255,0.08); border-radius:999px; padding:10px 22px; width:fit-content; }
 .nav-row a{ font-size:10.5px; font-weight:600; letter-spacing:1.6px; text-transform:uppercase; color:#c9c6bf; text-decoration:none; }
 .nav-row a:hover{ color:#fff; }
-.header-text-block{ margin-top:20px; text-align:left; }
+.header-main-row{ display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-top:20px; }
+.header-text-block{ text-align:left; }
 .script-name{ font-size:80px; color:#f2f1ee; margin:0 0 -12px; position:relative; z-index:1; }
-.impact-title{ font-size:140px; line-height:0.86; letter-spacing:0.5px; margin:0 0 18px; }
-.role-line{ font-weight:600; font-size:19px; letter-spacing:2.5px; text-transform:uppercase; color:#e7e4dc; margin:0; text-align:center; }
-.header-contact-row{ display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-top:18px; font-size:11px; letter-spacing:0.6px; color:#c9c5ba; }
-.header-photo-card{ flex:none; width:230px; padding:18px; display:flex; align-items:center; gap:14px; }
-.social-rail{ flex:none; display:flex; flex-direction:column; gap:16px; }
-.social-rail svg{ width:20px; height:20px; }
-.header-photo{ flex:1; min-width:0; width:100%; height:auto; max-height:260px; object-fit:contain; display:block; }
+.impact-title{ font-size:140px; line-height:0.86; letter-spacing:0.5px; margin:0; }
+.header-photo{ flex:none; height:230px; width:auto; max-width:320px; object-fit:contain; display:block; }
+.role-line{ font-weight:600; font-size:19px; letter-spacing:2.5px; text-transform:uppercase; color:#e7e4dc; margin:18px 0 0; text-align:center; }
+.header-contact-row{ display:flex; justify-content:center; gap:22px; flex-wrap:wrap; margin-top:14px; font-size:11px; letter-spacing:0.6px; color:#c9c5ba; }
 .contact-toggle{ position:relative; }
 .contact-toggle summary{ display:flex; align-items:center; gap:7px; cursor:pointer; list-style:none; }
 .contact-toggle summary::-webkit-details-marker{ display:none; }
@@ -79,13 +76,11 @@ body{ margin:0; }
 .rate-card{ padding:26px 28px; }
 .rate-title{ font-size:30px; margin:0 0 18px; }
 .rate-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
-.rate-tier{ background:#222; border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:18px 16px; display:flex; flex-direction:column; align-items:flex-start; }
-.rate-tier .tier-btn{ margin-top:auto; }
+.rate-tier{ background:#222; border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:18px 16px; }
 .rate-tier-name{ font-size:18px; margin:0 0 12px; }
-.rate-tier ul{ list-style:none; margin:0 0 9px; padding:0; }
+.rate-tier ul{ list-style:none; margin:0; padding:0; }
 .rate-tier li{ position:relative; padding-left:16px; margin-bottom:9px; font-size:12px; line-height:1.4; color:#c9c5ba; }
 .rate-tier li::before{ content:""; position:absolute; left:0; top:5px; width:6px; height:6px; border-radius:50%; background:#fff; }
-.tier-btn{ display:inline-block; background:#000; border:1px solid rgba(255,255,255,0.14); border-radius:999px; padding:8px 16px; font-size:9.5px; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; color:#f0eee8; text-decoration:none; }
 .closing-card{ text-align:center; padding:22px 20px; }
 .closing-quote{ font-family:'Playfair Display',Georgia,serif; font-style:italic; font-weight:500; font-size:14.5px; line-height:1.5; color:#e7e4dc; margin:0 0 12px; }
 .closing-name{ font-size:14px; letter-spacing:0.5px; color:#fff; margin:0 0 14px; }
@@ -95,10 +90,8 @@ body{ margin:0; }
 .root{ width:100%; padding:14px; }
 .grid{ grid-template-columns:1fr; }
 .col{ min-width:0; }
-.header-row{ flex-direction:column; }
-.header-photo-card{ width:100%; order:-1; justify-content:center; padding:14px; }
-.header-photo{ max-height:180px; width:auto; flex:none; }
-.social-rail{ flex-direction:row; }
+.header-main-row{ flex-direction:column; align-items:center; }
+.header-photo{ order:-1; height:auto; width:55%; max-width:220px; margin-bottom:6px; }
 .nav-row{ margin:0 auto; }
 .header-text-block{ text-align:center; }
 .header-contact-row{ justify-content:center; text-align:center; }
@@ -122,33 +115,25 @@ body{ margin:0; }
 </head>
 <body>
 <div class="root">
-  <div class="header-row">
-    <div class="card header-card">
-      <nav class="nav-row">
-        <a href="#contacto">Contacto</a>
-        <a href="#case-study">Portafolio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#experiencia">Experiencia</a>
-      </nav>
+  <div class="card header-card">
+    <nav class="nav-row">
+      <a href="#contacto">Contacto</a>
+      <a href="#case-study">Portafolio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#experiencia">Experiencia</a>
+    </nav>
+    <div class="header-main-row">
       <div class="header-text-block">
         <p class="script script-name">Lady Guerra&rsquo;s</p>
         <h1 class="impact impact-title">Portfolio</h1>
-        <p class="role-line">Social Media Manager</p>
-      </div>
-      <div class="header-contact-row">
-        <span>ladyguerrafranco@gmail.com</span>
-        <span>+57 310 420 4627</span>
-        <span>Medell&iacute;n, Colombia</span>
-      </div>
-    </div>
-    <div class="card header-photo-card">
-      <div class="social-rail">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="#fff" stroke="none"/></svg>
-        <svg viewBox="0 0 24 24"><path d="M15.8 8.5c-.9-.6-1.5-1.6-1.6-2.7h-2v9.4c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.2 0 .4 0 .6.1v-2.1c-.2 0-.4 0-.6 0-2.3 0-4.1 1.8-4.1 4.1s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1V9.9c.8.6 1.7.9 2.7.9V8.7c-.4 0-.8-.1-1.2-.2z" fill="#fff"/></svg>
-        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.79.395 1.434 1.174 1.434 1.409 0 2.495-1.485 2.495-3.63 0-1.898-1.363-3.226-3.309-3.226-2.254 0-3.579 1.691-3.579 3.44 0 .682.263 1.412.591 1.809a.24.24 0 0 1 .056.23c-.061.252-.196.79-.222.9-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.152 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z" fill="#fff"/></svg>
-        <svg viewBox="0 0 24 24"><path d="M13.5 21v-8.5h2.85l.43-3.31h-3.28V7.05c0-.96.27-1.61 1.64-1.61h1.75V2.48C15.98 2.33 15.01 2.25 13.87 2.25c-2.6 0-4.38 1.59-4.38 4.5v2.44H6.6v3.31h2.89V21h4.01z" fill="#fff"/></svg>
       </div>
       <img class="header-photo" src="/images/profile_silhouette.webp" alt="Lady Guerra">
+    </div>
+    <p class="role-line">Social Media Manager</p>
+    <div class="header-contact-row">
+      <span>ladyguerrafranco@gmail.com</span>
+      <span>+57 310 420 4627</span>
+      <span>Medell&iacute;n, Colombia</span>
     </div>
   </div>
   <div class="grid">
@@ -275,7 +260,6 @@ body{ margin:0; }
               <li>Programaci&oacute;n y publicaci&oacute;n</li>
               <li>Reporte mensual de desempe&ntilde;o</li>
             </ul>
-            <a href="#contacto" class="tier-btn">Cont&aacute;ctame</a>
           </div>
           <div class="rate-tier">
             <p class="impact rate-tier-name">Impulsar</p>
@@ -286,7 +270,6 @@ body{ margin:0; }
               <li>Soporte t&eacute;cnico de cuenta publicitaria</li>
               <li>Reporte mensual de resultados</li>
             </ul>
-            <a href="#contacto" class="tier-btn">Cont&aacute;ctame</a>
           </div>
           <div class="rate-tier">
             <p class="impact rate-tier-name">Escalar</p>
@@ -297,7 +280,6 @@ body{ margin:0; }
               <li>Gesti&oacute;n activa de perfiles</li>
               <li>Reporte mensual completo</li>
             </ul>
-            <a href="#contacto" class="tier-btn">Cont&aacute;ctame</a>
           </div>
         </div>
       </div>
