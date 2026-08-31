@@ -1,190 +1,213 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lady Guerra — Social Media Manager</title>
-<meta name="description" content="Lady Guerra — Social Media Manager, Medellín, Colombia." />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio Lady Guerra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Jost:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="root">
 
-<div class="page">
-
-  <!-- HERO -->
-  <section class="hero card">
-    <nav class="nav">
-      <a href="#contact">Contact</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#rate-card">Rate Card</a>
-      <a href="#testimonials">Testimonials</a>
-    </nav>
-
-    <div class="hero-body">
-      <div class="hero-text">
-        <h1 class="headline">Lady Guerra's<br /><span>PORTFOLIO</span></h1>
-        <p class="hero-role">Social Media Manager</p>
-        <div class="hero-contact">
-          <span>[ Tu teléfono ]</span>
-          <span>ladyguerrafranco@icloud.com</span>
-          <span>Medellín — Colombia</span>
-        </div>
-      </div>
-
-      <div class="hero-media">
-        <div class="social-rail">
-          <a href="#" aria-label="YouTube">▶</a>
-          <a href="https://instagram.com/ladyguerraf" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="X">✕</a>
-        </div>
-        <div class="hero-photo">
-          <img src="https://raw.githubusercontent.com/ladyguerrafranco8/pixelplay/claude/lady-guerra-modeling-portfolio-ohj0vs/lady-guerra-portfolio/public/images/book/04-bw-denim.jpg" alt="Lady Guerra" />
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- GRID -->
   <div class="grid">
 
-    <!-- LEFT COLUMN -->
+    <!-- LEFT: header + case study -->
     <div class="col">
 
-      <section class="card" id="case-study">
-        <h2 class="section-title">Case Study</h2>
-        <div class="case-study-body">
-          <p>[ Cuenta aquí un proyecto real que hayas manejado: qué hiciste, para qué marca o cliente, y qué resultado obtuviste. Ej: "Diseñé una estrategia de contenido de 30 días para..." ]</p>
-          <div class="placeholder-box">Imagen del proyecto</div>
+      <!-- HEADER -->
+      <div class="card header-card">
+        <div class="tag-row">
+          <span class="tag">Portafolio &middot; 2026</span>
+          <span class="tag">Medell&iacute;n, Colombia</span>
         </div>
-      </section>
-
-      <section class="card" id="portfolio">
-        <h3 class="subsection-title">Instagram Feed</h3>
-        <div class="thumb-grid">
-          <div class="placeholder-box small">Foto 1</div>
-          <div class="placeholder-box small">Foto 2</div>
-          <div class="placeholder-box small">Foto 3</div>
-          <div class="placeholder-box small">Foto 4</div>
-          <div class="placeholder-box small">Foto 5</div>
-          <div class="placeholder-box small">Foto 6</div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h3 class="subsection-title">Video Content</h3>
-        <div class="video-row">
-          <p>[ Describe un video/reel que hayas producido: guion, edición, resultado. ]</p>
-          <div class="thumb-grid three">
-            <div class="placeholder-box small">Video 1</div>
-            <div class="placeholder-box small">Video 2</div>
-            <div class="placeholder-box small">Video 3</div>
+        <div class="header-main">
+          <div class="header-photo-block">
+            <img class="header-photo" src="public/images/profile_silhouette.webp" alt="Lady Guerra">
+          </div>
+          <div class="header-text">
+            <p class="script script-name">Lady Guerra&rsquo;s</p>
+            <h1 class="impact impact-title">Portfolio</h1>
+            <p class="role-line">Social Media Manager</p>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h3 class="subsection-title">Analytics</h3>
-        <div class="stats-row">
-          <div class="stat"><span class="stat-value">[ 0 ]</span><span class="stat-label">Followers</span></div>
-          <div class="stat"><span class="stat-value">[ 0% ]</span><span class="stat-label">Engagement</span></div>
-          <div class="stat"><span class="stat-value">[ 0 ]</span><span class="stat-label">Reach</span></div>
+      <!-- CASE STUDY -->
+      <div class="card case-card">
+        <h2 class="impact case-title">Case Study</h2>
+        <p class="case-intro">Un vistazo a c&oacute;mo trabajo: <b>planeaci&oacute;n editorial</b>, <b>dise&ntilde;o de piezas</b> y <b>gesti&oacute;n de campa&ntilde;as</b> para construir una presencia de marca coherente y con resultados.</p>
+
+        <div class="case-block">
+          <div class="case-block-head">
+            <p class="case-num-big">01</p>
+            <p class="impact case-num-title">Dise&ntilde;o</p>
+          </div>
+          <p class="case-block-desc">Piezas gr&aacute;ficas creadas en Illustrator y Canva para marcas y colaboraciones, cuidando tipograf&iacute;a, color y composici&oacute;n.</p>
+          <div class="case-media">
+            <img src="public/images/strategy2.jpg" alt="Dise&ntilde;o de una pieza en Illustrator" style="object-position:center 22%;">
+            <div class="frame-row">
+              <img src="public/images/ollie.jpg" alt="Muestra de dise&ntilde;o de piezas" style="object-fit:contain; background:#efe9d6;">
+              <img src="public/images/nitrato.jpg" alt="D&iacute;a Mundial del Beso &mdash; Nitrato">
+            </div>
+            <span class="case-label">Dise&ntilde;o 01</span>
+          </div>
         </div>
-      </section>
 
+        <div class="case-block">
+          <div class="case-block-head">
+            <p class="case-num-big">02</p>
+            <p class="impact case-num-title">Instagram</p>
+          </div>
+          <p class="case-block-desc">Curadur&iacute;a de feed y gesti&oacute;n activa de perfil: planeaci&oacute;n visual, tono de marca y consistencia en cada publicaci&oacute;n.</p>
+          <div class="case-media">
+            <img src="public/images/profile_grid_square.jpg" alt="Perfil de Instagram con alcance">
+            <span class="case-label">Instagram 02</span>
+          </div>
+        </div>
+
+        <div class="case-block">
+          <div class="case-block-head">
+            <p class="case-num-big">03</p>
+            <p class="impact case-num-title">Video</p>
+          </div>
+          <p class="case-block-desc">Contenido en video para Reels y TikTok &mdash; pr&oacute;ximamente se agregar&aacute;n piezas de este formato.</p>
+          <div class="case-media">
+            <div class="case-pending">Video &mdash; pendiente</div>
+          </div>
+        </div>
+
+        <div class="case-block">
+          <div class="case-block-head">
+            <p class="case-num-big">04</p>
+            <p class="impact case-num-title">Resultados</p>
+          </div>
+          <p class="case-block-desc">M&eacute;tricas y resultados de campa&ntilde;as &mdash; pr&oacute;ximamente se agregar&aacute;n reportes de desempe&ntilde;o.</p>
+          <div class="case-media">
+            <div class="case-pending">Resultados &mdash; pendiente</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- RIGHT COLUMN -->
+    <!-- RIGHT: qualifications + work includes + rate card -->
     <div class="col">
-
-      <section class="card">
-        <h2 class="section-title">Qualifications</h2>
-        <div class="badge-row">
-          <span class="badge">[ Certificación 1 ]</span>
-          <span class="badge">[ Certificación 2 ]</span>
-          <span class="badge">[ Certificación 3 ]</span>
-          <span class="badge">[ Estudios ]</span>
+      <div class="card pad">
+        <h2 class="impact sub-title">Experiencia</h2>
+        <div class="qual-row">
+          <div class="qual-cert">
+            <img src="public/images/cert.jpg" alt="Certificado Inbound HubSpot Academy">
+          </div>
+          <div class="pill-stack">
+            <span class="pill"><b>+7 a&ntilde;os</b> como modelo y creadora de contenido</span>
+            <span class="pill"><b>Estudiante</b> de Comunicaci&oacute;n Social &mdash; U. Cat&oacute;lica Luis Amig&oacute;</span>
+            <span class="pill">Multiling&uuml;ismo &mdash; <b>U. de Groningen</b></span>
+            <span class="pill">Software de Ventas &mdash; <b>HubSpot Academy</b></span>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section class="card">
-        <h2 class="section-title">My Work Includes</h2>
+      <div class="card pad">
+        <h2 class="impact sub-title" style="font-size:22px;">Mi trabajo incluye</h2>
         <div class="work-grid">
-          <div class="work-item">
-            <h4>Content Creation</h4>
-            <p>Fotografía, video corto y edición para redes sociales.</p>
+          <div class="work-card">
+            <img src="public/images/strategy.jpg" alt="Meta Ads">
+            <div class="work-card-body">
+              <p class="work-card-title">Meta Ads</p>
+              <p class="work-card-desc">Configuraci&oacute;n, segmentaci&oacute;n y optimizaci&oacute;n de campa&ntilde;as en Facebook e Instagram.</p>
+            </div>
           </div>
-          <div class="work-item">
-            <h4>Brand &amp; Aesthetic</h4>
-            <p>Identidad visual coherente para el feed y las historias.</p>
+          <div class="work-card">
+            <img src="public/images/skull.jpg" alt="Dise&ntilde;o de piezas" style="object-fit:contain; background:#410a07;">
+            <div class="work-card-body">
+              <p class="work-card-title">Dise&ntilde;o de piezas</p>
+              <p class="work-card-desc">Piezas gr&aacute;ficas para marcas.</p>
+            </div>
           </div>
-          <div class="work-item">
-            <h4>Strategy &amp; Planning</h4>
-            <p>Calendario de contenido y planeación mensual.</p>
+          <div class="work-card">
+            <img src="public/images/strategy2.jpg" alt="Estrategia de contenido">
+            <div class="work-card-body">
+              <p class="work-card-title">Estrategia</p>
+              <p class="work-card-desc">Planeaci&oacute;n editorial y tono de marca en redes.</p>
+            </div>
           </div>
-          <div class="work-item">
-            <h4>Analytics &amp; Reporting</h4>
-            <p>Seguimiento de métricas y reportes de desempeño.</p>
+          <div class="work-card">
+            <img src="public/images/support.jpg" alt="Seguimiento &amp; soporte">
+            <div class="work-card-body">
+              <p class="work-card-title">Soporte</p>
+              <p class="work-card-desc">Monitoreo de campa&ntilde;as y soporte t&eacute;cnico de cuenta.</p>
+            </div>
+          </div>
+          <div class="work-card">
+            <img src="public/images/dim_photo.jpg" alt="Creaci&oacute;n de contenido">
+            <div class="work-card-body">
+              <p class="work-card-title">Creaci&oacute;n de contenido</p>
+              <p class="work-card-desc">Fotos y video como creadora de contenido para marcas.</p>
+            </div>
+          </div>
+          <div class="work-card">
+            <img src="public/images/essentials.jpg" alt="Branding &amp; est&eacute;tica">
+            <div class="work-card-body">
+              <p class="work-card-title">Branding &amp; est&eacute;tica</p>
+              <p class="work-card-desc">Identidad visual y curadur&iacute;a de feed para marcas.</p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="card" id="rate-card">
-        <h2 class="section-title">Rate Card</h2>
+      <div class="card rate-card">
+        <h2 class="impact rate-title">Servicios</h2>
         <div class="rate-grid">
           <div class="rate-tier">
-            <h4>Create</h4>
+            <p class="impact rate-tier-name">Crear</p>
             <ul>
-              <li>[ Servicio 1 ]</li>
-              <li>[ Servicio 2 ]</li>
-              <li>[ Servicio 3 ]</li>
+              <li>Calendario de contenido mensual</li>
+              <li>Producci&oacute;n de fotos/video</li>
+              <li>Planeaci&oacute;n de Reels</li>
+              <li>Programaci&oacute;n y publicaci&oacute;n</li>
+              <li>Reporte mensual de desempe&ntilde;o</li>
             </ul>
-            <p class="rate-price">Desde $[ XXX ]</p>
-            <a class="rate-btn" href="#contact">Contact Me</a>
           </div>
           <div class="rate-tier">
-            <h4>Build</h4>
+            <p class="impact rate-tier-name">Impulsar</p>
             <ul>
-              <li>[ Servicio 1 ]</li>
-              <li>[ Servicio 2 ]</li>
-              <li>[ Servicio 3 ]</li>
+              <li>Configuraci&oacute;n y gesti&oacute;n de Meta Ads</li>
+              <li>Segmentaci&oacute;n de p&uacute;blicos y presupuestos</li>
+              <li>Optimizaci&oacute;n continua de campa&ntilde;as</li>
+              <li>Soporte t&eacute;cnico de cuenta publicitaria</li>
+              <li>Reporte mensual de resultados</li>
             </ul>
-            <p class="rate-price">Desde $[ XXX ]</p>
-            <a class="rate-btn" href="#contact">Contact Me</a>
           </div>
           <div class="rate-tier">
-            <h4>Scale</h4>
+            <p class="impact rate-tier-name">Escalar</p>
             <ul>
-              <li>[ Servicio 1 ]</li>
-              <li>[ Servicio 2 ]</li>
-              <li>[ Servicio 3 ]</li>
+              <li>Estrategia integral de marca</li>
+              <li>Contenido + Meta Ads + dise&ntilde;o de piezas</li>
+              <li>Identidad visual y tono de marca</li>
+              <li>Gesti&oacute;n activa de perfiles</li>
+              <li>Reporte mensual completo</li>
             </ul>
-            <p class="rate-price">Desde $[ XXX ]</p>
-            <a class="rate-btn" href="#contact">Contact Me</a>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="card" id="testimonials">
-        <h2 class="section-title">Testimonials</h2>
-        <div class="testimonial">
-          <p>"[ Aquí va la reseña real de un cliente o marca con la que hayas trabajado. ]"</p>
-          <span class="testimonial-author">— [ Nombre, Marca ]</span>
+      <div class="card closing-card">
+        <p class="impact closing-name">@ladyguerraf</p>
+        <div class="social-icons">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.9" fill="#fff" stroke="none"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M15.8 8.5c-.9-.6-1.5-1.6-1.6-2.7h-2v9.4c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.2 0 .4 0 .6.1v-2.1c-.2 0-.4 0-.6 0-2.3 0-4.1 1.8-4.1 4.1s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1V9.9c.8.6 1.7.9 2.7.9V8.7c-.4 0-.8-.1-1.2-.2z" fill="#fff"/></svg>
+          <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.79.395 1.434 1.174 1.434 1.409 0 2.495-1.485 2.495-3.63 0-1.898-1.363-3.226-3.309-3.226-2.254 0-3.579 1.691-3.579 3.44 0 .682.263 1.412.591 1.809a.24.24 0 0 1 .056.23c-.061.252-.196.79-.222.9-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.152 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z" fill="#fff"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M13.5 21v-8.5h2.85l.43-3.31h-3.28V7.05c0-.96.27-1.61 1.64-1.61h1.75V2.48C15.98 2.33 15.01 2.25 13.87 2.25c-2.6 0-4.38 1.59-4.38 4.5v2.44H6.6v3.31h2.89V21h4.01z" fill="#fff"/></svg>
         </div>
-      </section>
-
+        <details class="contact-toggle contact-toggle-footer">
+          <summary class="contact-btn">Cont&aacute;ctame <span class="chevron">&#9660;</span></summary>
+          <div class="contact-dropdown">
+            <p>ladyguerrafranco@gmail.com</p>
+            <p><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#25D366"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" fill="#fff"/></svg> +57 310 420 4627</p>
+          </div>
+        </details>
+      </div>
     </div>
+
   </div>
-
-  <footer class="card" id="contact">
-    <p class="contact-label">Bookings</p>
-    <a class="contact-link" href="https://instagram.com/ladyguerraf" target="_blank" rel="noopener">Instagram — @ladyguerraf</a>
-  </footer>
-
 </div>
-
 </body>
 </html>
