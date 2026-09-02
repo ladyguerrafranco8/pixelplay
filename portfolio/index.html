@@ -36,24 +36,24 @@ body{ margin:0; }
 .grid{ display:grid; grid-template-columns:1.35fr 1fr; gap:24px; margin-top:0; align-items:stretch; }
 .col{ display:flex; flex-direction:column; gap:24px; }
 .col .case-card{ flex:1; display:flex; flex-direction:column; }
-.case-card{ padding:30px 32px 34px; }
-.case-header-row{ display:flex; align-items:flex-start; gap:22px; margin:0 0 26px; }
+.case-card{ padding:40px 32px 34px; }
+.case-header-row{ display:flex; align-items:flex-start; gap:22px; margin:0 0 30px; }
 .case-title{ font-size:28px; margin:0; flex:0 0 auto; }
-.case-intro{ font-size:11.5px; line-height:1.6; color:#c9c5ba; margin:0 auto; max-width:520px; flex:1 1 220px; text-align:center; }
+.case-intro{ font-size:13px; line-height:1.65; color:#c9c5ba; margin:0 auto; max-width:520px; flex:1 1 220px; text-align:center; }
 .case-intro b{ color:#fff; }
-.case-block{ display:flex; flex-direction:column; gap:10px; padding:20px 0; border-top:1px solid rgba(255,255,255,0.07); }
+.case-block{ display:flex; flex-direction:column; gap:18px; padding:26px 0; border-top:1px solid rgba(255,255,255,0.07); }
 .case-block:first-of-type{ border-top:none; padding-top:0; }
 .case-block-head{ display:flex; align-items:baseline; gap:8px; }
 .case-num-big{ font-size:10.5px; font-weight:700; letter-spacing:1.5px; color:#4a473d; margin:0; }
 .case-num-title{ font-size:15px; margin:0; }
-.case-block-desc{ font-size:10.3px; line-height:1.55; color:#c9c5ba; margin:0; max-width:560px; }
+.case-block-desc{ font-size:12px; line-height:1.6; color:#c9c5ba; margin:0; max-width:560px; }
 .case-media{ position:relative; }
 .case-media img{ width:100%; height:108px; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,0.28); display:block; }
 .case-media .frame-row{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
 .case-media .frame-row img, .case-media .frame-row .case-pending{ height:56px; }
 .case-label{ position:absolute; left:12px; bottom:12px; background:rgba(10,10,9,0.78); padding:5px 12px; border-radius:999px; font-size:8.5px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#fff; }
 .case-pending{ height:108px; border:1px dashed rgba(255,255,255,0.16); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:9.5px; letter-spacing:1.3px; text-transform:uppercase; color:#5c584e; text-align:center; }
-.video-row{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+.video-row{ display:grid; grid-template-columns:repeat(3, 168px); gap:20px; justify-content:center; }
 .video-row .case-pending{ height:auto; aspect-ratio:9/16; line-height:1.4; }
 .video-row .phone-shot{ height:auto; aspect-ratio:9/16; }
 .phone-shot{ position:relative; border:3px solid rgba(255,255,255,0.2); border-radius:26px !important; background:#000; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.35); }
@@ -111,6 +111,7 @@ body{ margin:0; }
 .case-header-row .case-intro{ flex:none; max-width:none; }
 .case-media img{ height:auto; aspect-ratio:16/9; min-width:0; }
 .frame-row img{ width:100%; height:auto; aspect-ratio:1/1; min-width:0; }
+.video-row{ grid-template-columns:repeat(3, 1fr); gap:10px; }
 .video-row .case-pending{ height:auto; aspect-ratio:9/16; min-width:0; }
 .video-row .phone-shot{ height:auto; aspect-ratio:9/16; min-width:0; }
 .insta-phones{ justify-content:center; flex-wrap:wrap; }
@@ -150,14 +151,14 @@ body{ margin:0; }
       <div class="card case-card">
         <div class="case-header-row">
           <h2 class="impact case-title">Case Study</h2>
-          <p class="case-intro"><b>Dise&ntilde;o</b>, <b>planeo</b> y <b>gestiono</b> la estrategia de contenido de marcas de principio a fin: creo piezas gr&aacute;ficas, programo campa&ntilde;as pagas y cuido cada publicaci&oacute;n para construir una presencia de marca coherente y con resultados reales.</p>
+          <p class="case-intro"><b>Dise&ntilde;o</b>, <b>planifico</b> y <b>gestiono</b> la estrategia de contenido de marcas con visi&oacute;n integral. Desarrollo piezas gr&aacute;ficas, programo campa&ntilde;as pagas y superviso cada publicaci&oacute;n para construir una presencia de marca coherente, con identidad clara y resultados medibles.</p>
         </div>
         <div class="case-block">
           <div class="case-block-head">
             <p class="case-num-big">01</p>
             <p class="impact case-num-title">Instagram</p>
           </div>
-          <p class="case-block-desc">Curadur&iacute;a de feed y gesti&oacute;n activa de perfil para dos marcas de moda &mdash; femenina y masculina.</p>
+          <p class="case-block-desc">Administro el calendario de contenido y la curadur&iacute;a del feed para m&uacute;ltiples marcas, asegurando una identidad visual coherente y alineada a los objetivos de cada cliente.</p>
           <div class="insta-phones">
             <div class="phone-shot insta-phone"><img src="/images/insta_female.jpg" alt="Screenshot completo del feed de Instagram &mdash; marca femenina"></div>
             <p class="insta-middle-text">Planeo el calendario de contenido y cuido una identidad visual coherente en cada publicaci&oacute;n. <b>El resultado: un feed que se siente curado, no improvisado.</b></p>
