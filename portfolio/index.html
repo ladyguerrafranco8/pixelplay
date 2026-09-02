@@ -37,9 +37,13 @@ body{ margin:0; }
 .col{ display:flex; flex-direction:column; gap:24px; }
 .col .case-card{ flex:1; display:flex; flex-direction:column; }
 .case-card{ padding:40px 32px 34px; }
-.case-header-row{ display:flex; align-items:flex-start; gap:22px; margin:0 0 30px; }
-.case-title{ font-size:28px; margin:0; flex:0 0 auto; }
-.case-intro{ font-size:13.5px; line-height:1.65; color:#c9c5ba; margin:0 auto; max-width:520px; flex:1 1 220px; text-align:justify; text-align-last:center; }
+.case-intro-toggle{ margin:0 0 30px; }
+.case-title-row{ display:flex; align-items:center; gap:12px; cursor:pointer; list-style:none; }
+.case-title-row::-webkit-details-marker{ display:none; }
+.case-title{ font-size:28px; margin:0; }
+.case-intro-toggle .chevron{ font-size:13px; color:#8f8b82; transition:transform .15s ease; }
+.case-intro-toggle[open] .chevron{ transform:rotate(180deg); }
+.case-intro{ font-size:13.5px; line-height:1.65; color:#c9c5ba; margin:16px auto 0; max-width:520px; text-align:justify; text-align-last:center; }
 .case-intro b{ color:#fff; }
 .case-block{ display:flex; flex-direction:column; gap:18px; padding:26px 0; border-top:1px solid rgba(255,255,255,0.07); }
 .case-block:first-of-type{ border-top:none; padding-top:0; }
@@ -105,8 +109,6 @@ body{ margin:0; }
 .impact-title{ font-size:12vw; text-align:center; }
 .script-name{ font-size:7vw; text-align:center; }
 .case-block, .case-media, .frame-row{ min-width:0; }
-.case-header-row{ flex-direction:column; gap:8px; }
-.case-header-row .case-intro{ flex:none; max-width:none; }
 .case-media img{ height:auto; aspect-ratio:16/9; min-width:0; }
 .frame-row img{ width:100%; height:auto; aspect-ratio:1/1; min-width:0; }
 .video-row{ grid-template-columns:repeat(3, 1fr); gap:10px; }
@@ -146,10 +148,13 @@ body{ margin:0; }
         </div>
       </div>
       <div class="card case-card">
-        <div class="case-header-row">
-          <h2 class="impact case-title">Case Study</h2>
+        <details class="case-intro-toggle" open>
+          <summary class="case-title-row">
+            <h2 class="impact case-title">Case Study</h2>
+            <span class="chevron">&#9660;</span>
+          </summary>
           <p class="case-intro"><b>Dise&ntilde;o</b>, <b>planifico</b> y <b>gestiono</b> la estrategia de contenido de marcas con visi&oacute;n integral. Desarrollo piezas gr&aacute;ficas, programo campa&ntilde;as pagas y superviso cada publicaci&oacute;n para construir una presencia de marca coherente, con identidad clara y resultados medibles.</p>
-        </div>
+        </details>
         <div class="case-block">
           <div class="case-block-head">
             <p class="case-num-big">01</p>
