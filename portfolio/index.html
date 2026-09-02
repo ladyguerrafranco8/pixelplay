@@ -41,7 +41,7 @@ body{ margin:0; }
 .case-title-row{ display:flex; align-items:center; gap:12px; cursor:pointer; list-style:none; }
 .case-title-row::-webkit-details-marker{ display:none; }
 .case-title{ font-size:28px; margin:0; }
-.case-intro-toggle .chevron{ font-size:13px; color:#8f8b82; transition:transform .15s ease; }
+.case-intro-toggle .chevron{ display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; border-radius:50%; background:#222; border:1px solid rgba(255,255,255,0.14); font-size:11px; color:#f0eee8; transition:transform .15s ease; flex:none; }
 .case-intro-toggle[open] .chevron{ transform:rotate(180deg); }
 .case-intro{ font-size:13.5px; line-height:1.65; color:#c9c5ba; margin:16px auto 0; max-width:520px; text-align:justify; text-align-last:center; }
 .case-intro b{ color:#fff; }
@@ -148,7 +148,7 @@ body{ margin:0; }
         </div>
       </div>
       <div class="card case-card">
-        <details class="case-intro-toggle" open>
+        <details class="case-intro-toggle">
           <summary class="case-title-row">
             <h2 class="impact case-title">Case Study</h2>
             <span class="chevron">&#9660;</span>
