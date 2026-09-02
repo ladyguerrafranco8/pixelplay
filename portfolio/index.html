@@ -57,11 +57,15 @@ body{ margin:0; }
 .case-pending{ height:108px; border:1px dashed rgba(255,255,255,0.16); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:9.5px; letter-spacing:1.3px; text-transform:uppercase; color:#5c584e; text-align:center; }
 .video-row{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
 .video-row .case-pending{ height:190px; line-height:1.4; }
+.phone-shot{ position:relative; border:3px solid rgba(255,255,255,0.2); border-radius:26px !important; background:#000; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.35); }
+.phone-shot::before{ content:""; position:absolute; top:9px; left:50%; transform:translateX(-50%); width:30%; height:5px; border-radius:3px; background:rgba(255,255,255,0.25); z-index:2; }
+.phone-shot img{ width:100%; height:100%; object-fit:cover; display:block; }
 .case-split{ display:flex; gap:14px; }
 .case-split-media{ position:relative; flex:1; min-width:0; }
-.case-split-media img{ width:100%; height:302px; object-fit:cover; object-position:top; border-radius:12px; border:1px solid rgba(255,255,255,0.35); display:block; background:#000; }
+.bubble-grid{ display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,1fr); gap:7px; aspect-ratio:3/2; }
+.bubble-grid img{ width:100%; height:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:1px solid rgba(255,255,255,0.35); display:block; background:#000; }
 .case-split-right{ flex:1; display:flex; flex-direction:column; gap:12px; min-width:0; }
-.case-split-right .case-split-media img{ height:172px; }
+.case-split-right .bubble-grid img{ border-radius:10px; }
 .case-video-split{ display:flex; gap:18px; align-items:flex-start; }
 .case-video-info{ flex:0 0 168px; display:flex; flex-direction:column; gap:8px; }
 .case-video-split .video-row{ flex:1; min-width:0; }
@@ -114,8 +118,6 @@ body{ margin:0; }
 .insta-shot img{ height:auto; aspect-ratio:3/5; min-width:0; }
 .video-row .case-pending{ height:auto; aspect-ratio:9/16; min-width:0; }
 .case-split{ flex-direction:column; }
-.case-split-media img{ height:auto; aspect-ratio:4/5; min-width:0; }
-.case-split-right .case-split-media img{ aspect-ratio:4/5; }
 .case-video-split{ flex-direction:column; gap:12px; }
 .case-video-info{ flex:1 1 auto; }
 .qual-row{ flex-direction:column; }
@@ -161,13 +163,27 @@ body{ margin:0; }
           </div>
           <div class="case-split">
             <div class="case-split-media">
-              <img src="/images/insta_female.jpg" alt="Feed de Instagram de marca de moda femenina">
+              <div class="bubble-grid">
+                <img src="/images/insta_bubble_f1.jpg" alt="Foto de feed de Instagram &mdash; marca femenina">
+                <img src="/images/insta_bubble_f2.jpg" alt="Foto de feed de Instagram &mdash; marca femenina">
+                <img src="/images/insta_bubble_f3.jpg" alt="Foto de feed de Instagram &mdash; marca femenina">
+                <img src="/images/insta_bubble_f4.jpg" alt="Foto de feed de Instagram &mdash; marca femenina">
+                <img src="/images/insta_bubble_f5.jpg" alt="Foto de feed de Instagram &mdash; marca femenina">
+                <img src="/images/insta_bubble_f6.jpg" alt="Foto de feed de Instagram &mdash; marca femenina">
+              </div>
               <span class="case-label">Instagram 01</span>
             </div>
             <div class="case-split-right">
               <p class="case-block-desc">Curadur&iacute;a de feed y gesti&oacute;n activa de perfil para dos marcas de moda &mdash; femenina y masculina &mdash;: planeaci&oacute;n visual, tono de marca y consistencia en cada publicaci&oacute;n.</p>
               <div class="case-split-media">
-                <img src="/images/insta_male.jpg" alt="Feed de Instagram de marca de moda masculina">
+                <div class="bubble-grid">
+                  <img src="/images/insta_bubble_m1.jpg" alt="Foto de feed de Instagram &mdash; marca masculina">
+                  <img src="/images/insta_bubble_m2.jpg" alt="Foto de feed de Instagram &mdash; marca masculina">
+                  <img src="/images/insta_bubble_m3.jpg" alt="Foto de feed de Instagram &mdash; marca masculina">
+                  <img src="/images/insta_bubble_m4.jpg" alt="Foto de feed de Instagram &mdash; marca masculina">
+                  <img src="/images/insta_bubble_m5.jpg" alt="Foto de feed de Instagram &mdash; marca masculina">
+                  <img src="/images/insta_bubble_m6.jpg" alt="Foto de feed de Instagram &mdash; marca masculina">
+                </div>
               </div>
             </div>
           </div>
@@ -182,9 +198,9 @@ body{ margin:0; }
               <p class="case-block-desc">Contenido en video para Reels y TikTok &mdash; pr&oacute;ximamente se agregar&aacute;n piezas de este formato.</p>
             </div>
             <div class="video-row">
-              <div class="case-pending">Video<br>pendiente</div>
-              <div class="case-pending">Video<br>pendiente</div>
-              <div class="case-pending">Video<br>pendiente</div>
+              <div class="case-pending phone-shot">Video<br>pendiente</div>
+              <div class="case-pending phone-shot">Video<br>pendiente</div>
+              <div class="case-pending phone-shot">Video<br>pendiente</div>
             </div>
           </div>
         </div>
