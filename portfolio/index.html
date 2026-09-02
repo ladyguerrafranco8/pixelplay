@@ -33,8 +33,9 @@ body{ margin:0; }
 .contact-dropdown p{ margin:0 0 6px; color:#c9c5ba; display:flex; align-items:center; gap:6px; }
 .contact-dropdown p:last-child{ margin-bottom:0; }
 .contact-dropdown svg{ width:20px; height:20px; flex:none; }
-.grid{ display:grid; grid-template-columns:1.35fr 1fr; gap:24px; margin-top:0; align-items:start; }
-.col{ display:flex; flex-direction:column; gap:24px; }
+.page-section{ display:flex; flex-direction:column; gap:24px; }
+.page-section + .page-section{ margin-top:56px; }
+.page-row{ display:grid; grid-template-columns:1.35fr 1fr; gap:24px; align-items:start; }
 .case-card{ padding:30px 32px 34px; }
 .case-header-row{ display:flex; align-items:flex-start; gap:22px; margin:0 0 26px; }
 .case-title{ font-size:28px; margin:0; flex:0 0 auto; }
@@ -105,8 +106,8 @@ body{ margin:0; }
 .social-icons svg{ width:28px; height:28px; }
 @media (max-width: 900px) {
 .root{ width:100%; padding:14px; }
-.grid{ grid-template-columns:1fr; }
-.col{ min-width:0; }
+.page-section + .page-section{ margin-top:36px; }
+.page-row{ grid-template-columns:1fr; }
 .header-main{ flex-direction:column; align-items:center; gap:6px; margin-top:14px; }
 .header-photo-block{ width:120px; margin-bottom:0; }
 .header-text{ width:100%; min-width:0; text-align:center; }
@@ -136,8 +137,7 @@ body{ margin:0; }
 </head>
 <body>
 <div class="root">
-  <div class="grid">
-    <div class="col">
+  <section class="page-section">
       <div class="card header-card">
         <div class="tag-row">
           <span class="tag">Portafolio &middot; 2026</span>
@@ -186,6 +186,12 @@ body{ margin:0; }
             </div>
           </div>
         </div>
+      </div>
+  </section>
+
+  <section class="page-section">
+    <div class="page-row">
+      <div class="card case-card">
         <div class="case-block">
           <div class="case-video-split">
             <div class="case-video-info">
@@ -196,15 +202,13 @@ body{ margin:0; }
               <p class="case-block-desc">Guiono, grabo y edito Reels y TikToks org&aacute;nicos para marcas, cuidando la est&eacute;tica de cada video y pensando en que se vea, se comparta y se guarde.</p>
             </div>
             <div class="video-row">
-              <div class="phone-shot"><img src="/images/video_jersey.jpg" alt="Frame de video &mdash; UGC con camiseta deportiva"></div>
-              <div class="phone-shot"><img src="/images/video_adidas_pillow.jpg" alt="Frame de video &mdash; UGC con camiseta adidas"></div>
-              <div class="phone-shot"><img src="/images/video_gym_discipline.jpg" alt="Frame de video &mdash; 99% Discipline, contenido de gimnasio"></div>
+              <div class="phone-shot"><img src="/images/video_nitrato_shirt.jpg" alt="Frame de video &mdash; camiseta Nitrato en exhibici&oacute;n"></div>
+              <div class="phone-shot"><img src="/images/video_nitrato_coat.jpg" alt="Frame de video &mdash; UGC nocturno con abrigo y camiseta gr&aacute;fica"></div>
+              <div class="phone-shot"><img src="/images/video_nitrato_street.jpg" alt="Frame de video &mdash; nitrato.co, caminando en la calle"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col">
       <div class="card pad">
         <h2 class="impact sub-title">Experiencia</h2>
         <div class="qual-row">
@@ -229,6 +233,10 @@ body{ margin:0; }
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="page-section">
       <div class="card pad">
         <h2 class="impact sub-title">Mi trabajo incluye</h2>
         <div class="work-grid">
@@ -327,8 +335,7 @@ body{ margin:0; }
           </div>
         </details>
       </div>
-    </div>
-  </div>
+  </section>
 </div>
 </body>
 </html>
