@@ -57,6 +57,7 @@ body{ margin:0; }
 .case-pending{ height:108px; border:1px dashed rgba(255,255,255,0.16); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:9.5px; letter-spacing:1.3px; text-transform:uppercase; color:#5c584e; text-align:center; }
 .video-row{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
 .video-row .case-pending{ height:190px; line-height:1.4; }
+.video-row .phone-shot{ height:190px; }
 .phone-shot{ position:relative; border:3px solid rgba(255,255,255,0.2); border-radius:26px !important; background:#000; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.35); }
 .phone-shot::before{ content:""; position:absolute; top:9px; left:50%; transform:translateX(-50%); width:30%; height:5px; border-radius:3px; background:rgba(255,255,255,0.25); z-index:2; }
 .phone-shot img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -117,6 +118,7 @@ body{ margin:0; }
 .frame-row img{ width:100%; height:auto; aspect-ratio:1/1; min-width:0; }
 .insta-shot img{ height:auto; aspect-ratio:3/5; min-width:0; }
 .video-row .case-pending{ height:auto; aspect-ratio:9/16; min-width:0; }
+.video-row .phone-shot{ height:auto; aspect-ratio:9/16; min-width:0; }
 .case-split{ flex-direction:column; }
 .case-video-split{ flex-direction:column; gap:12px; }
 .case-video-info{ flex:1 1 auto; }
@@ -195,12 +197,12 @@ body{ margin:0; }
                 <p class="case-num-big">02</p>
                 <p class="impact case-num-title">Video</p>
               </div>
-              <p class="case-block-desc">Contenido en video para Reels y TikTok &mdash; pr&oacute;ximamente se agregar&aacute;n piezas de este formato.</p>
+              <p class="case-block-desc">Frames reales de Reels y TikToks grabados y editados para marcas &mdash; contenido de estilo de vida y UGC.</p>
             </div>
             <div class="video-row">
-              <div class="case-pending phone-shot">Video<br>pendiente</div>
-              <div class="case-pending phone-shot">Video<br>pendiente</div>
-              <div class="case-pending phone-shot">Video<br>pendiente</div>
+              <div class="phone-shot"><img src="/images/video_jersey.jpg" alt="Frame de video &mdash; UGC con camiseta deportiva"></div>
+              <div class="phone-shot"><img src="/images/video_adidas_pillow.jpg" alt="Frame de video &mdash; UGC con camiseta adidas"></div>
+              <div class="phone-shot"><img src="/images/video_gym_discipline.jpg" alt="Frame de video &mdash; 99% Discipline, contenido de gimnasio"></div>
             </div>
           </div>
         </div>
