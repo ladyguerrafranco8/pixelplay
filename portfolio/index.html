@@ -36,8 +36,9 @@ body{ margin:0; }
 .grid{ display:grid; grid-template-columns:1.35fr 1fr; gap:24px; margin-top:0; align-items:start; }
 .col{ display:flex; flex-direction:column; gap:24px; }
 .case-card{ padding:30px 32px 34px; }
-.case-title{ font-size:28px; margin:0 0 8px; }
-.case-intro{ font-size:11.5px; line-height:1.6; color:#c9c5ba; margin:0 0 26px; max-width:520px; }
+.case-header-row{ display:flex; align-items:flex-start; gap:22px; margin:0 0 26px; }
+.case-title{ font-size:28px; margin:0; flex:0 0 auto; }
+.case-intro{ font-size:11.5px; line-height:1.6; color:#c9c5ba; margin:0; max-width:520px; flex:1 1 220px; }
 .case-intro b{ color:#fff; }
 .case-block{ display:flex; flex-direction:column; gap:10px; padding:20px 0; border-top:1px solid rgba(255,255,255,0.07); }
 .case-block:first-of-type{ border-top:none; padding-top:0; }
@@ -56,6 +57,14 @@ body{ margin:0; }
 .case-pending{ height:108px; border:1px dashed rgba(255,255,255,0.16); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:9.5px; letter-spacing:1.3px; text-transform:uppercase; color:#5c584e; text-align:center; }
 .video-row{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
 .video-row .case-pending{ height:190px; line-height:1.4; }
+.case-split{ display:flex; gap:14px; }
+.case-split-media{ position:relative; flex:1; min-width:0; }
+.case-split-media img{ width:100%; height:302px; object-fit:cover; object-position:top; border-radius:12px; border:1px solid rgba(255,255,255,0.35); display:block; background:#000; }
+.case-split-right{ flex:1; display:flex; flex-direction:column; gap:12px; min-width:0; }
+.case-split-right .case-split-media img{ height:172px; }
+.case-video-split{ display:flex; gap:18px; align-items:flex-start; }
+.case-video-info{ flex:0 0 168px; display:flex; flex-direction:column; gap:8px; }
+.case-video-split .video-row{ flex:1; min-width:0; }
 .pad{ padding:28px 30px; }
 .sub-title{ font-size:28px; margin:0 0 18px; }
 .qual-row{ display:flex; gap:20px; align-items:center; }
@@ -98,10 +107,17 @@ body{ margin:0; }
 .impact-title{ font-size:12vw; text-align:center; }
 .script-name{ font-size:7vw; text-align:center; }
 .case-block, .case-media, .frame-row{ min-width:0; }
+.case-header-row{ flex-direction:column; gap:8px; }
+.case-header-row .case-intro{ flex:none; max-width:none; }
 .case-media img{ height:auto; aspect-ratio:16/9; min-width:0; }
 .frame-row img{ width:100%; height:auto; aspect-ratio:1/1; min-width:0; }
 .insta-shot img{ height:auto; aspect-ratio:3/5; min-width:0; }
 .video-row .case-pending{ height:auto; aspect-ratio:9/16; min-width:0; }
+.case-split{ flex-direction:column; }
+.case-split-media img{ height:auto; aspect-ratio:4/5; min-width:0; }
+.case-split-right .case-split-media img{ aspect-ratio:4/5; }
+.case-video-split{ flex-direction:column; gap:12px; }
+.case-video-info{ flex:1 1 auto; }
 .qual-row{ flex-direction:column; }
 .qual-row, .qual-cert{ min-width:0; }
 .qual-cert{ width:100%; }
@@ -135,8 +151,10 @@ body{ margin:0; }
         </div>
       </div>
       <div class="card case-card">
-        <h2 class="impact case-title">Case Study</h2>
-        <p class="case-intro">Un vistazo a c&oacute;mo trabajo: <b>planeaci&oacute;n editorial</b>, <b>dise&ntilde;o de piezas</b> y <b>gesti&oacute;n de campa&ntilde;as</b> para construir una presencia de marca coherente y con resultados.</p>
+        <div class="case-header-row">
+          <h2 class="impact case-title">Case Study</h2>
+          <p class="case-intro">Un vistazo a c&oacute;mo trabajo: <b>planeaci&oacute;n editorial</b>, <b>dise&ntilde;o de piezas</b> y <b>gesti&oacute;n de campa&ntilde;as</b> para construir una presencia de marca coherente y con resultados.</p>
+        </div>
         <div class="case-block">
           <div class="case-block-head">
             <p class="case-num-big">01</p>
@@ -157,22 +175,28 @@ body{ margin:0; }
             <p class="case-num-big">02</p>
             <p class="impact case-num-title">Instagram</p>
           </div>
-          <p class="case-block-desc">Curadur&iacute;a de feed y gesti&oacute;n activa de perfil para dos marcas de moda &mdash; femenina y masculina &mdash;: planeaci&oacute;n visual, tono de marca y consistencia en cada publicaci&oacute;n.</p>
-          <div class="case-media">
-            <div class="insta-duo">
-              <div class="insta-shot"><img src="/images/insta_female.jpg" alt="Feed de Instagram de marca de moda femenina"></div>
-              <div class="insta-shot"><img src="/images/insta_male.jpg" alt="Feed de Instagram de marca de moda masculina"></div>
+          <div class="case-split">
+            <div class="case-split-media">
+              <img src="/images/insta_female.jpg" alt="Feed de Instagram de marca de moda femenina">
+              <span class="case-label">Instagram 02</span>
             </div>
-            <span class="case-label">Instagram 02</span>
+            <div class="case-split-right">
+              <p class="case-block-desc">Curadur&iacute;a de feed y gesti&oacute;n activa de perfil para dos marcas de moda &mdash; femenina y masculina &mdash;: planeaci&oacute;n visual, tono de marca y consistencia en cada publicaci&oacute;n.</p>
+              <div class="case-split-media">
+                <img src="/images/insta_male.jpg" alt="Feed de Instagram de marca de moda masculina">
+              </div>
+            </div>
           </div>
         </div>
         <div class="case-block">
-          <div class="case-block-head">
-            <p class="case-num-big">03</p>
-            <p class="impact case-num-title">Video</p>
-          </div>
-          <p class="case-block-desc">Contenido en video para Reels y TikTok &mdash; pr&oacute;ximamente se agregar&aacute;n piezas de este formato.</p>
-          <div class="case-media">
+          <div class="case-video-split">
+            <div class="case-video-info">
+              <div class="case-block-head">
+                <p class="case-num-big">03</p>
+                <p class="impact case-num-title">Video</p>
+              </div>
+              <p class="case-block-desc">Contenido en video para Reels y TikTok &mdash; pr&oacute;ximamente se agregar&aacute;n piezas de este formato.</p>
+            </div>
             <div class="video-row">
               <div class="case-pending">Video<br>pendiente</div>
               <div class="case-pending">Video<br>pendiente</div>
