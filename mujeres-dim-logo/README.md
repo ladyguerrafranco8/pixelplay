@@ -17,5 +17,15 @@ Deportivo Independiente de Medellín.
 ## Qué cambió respecto al logo anterior
 
 Mismo diseño exacto (escudo con pico arriba, franja diagonal roja/azul, cinta "DIM",
-"MUJERES" en arco dorado arriba y "2025" abajo) — solo redibujado como vector nítido en
-vez del PNG borroso/pixelado que había antes. Sin elementos nuevos.
+"MUJERES" en arco dorado arriba y "2025" abajo) — redibujado como vector nítido y pulido
+a nivel de acabado profesional:
+
+- Texto perfectamente centrado (verificado a nivel de píxel) en el escudo y la cinta.
+- Kerning ajustado para dar jerarquía: "DIM" domina (más grande, más peso, contorno
+  oscuro nítido), "MUJERES" y "2025" quedan como elementos secundarios en dorado.
+- Degradados sutiles (radiales en rojo/azul, bisel metálico en el borde) para dar
+  volumen, en vez de colores planos.
+- Textura fina tipo tela/bordado sobre el escudo y la cinta (muy sutil, no decorativa).
+- Sombra suave general (el escudo "flota") y sombra propia bajo la cinta para que se
+  vea superpuesta, más un relieve ligero en las letras de "DIM".
+- Bordes vectoriales limpios, sin pixelación en ningún tamaño de exportación.
