@@ -16,9 +16,6 @@ Deportivo Independiente de Medellín.
 
 ## Qué cambió respecto al logo anterior
 
-- Escudo con geometría más limpia (curvas suaves en vez de bordes irregulares).
-- Franja diagonal roja/azul más definida, colores del DIM.
-- Balón de fútbol como emblema central (identidad del contenido deportivo).
-- Cinta "DIM" con mejor contraste y bordes dorados.
-- "MUJERES" en arco dorado arriba, "2025" con estrellas doradas abajo.
-- Doble borde (marfil + dorado + azul) para un look más premium tipo escudo de club.
+Mismo diseño exacto (escudo con pico arriba, franja diagonal roja/azul, cinta "DIM",
+"MUJERES" en arco dorado arriba y "2025" abajo) — solo redibujado como vector nítido en
+vez del PNG borroso/pixelado que había antes. Sin elementos nuevos.

@@ -1,113 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1180" width="1000" height="1180">
   <defs>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f3d98a"/>
-      <stop offset="45%" stop-color="#c99a2e"/>
-      <stop offset="100%" stop-color="#8a6417"/>
-    </linearGradient>
     <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e8362a"/>
-      <stop offset="100%" stop-color="#a3130f"/>
+      <stop offset="0%" stop-color="#d13a2e"/>
+      <stop offset="100%" stop-color="#b12b21"/>
     </linearGradient>
     <linearGradient id="navy" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1c3566"/>
-      <stop offset="100%" stop-color="#0b1830"/>
+      <stop offset="0%" stop-color="#1a2c52"/>
+      <stop offset="100%" stop-color="#0f1c38"/>
     </linearGradient>
-    <linearGradient id="cream" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fdf8ec"/>
-      <stop offset="100%" stop-color="#f2e6c8"/>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c7a463"/>
+      <stop offset="100%" stop-color="#a9834a"/>
     </linearGradient>
 
-    <path id="shieldOuter" d="M300 34
-      C 214 34 136 50 66 92
-      L 66 330
-      C 66 470 150 566 226 606
-      C 252 619 276 630 300 668
-      C 324 630 348 619 374 606
-      C 450 566 534 470 534 330
-      L 534 92
-      C 464 50 386 34 300 34 Z"/>
+    <path id="shieldOuter" d="M500,50
+      Q 420 88 158 193
+      C 42 246 4 372 4 490
+      C 4 642 88 840 248 972
+      C 348 1054 430 1086 500 1150
+      C 570 1086 652 1054 752 972
+      C 912 840 996 642 996 490
+      C 996 372 958 246 842 193
+      Q 580 88 500 50 Z"/>
 
-    <path id="shieldInner" d="M300 56
-      C 224 56 154 71 90 108
-      L 90 328
-      C 90 456 168 545 236 581
-      C 260 593 282 603 300 634
-      C 318 603 340 593 364 581
-      C 432 545 510 456 510 328
-      L 510 108
-      C 446 71 376 56 300 56 Z"/>
+    <path id="shieldInner" d="M500,86
+      Q 434 118 210 210
+      C 108 254 74 362 74 468
+      C 74 600 148 772 288 888
+      C 372 958 442 984 500 1040
+      C 558 984 628 958 712 888
+      C 852 772 926 600 926 468
+      C 926 362 892 254 790 210
+      Q 566 118 500 86 Z"/>
 
-    <clipPath id="clipInner">
-      <use href="#shieldInner"/>
-    </clipPath>
-
-    <path id="arcTop" d="M 128 175 C 190 118 410 118 472 175" fill="none"/>
-
-    <polygon id="pentCentral" points="0,-26 24.73,-8.03 15.28,21.03 -15.28,21.03 -24.73,-8.03"/>
-    <polygon id="pentCap" points="0,-13 12.4,-4 7.7,10.5 -7.7,10.5 -12.4,-4"/>
+    <clipPath id="clipInner"><use href="#shieldInner"/></clipPath>
   </defs>
 
-  <!-- outer cream medallion -->
-  <use href="#shieldOuter" fill="url(#cream)" stroke="#0b1830" stroke-width="5"/>
+  <!-- outer cream medallion band -->
+  <use href="#shieldOuter" fill="#f7f1de" stroke="#101d3a" stroke-width="9"/>
 
-  <!-- inner content, diagonal red/navy split -->
+  <!-- inner content: diagonal red / navy split -->
   <g clip-path="url(#clipInner)">
-    <rect x="70" y="40" width="480" height="620" fill="url(#red)"/>
-    <polygon points="510,90 510,620 190,620" fill="url(#navy)"/>
+    <rect x="60" y="70" width="880" height="1000" fill="url(#red)"/>
+    <polygon points="926,190 926,1040 300,1040" fill="url(#navy)"/>
   </g>
-  <use href="#shieldInner" fill="none" stroke="#0b1830" stroke-width="4"/>
-  <use href="#shieldInner" fill="none" stroke="url(#gold)" stroke-width="1.5" transform="translate(0,-2)"/>
+  <use href="#shieldInner" fill="none" stroke="#101d3a" stroke-width="7"/>
+  <use href="#shieldInner" fill="none" stroke="#f7f1de" stroke-width="3"
+       transform="translate(500,565) scale(0.983) translate(-500,-565)"/>
 
   <!-- MUJERES arched -->
-  <text font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700"
-        letter-spacing="7" fill="url(#gold)" stroke="#5c4210" stroke-width="0.6">
+  <defs>
+    <path id="arcTop" d="M 230 330 C 300 255 700 255 770 330" fill="none"/>
+  </defs>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700"
+        letter-spacing="10" fill="url(#gold)">
     <textPath href="#arcTop" startOffset="50%" text-anchor="middle">MUJERES</textPath>
   </text>
 
   <!-- ribbon banner -->
   <g>
-    <polygon points="70,388 76,410 70,432 118,420 118,400" fill="#0b1830"/>
-    <polygon points="530,388 524,410 530,432 482,420 482,400" fill="#0b1830"/>
-    <path d="M96 372
-      L504 372
-      L504 448
-      L96 448
-      Z" fill="url(#navy)" stroke="#0b1830" stroke-width="3"/>
-    <path d="M96 372 L504 372" stroke="url(#gold)" stroke-width="2"/>
-    <path d="M96 448 L504 448" stroke="url(#gold)" stroke-width="2"/>
-    <text x="300" y="425" font-family="Georgia, 'Times New Roman', serif" font-size="58"
-          font-weight="800" letter-spacing="6" fill="#fdf8ec" text-anchor="middle">DIM</text>
-  </g>
+    <!-- folded ends -->
+    <polygon points="170,655 20,700 80,750 20,800 170,845" fill="#0f1c38"/>
+    <polygon points="830,655 980,700 920,750 980,800 830,845" fill="#0f1c38"/>
+    <polygon points="20,700 80,750 20,800 55,750" fill="#0a1428"/>
+    <polygon points="980,700 920,750 980,800 945,750" fill="#0a1428"/>
 
-  <!-- stars -->
-  <g fill="url(#gold)">
-    <path transform="translate(226,505) scale(0.9)" d="M0,-14 L3.5,-4.5 L13,-4.5 L5.5,2 L8,12 L0,6 L-8,12 L-5.5,2 L-13,-4.5 L-3.5,-4.5 Z"/>
-    <path transform="translate(374,505) scale(0.9)" d="M0,-14 L3.5,-4.5 L13,-4.5 L5.5,2 L8,12 L0,6 L-8,12 L-5.5,2 L-13,-4.5 L-3.5,-4.5 Z"/>
+    <!-- main band -->
+    <path d="M170,655 L830,655 L830,845 L170,845 Z" fill="url(#navy)"/>
+    <path d="M170,663 L830,663" stroke="#f7f1de" stroke-width="4" opacity="0.85"/>
+    <path d="M170,837 L830,837" stroke="#f7f1de" stroke-width="4" opacity="0.85"/>
+
+    <text x="500" y="790" font-family="Georgia, 'Times New Roman', serif" font-size="112"
+          font-weight="700" letter-spacing="6" fill="#fbf8ef" text-anchor="middle">DIM</text>
   </g>
 
   <!-- 2025 -->
-  <text x="300" y="516" font-family="Georgia, 'Times New Roman', serif" font-size="30"
-        font-weight="700" letter-spacing="10" fill="url(#gold)" text-anchor="middle">2025</text>
-
-  <!-- football emblem, centered in the open field -->
-  <g transform="translate(300,278)">
-    <circle r="68" fill="#fdf8ec" stroke="#0b1830" stroke-width="5"/>
-    <g fill="#0b1830">
-      <use href="#pentCentral"/>
-      <use href="#pentCap" transform="rotate(36) translate(0,-56)"/>
-      <use href="#pentCap" transform="rotate(108) translate(0,-56)"/>
-      <use href="#pentCap" transform="rotate(180) translate(0,-56)"/>
-      <use href="#pentCap" transform="rotate(252) translate(0,-56)"/>
-      <use href="#pentCap" transform="rotate(324) translate(0,-56)"/>
-    </g>
-    <g stroke="#0b1830" stroke-width="3" fill="none" stroke-linecap="round">
-      <path d="M0,-26 L0,-45"/>
-      <path d="M24.73,-8.03 L44,-14.6"/>
-      <path d="M15.28,21.03 L27.2,37.4"/>
-      <path d="M-15.28,21.03 L-27.2,37.4"/>
-      <path d="M-24.73,-8.03 L-44,-14.6"/>
-    </g>
-    <circle r="68" fill="none" stroke="url(#gold)" stroke-width="2"/>
-  </g>
+  <text x="500" y="965" font-family="Georgia, 'Times New Roman', serif" font-size="42"
+        font-weight="600" letter-spacing="14" fill="url(#gold)" text-anchor="middle">2025</text>
 </svg>
