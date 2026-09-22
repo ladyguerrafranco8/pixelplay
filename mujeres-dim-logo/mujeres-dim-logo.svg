@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="600" height="700">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3d98a"/>
+      <stop offset="45%" stop-color="#c99a2e"/>
+      <stop offset="100%" stop-color="#8a6417"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8362a"/>
+      <stop offset="100%" stop-color="#a3130f"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c3566"/>
+      <stop offset="100%" stop-color="#0b1830"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf8ec"/>
+      <stop offset="100%" stop-color="#f2e6c8"/>
+    </linearGradient>
+
+    <path id="shieldOuter" d="M300 34
+      C 214 34 136 50 66 92
+      L 66 330
+      C 66 470 150 566 226 606
+      C 252 619 276 630 300 668
+      C 324 630 348 619 374 606
+      C 450 566 534 470 534 330
+      L 534 92
+      C 464 50 386 34 300 34 Z"/>
+
+    <path id="shieldInner" d="M300 56
+      C 224 56 154 71 90 108
+      L 90 328
+      C 90 456 168 545 236 581
+      C 260 593 282 603 300 634
+      C 318 603 340 593 364 581
+      C 432 545 510 456 510 328
+      L 510 108
+      C 446 71 376 56 300 56 Z"/>
+
+    <clipPath id="clipInner">
+      <use href="#shieldInner"/>
+    </clipPath>
+
+    <path id="arcTop" d="M 128 175 C 190 118 410 118 472 175" fill="none"/>
+
+    <polygon id="pentCentral" points="0,-26 24.73,-8.03 15.28,21.03 -15.28,21.03 -24.73,-8.03"/>
+    <polygon id="pentCap" points="0,-13 12.4,-4 7.7,10.5 -7.7,10.5 -12.4,-4"/>
+  </defs>
+
+  <!-- outer cream medallion -->
+  <use href="#shieldOuter" fill="url(#cream)" stroke="#0b1830" stroke-width="5"/>
+
+  <!-- inner content, diagonal red/navy split -->
+  <g clip-path="url(#clipInner)">
+    <rect x="70" y="40" width="480" height="620" fill="url(#red)"/>
+    <polygon points="510,90 510,620 190,620" fill="url(#navy)"/>
+  </g>
+  <use href="#shieldInner" fill="none" stroke="#0b1830" stroke-width="4"/>
+  <use href="#shieldInner" fill="none" stroke="url(#gold)" stroke-width="1.5" transform="translate(0,-2)"/>
+
+  <!-- MUJERES arched -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700"
+        letter-spacing="7" fill="url(#gold)" stroke="#5c4210" stroke-width="0.6">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">MUJERES</textPath>
+  </text>
+
+  <!-- ribbon banner -->
+  <g>
+    <polygon points="70,388 76,410 70,432 118,420 118,400" fill="#0b1830"/>
+    <polygon points="530,388 524,410 530,432 482,420 482,400" fill="#0b1830"/>
+    <path d="M96 372
+      L504 372
+      L504 448
+      L96 448
+      Z" fill="url(#navy)" stroke="#0b1830" stroke-width="3"/>
+    <path d="M96 372 L504 372" stroke="url(#gold)" stroke-width="2"/>
+    <path d="M96 448 L504 448" stroke="url(#gold)" stroke-width="2"/>
+    <text x="300" y="425" font-family="Georgia, 'Times New Roman', serif" font-size="58"
+          font-weight="800" letter-spacing="6" fill="#fdf8ec" text-anchor="middle">DIM</text>
+  </g>
+
+  <!-- stars -->
+  <g fill="url(#gold)">
+    <path transform="translate(226,505) scale(0.9)" d="M0,-14 L3.5,-4.5 L13,-4.5 L5.5,2 L8,12 L0,6 L-8,12 L-5.5,2 L-13,-4.5 L-3.5,-4.5 Z"/>
+    <path transform="translate(374,505) scale(0.9)" d="M0,-14 L3.5,-4.5 L13,-4.5 L5.5,2 L8,12 L0,6 L-8,12 L-5.5,2 L-13,-4.5 L-3.5,-4.5 Z"/>
+  </g>
+
+  <!-- 2025 -->
+  <text x="300" y="516" font-family="Georgia, 'Times New Roman', serif" font-size="30"
+        font-weight="700" letter-spacing="10" fill="url(#gold)" text-anchor="middle">2025</text>
+
+  <!-- football emblem, centered in the open field -->
+  <g transform="translate(300,278)">
+    <circle r="68" fill="#fdf8ec" stroke="#0b1830" stroke-width="5"/>
+    <g fill="#0b1830">
+      <use href="#pentCentral"/>
+      <use href="#pentCap" transform="rotate(36) translate(0,-56)"/>
+      <use href="#pentCap" transform="rotate(108) translate(0,-56)"/>
+      <use href="#pentCap" transform="rotate(180) translate(0,-56)"/>
+      <use href="#pentCap" transform="rotate(252) translate(0,-56)"/>
+      <use href="#pentCap" transform="rotate(324) translate(0,-56)"/>
+    </g>
+    <g stroke="#0b1830" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M0,-26 L0,-45"/>
+      <path d="M24.73,-8.03 L44,-14.6"/>
+      <path d="M15.28,21.03 L27.2,37.4"/>
+      <path d="M-15.28,21.03 L-27.2,37.4"/>
+      <path d="M-24.73,-8.03 L-44,-14.6"/>
+    </g>
+    <circle r="68" fill="none" stroke="url(#gold)" stroke-width="2"/>
+  </g>
+</svg>
