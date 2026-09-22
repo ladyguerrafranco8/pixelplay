@@ -29,3 +29,15 @@ a nivel de acabado profesional:
 - Sombra suave general (el escudo "flota") y sombra propia bajo la cinta para que se
   vea superpuesta, más un relieve ligero en las letras de "DIM".
 - Bordes vectoriales limpios, sin pixelación en ningún tamaño de exportación.
+
+## Post-proceso aplicado a los PNG
+
+Los tres archivos `.png` pasaron por un post-proceso de edición de imagen sobre los
+píxeles exactos exportados (sin regenerar ni tocar el diseño/SVG):
+
+- Ajuste de curvas de color / saturación sobre las áreas existentes.
+- Sharpen (unsharp mask) sobre los bordes ya existentes.
+- Overlay de una textura sutil de ruido de tela, blend mode "overlay", baja opacidad,
+  aplicado sobre toda la imagen sin alterar ninguna forma ni la transparencia.
+
+El `.svg` es la fuente vectorial y no lleva este post-proceso (no aplica a vectores).
